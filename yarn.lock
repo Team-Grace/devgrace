@@ -1480,6 +1480,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@emotion/eslint-plugin@npm:^11.11.0":
+  version: 11.11.0
+  resolution: "@emotion/eslint-plugin@npm:11.11.0"
+  peerDependencies:
+    eslint: 6 || 7 || 8
+  checksum: 2d555b6790700e0d0c2862d4aa2fd697ea5851faa7e406ab459028e66daad2ee0dc3dec29362c2edc2656a63f826ac15629112d3e9aca64323fa40f9e5674bd4
+  languageName: node
+  linkType: hard
+
 "@emotion/hash@npm:^0.9.1":
   version: 0.9.1
   resolution: "@emotion/hash@npm:0.9.1"
@@ -1584,6 +1593,22 @@ __metadata:
   peerDependencies:
     react: ">=16.8.0"
     react-dom: ">=16.8.0"
+  languageName: unknown
+  linkType: soft
+
+"@grace/utils@workspace:packages/utils":
+  version: 0.0.0-use.local
+  resolution: "@grace/utils@workspace:packages/utils"
+  dependencies:
+    "@rollup/plugin-babel": ^6.0.3
+    "@rollup/plugin-commonjs": ^25.0.4
+    "@rollup/plugin-node-resolve": ^15.1.0
+    "@rollup/plugin-terser": ^0.4.3
+    "@rollup/plugin-typescript": ^11.1.2
+    "@types/node": ^20.5.0
+    rollup: ^3.28.0
+    tslib: ^2.6.1
+    typescript: ^5.1.6
   languageName: unknown
   linkType: soft
 
@@ -4498,6 +4523,7 @@ __metadata:
     "@babel/preset-react": ^7.22.5
     "@babel/preset-typescript": ^7.22.5
     "@emotion/babel-plugin": ^11.11.0
+    "@emotion/eslint-plugin": ^11.11.0
     "@types/react": ^18.2.15
     "@types/react-dom": ^18.2.7
     "@typescript-eslint/eslint-plugin": ^6.0.0

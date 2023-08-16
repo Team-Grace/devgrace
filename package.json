@@ -1,17 +1,22 @@
 {
   "name": "grace",
   "private": true,
-  "version": "0.0.0",
   "workspaces": [
     "packages/*"
   ],
   "author": "ssi02014 <ssi02014@naver.com>",
+  "scripts": {
+    "publish": "lerna publish",
+    "version": "lerna version",
+    "typecheck": "tsc --noEmit"
+  },
   "devDependencies": {
     "@babel/core": "^7.22.10",
     "@babel/preset-env": "^7.22.10",
     "@babel/preset-react": "^7.22.5",
     "@babel/preset-typescript": "^7.22.5",
     "@emotion/babel-plugin": "^11.11.0",
+    "@emotion/eslint-plugin": "^11.11.0",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.0.0",

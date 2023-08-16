@@ -1,0 +1,27 @@
+{
+  "name": "@grace/utils",
+  "sideEffects": false,
+  "version": "0.0.1",
+  "description": "grace/utils",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "scripts": {
+    "build": "rm -rf dist && rollup -c"
+  },
+  "author": "ssi02014 <ssi02014@naver.com>",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^25.0.4",
+    "@rollup/plugin-node-resolve": "^15.1.0",
+    "@rollup/plugin-terser": "^0.4.3",
+    "@rollup/plugin-typescript": "^11.1.2",
+    "@types/node": "^20.5.0",
+    "rollup": "^3.28.0",
+    "tslib": "^2.6.1",
+    "typescript": "^5.1.6"
+  }
+}
