@@ -1,7 +1,7 @@
 {
   "name": "@devgrace/utils",
   "sideEffects": false,
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "devgrace/utils",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
