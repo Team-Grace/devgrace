@@ -1,8 +1,8 @@
 {
-  "name": "@grace/ui",
+  "name": "@devgrace/ui",
   "sideEffects": false,
-  "version": "0.0.1",
-  "description": "grace/ui",
+  "version": "0.0.3",
+  "description": "devgrace/ui",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "scripts": {
@@ -32,5 +32,6 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "gitHead": "aeb1ff2ef21460cd38ef467219c5d1a0c1a52c29"
 }

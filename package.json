@@ -1,12 +1,12 @@
 {
-  "name": "grace",
+  "name": "devgrace",
   "private": true,
   "workspaces": [
     "packages/*"
   ],
   "author": "ssi02014 <ssi02014@naver.com>",
   "scripts": {
-    "publish": "lerna publish",
+    "publish": "lerna publish from-package",
     "version": "lerna version",
     "typecheck": "tsc --noEmit"
   },

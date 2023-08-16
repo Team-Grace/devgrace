@@ -1,8 +1,8 @@
 {
-  "name": "@grace/utils",
+  "name": "@devgrace/utils",
   "sideEffects": false,
-  "version": "0.0.1",
-  "description": "grace/utils",
+  "version": "0.0.3",
+  "description": "devgrace/utils",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "scripts": {
@@ -23,5 +23,6 @@
     "rollup": "^3.28.0",
     "tslib": "^2.6.1",
     "typescript": "^5.1.6"
-  }
+  },
+  "gitHead": "aeb1ff2ef21460cd38ef467219c5d1a0c1a52c29"
 }
