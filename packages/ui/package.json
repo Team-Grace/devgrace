@@ -1,7 +1,7 @@
 {
   "name": "@devgrace/ui",
   "sideEffects": false,
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "devgrace/ui",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
