@@ -1,18 +1,18 @@
-import nodeResolve from "@rollup/plugin-node-resolve";
-import babel from "@rollup/plugin-babel";
-import terser from "@rollup/plugin-terser";
-import typescript from "@rollup/plugin-typescript";
-import commonjs from "@rollup/plugin-commonjs";
-import pkg from "./package.json" assert { type: "json" };
+import nodeResolve from '@rollup/plugin-node-resolve';
+import babel from '@rollup/plugin-babel';
+import terser from '@rollup/plugin-terser';
+import typescript from '@rollup/plugin-typescript';
+import commonjs from '@rollup/plugin-commonjs';
+import pkg from './package.json' assert { type: 'json' };
 
-const extensions = [".js", ".jsx", ".ts", ".tsx"];
+const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 
 export default {
-  input: "./src/index.ts", // 진입 경로
+  input: './src/index.ts', // 진입 경로
   output: [
     {
       file: pkg.main,
-      format: "esm",
+      format: 'esm',
       sourcemap: false,
     },
   ],
@@ -20,13 +20,13 @@ export default {
     nodeResolve({
       extensions,
     }),
-    commonjs({ include: "node_modules/**" }),
+    commonjs(),
     babel({
       exclude: /node_modules/,
       extensions,
-      include: ["src/**/*"],
+      include: ['src/**/*'],
     }),
-    typescript({ tsconfig: "./tsconfig.json" }),
+    typescript({ tsconfig: './tsconfig.json' }),
     terser(),
   ],
 };

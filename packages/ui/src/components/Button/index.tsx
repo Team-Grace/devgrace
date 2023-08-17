@@ -1,11 +1,16 @@
 import React from 'react';
+import styled from '@emotion/styled';
 
 interface ButtonProps {
   children: React.ReactNode;
 }
 
-const Button = ({ children }: ButtonProps) => {
-  return <div>{children}</div>;
+export const Button = ({ children }: ButtonProps) => {
+  return <StyledButton>{children}</StyledButton>;
 };
 
-export default Button;
+const StyledButton = styled.button`
+  padding: 10px 15px;
+  border: 1px solid #111;
+  border-radius: 6px;
+`;
