@@ -42,7 +42,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/preset-env", "virtual:792eac2794d4baf13284e2048e1d1fb9724457aab62d48bc2e1bd4b2bf21e7be3dfea8f0ad969ee22ca8945dfa00d46e2a50c5bbcd78a91dcb874c3362e1871d#npm:7.22.10"],\
             ["@babel/preset-react", "virtual:792eac2794d4baf13284e2048e1d1fb9724457aab62d48bc2e1bd4b2bf21e7be3dfea8f0ad969ee22ca8945dfa00d46e2a50c5bbcd78a91dcb874c3362e1871d#npm:7.22.5"],\
             ["@babel/preset-typescript", "virtual:792eac2794d4baf13284e2048e1d1fb9724457aab62d48bc2e1bd4b2bf21e7be3dfea8f0ad969ee22ca8945dfa00d46e2a50c5bbcd78a91dcb874c3362e1871d#npm:7.22.5"],\
-            ["@emotion/babel-plugin", "npm:11.11.0"],\
             ["@emotion/eslint-plugin", "virtual:792eac2794d4baf13284e2048e1d1fb9724457aab62d48bc2e1bd4b2bf21e7be3dfea8f0ad969ee22ca8945dfa00d46e2a50c5bbcd78a91dcb874c3362e1871d#npm:11.11.0"],\
             ["@types/react", "npm:18.2.20"],\
             ["@types/react-dom", "npm:18.2.7"],\
@@ -2617,6 +2616,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/ui/",\
           "packageDependencies": [\
             ["@devgrace/ui", "workspace:packages/ui"],\
+            ["@emotion/babel-plugin", "npm:11.11.0"],\
             ["@rollup/plugin-babel", "virtual:5b3329806691ec12d52ecd29dd77e659c67530fbfd14a3481a0a53b2787ff0df815120eed5a7c1c2750c2d152d6c0e2b6ec3c66ee7729115b5725fb5231592f7#npm:6.0.3"],\
             ["@rollup/plugin-commonjs", "virtual:5b3329806691ec12d52ecd29dd77e659c67530fbfd14a3481a0a53b2787ff0df815120eed5a7c1c2750c2d152d6c0e2b6ec3c66ee7729115b5725fb5231592f7#npm:25.0.4"],\
             ["@rollup/plugin-node-resolve", "virtual:5b3329806691ec12d52ecd29dd77e659c67530fbfd14a3481a0a53b2787ff0df815120eed5a7c1c2750c2d152d6c0e2b6ec3c66ee7729115b5725fb5231592f7#npm:15.1.0"],\
@@ -5374,7 +5374,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/preset-env", "virtual:792eac2794d4baf13284e2048e1d1fb9724457aab62d48bc2e1bd4b2bf21e7be3dfea8f0ad969ee22ca8945dfa00d46e2a50c5bbcd78a91dcb874c3362e1871d#npm:7.22.10"],\
             ["@babel/preset-react", "virtual:792eac2794d4baf13284e2048e1d1fb9724457aab62d48bc2e1bd4b2bf21e7be3dfea8f0ad969ee22ca8945dfa00d46e2a50c5bbcd78a91dcb874c3362e1871d#npm:7.22.5"],\
             ["@babel/preset-typescript", "virtual:792eac2794d4baf13284e2048e1d1fb9724457aab62d48bc2e1bd4b2bf21e7be3dfea8f0ad969ee22ca8945dfa00d46e2a50c5bbcd78a91dcb874c3362e1871d#npm:7.22.5"],\
-            ["@emotion/babel-plugin", "npm:11.11.0"],\
             ["@emotion/eslint-plugin", "virtual:792eac2794d4baf13284e2048e1d1fb9724457aab62d48bc2e1bd4b2bf21e7be3dfea8f0ad969ee22ca8945dfa00d46e2a50c5bbcd78a91dcb874c3362e1871d#npm:11.11.0"],\
             ["@types/react", "npm:18.2.20"],\
             ["@types/react-dom", "npm:18.2.7"],\

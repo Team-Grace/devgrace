@@ -1,1 +1,4 @@
-module.exports = { extends: '../../babel.config.js' };
+module.exports = {
+  extends: '../../babel.config.js',
+  plugins: ['@emotion/babel-plugin'],
+};

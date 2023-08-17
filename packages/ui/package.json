@@ -6,11 +6,13 @@
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "scripts": {
-    "build": "rm -rf dist && rollup -c"
+    "build": "rm -rf dist && rollup -c",
+    "typecheck": "tsc --noEmit"
   },
   "author": "ssi02014 <ssi02014@naver.com>",
   "license": "MIT",
   "devDependencies": {
+    "@emotion/babel-plugin": "^11.11.0",
     "@rollup/plugin-babel": "^6.0.3",
     "@rollup/plugin-commonjs": "^25.0.4",
     "@rollup/plugin-node-resolve": "^15.1.0",
