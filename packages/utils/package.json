@@ -1,7 +1,7 @@
 {
   "name": "@devgrace/utils",
   "sideEffects": false,
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "devgrace/utils",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -25,5 +25,5 @@
     "tslib": "^2.6.1",
     "typescript": "^5.1.6"
   },
-  "gitHead": "55b805afee20852d583ecac3f29597782684a310"
+  "gitHead": "7722785374b897572934e335817ec297ad45a943"
 }

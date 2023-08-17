@@ -9,7 +9,7 @@
     "typecheck": "lerna run typecheck",
     "build": "yarn typecheck && lerna run build",
     "version": "lerna version",
-    "publish": "lerna publish from-package"
+    "publish": "yarn version && lerna publish from-package"
   },
   "devDependencies": {
     "@babel/core": "^7.22.10",
