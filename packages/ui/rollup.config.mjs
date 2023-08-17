@@ -9,7 +9,7 @@ import pkg from './package.json' assert { type: 'json' };
 const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 
 export default {
-  input: './src/index.tsx', // 진입 경로
+  input: './src/index.ts', // 진입 경로
   output: [
     {
       file: pkg.main,

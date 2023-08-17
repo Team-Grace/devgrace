@@ -14,10 +14,10 @@
 ## Usage
 ```
 // npm
-npm i @devgrace/ui @devgrace/utils @devgrace/hooks
+npm i @devgrace/ui @devgrace/react @devgrace/utils
 
 // yarn
-yarn add @devgrace/ui @devgrace/utils @devgrace/hooks
+yarn add @devgrace/ui @devgrace/react @devgrace/utils
 ```
 
 
