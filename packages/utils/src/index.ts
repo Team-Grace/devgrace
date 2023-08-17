@@ -1,1 +1,2 @@
-export { add } from "./add";
+export * from './common';
+export * from './device';

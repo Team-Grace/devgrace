@@ -2891,8 +2891,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@rollup/plugin-node-resolve", "virtual:c50149d6aca01ca71ced62e9ba7f7847b9f1ba08bdb0b17e0b5b6f901401e8f1801e9eebf4b445832fd14b804cb868fb099bb30b77e93ea91b6da47016d88f97#npm:15.1.0"],\
             ["@rollup/plugin-terser", "virtual:c50149d6aca01ca71ced62e9ba7f7847b9f1ba08bdb0b17e0b5b6f901401e8f1801e9eebf4b445832fd14b804cb868fb099bb30b77e93ea91b6da47016d88f97#npm:0.4.3"],\
             ["@rollup/plugin-typescript", "virtual:c50149d6aca01ca71ced62e9ba7f7847b9f1ba08bdb0b17e0b5b6f901401e8f1801e9eebf4b445832fd14b804cb868fb099bb30b77e93ea91b6da47016d88f97#npm:11.1.2"],\
+            ["@types/jest", "npm:29.5.3"],\
             ["@types/node", "npm:20.5.0"],\
+            ["core-js", "npm:3.32.0"],\
+            ["jest", "virtual:c50149d6aca01ca71ced62e9ba7f7847b9f1ba08bdb0b17e0b5b6f901401e8f1801e9eebf4b445832fd14b804cb868fb099bb30b77e93ea91b6da47016d88f97#npm:29.6.2"],\
+            ["jest-environment-jsdom", "virtual:c50149d6aca01ca71ced62e9ba7f7847b9f1ba08bdb0b17e0b5b6f901401e8f1801e9eebf4b445832fd14b804cb868fb099bb30b77e93ea91b6da47016d88f97#npm:29.6.2"],\
             ["rollup", "npm:3.28.0"],\
+            ["ts-jest", "virtual:c50149d6aca01ca71ced62e9ba7f7847b9f1ba08bdb0b17e0b5b6f901401e8f1801e9eebf4b445832fd14b804cb868fb099bb30b77e93ea91b6da47016d88f97#npm:29.1.1"],\
             ["tslib", "npm:2.6.1"],\
             ["typescript", "patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=5da071"]\
           ],\

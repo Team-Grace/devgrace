@@ -8,7 +8,7 @@
   "scripts": {
     "typecheck": "lerna run typecheck",
     "test": "lerna run test",
-    "build": "yarn typecheck && lerna run build",
+    "build": "yarn typecheck &&  yarn test && lerna run build",
     "version": "lerna version",
     "publish": "yarn version && lerna publish from-package"
   },

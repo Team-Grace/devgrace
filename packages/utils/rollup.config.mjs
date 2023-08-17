@@ -22,11 +22,10 @@ export default {
     }),
     commonjs(),
     babel({
-      exclude: /node_modules/,
       extensions,
       include: ['src/**/*'],
     }),
-    typescript({ tsconfig: './tsconfig.json' }),
+    typescript({ tsconfig: './tsconfig.json', exclude: ['**/*.spec.ts'] }),
     terser(),
   ],
 };
