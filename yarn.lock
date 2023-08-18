@@ -1507,12 +1507,19 @@ __metadata:
     "@rollup/plugin-node-resolve": ^15.1.0
     "@rollup/plugin-terser": ^0.4.3
     "@rollup/plugin-typescript": ^11.1.2
+    "@testing-library/jest-dom": ^6.0.1
+    "@testing-library/react": ^14.0.0
+    "@types/jest": ^29.5.3
     "@types/react": ^18.2.20
     "@types/react-dom": ^18.2.7
+    core-js: ^3.32.0
+    jest: ^29.6.2
+    jest-environment-jsdom: ^29.6.2
     react: ^18.2.0
     react-dom: ^18.2.0
     rollup: ^3.28.0
     rollup-plugin-peer-deps-external: ^2.2.4
+    ts-jest: ^29.1.1
     typescript: ^5.1.6
   peerDependencies:
     react: ">=16.8.0"
@@ -2753,6 +2760,36 @@ __metadata:
     vitest:
       optional: true
   checksum: 9b978e993f084553f8e39215b08f6e09e84a4c78e578db35d361bb4259aed84418f1b17ce52f23ead4d81cc7cad5ae5b18a6596d6d531a6d2252be66409e7167
+  languageName: node
+  linkType: hard
+
+"@testing-library/jest-dom@npm:^6.0.1":
+  version: 6.0.1
+  resolution: "@testing-library/jest-dom@npm:6.0.1"
+  dependencies:
+    "@adobe/css-tools": ^4.0.1
+    "@babel/runtime": ^7.9.2
+    aria-query: ^5.0.0
+    chalk: ^3.0.0
+    css.escape: ^1.5.1
+    dom-accessibility-api: ^0.5.6
+    lodash: ^4.17.15
+    redent: ^3.0.0
+  peerDependencies:
+    "@jest/globals": ">= 28"
+    "@types/jest": ">= 28"
+    jest: ">= 28"
+    vitest: ">= 0.32"
+  peerDependenciesMeta:
+    "@jest/globals":
+      optional: true
+    "@types/jest":
+      optional: true
+    jest:
+      optional: true
+    vitest:
+      optional: true
+  checksum: b5c35e2a79d646753f0305bf7f461c5d6fb873016527a78606a20a5fcc7e55a2f5e9eb394d376c47739cee566af133c6f53d8f49681d623db1cf6f236c5971df
   languageName: node
   linkType: hard
 

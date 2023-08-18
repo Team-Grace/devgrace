@@ -2820,12 +2820,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@rollup/plugin-node-resolve", "virtual:c50149d6aca01ca71ced62e9ba7f7847b9f1ba08bdb0b17e0b5b6f901401e8f1801e9eebf4b445832fd14b804cb868fb099bb30b77e93ea91b6da47016d88f97#npm:15.1.0"],\
             ["@rollup/plugin-terser", "virtual:c50149d6aca01ca71ced62e9ba7f7847b9f1ba08bdb0b17e0b5b6f901401e8f1801e9eebf4b445832fd14b804cb868fb099bb30b77e93ea91b6da47016d88f97#npm:0.4.3"],\
             ["@rollup/plugin-typescript", "virtual:c50149d6aca01ca71ced62e9ba7f7847b9f1ba08bdb0b17e0b5b6f901401e8f1801e9eebf4b445832fd14b804cb868fb099bb30b77e93ea91b6da47016d88f97#npm:11.1.2"],\
+            ["@testing-library/jest-dom", "virtual:5b3329806691ec12d52ecd29dd77e659c67530fbfd14a3481a0a53b2787ff0df815120eed5a7c1c2750c2d152d6c0e2b6ec3c66ee7729115b5725fb5231592f7#npm:6.0.1"],\
+            ["@testing-library/react", "virtual:c50149d6aca01ca71ced62e9ba7f7847b9f1ba08bdb0b17e0b5b6f901401e8f1801e9eebf4b445832fd14b804cb868fb099bb30b77e93ea91b6da47016d88f97#npm:14.0.0"],\
+            ["@types/jest", "npm:29.5.3"],\
             ["@types/react", "npm:18.2.20"],\
             ["@types/react-dom", "npm:18.2.7"],\
+            ["core-js", "npm:3.32.0"],\
+            ["jest", "virtual:c50149d6aca01ca71ced62e9ba7f7847b9f1ba08bdb0b17e0b5b6f901401e8f1801e9eebf4b445832fd14b804cb868fb099bb30b77e93ea91b6da47016d88f97#npm:29.6.2"],\
+            ["jest-environment-jsdom", "virtual:c50149d6aca01ca71ced62e9ba7f7847b9f1ba08bdb0b17e0b5b6f901401e8f1801e9eebf4b445832fd14b804cb868fb099bb30b77e93ea91b6da47016d88f97#npm:29.6.2"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:c50149d6aca01ca71ced62e9ba7f7847b9f1ba08bdb0b17e0b5b6f901401e8f1801e9eebf4b445832fd14b804cb868fb099bb30b77e93ea91b6da47016d88f97#npm:18.2.0"],\
             ["rollup", "npm:3.28.0"],\
             ["rollup-plugin-peer-deps-external", "virtual:c50149d6aca01ca71ced62e9ba7f7847b9f1ba08bdb0b17e0b5b6f901401e8f1801e9eebf4b445832fd14b804cb868fb099bb30b77e93ea91b6da47016d88f97#npm:2.2.4"],\
+            ["ts-jest", "virtual:c50149d6aca01ca71ced62e9ba7f7847b9f1ba08bdb0b17e0b5b6f901401e8f1801e9eebf4b445832fd14b804cb868fb099bb30b77e93ea91b6da47016d88f97#npm:29.1.1"],\
             ["typescript", "patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=5da071"]\
           ],\
           "linkType": "SOFT"\
@@ -4356,6 +4363,42 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@testing-library/jest-dom", "npm:6.0.0"]\
           ],\
           "linkType": "SOFT"\
+        }],\
+        ["npm:6.0.1", {\
+          "packageLocation": "./.yarn/cache/@testing-library-jest-dom-npm-6.0.1-90ebbcfb58-b5c35e2a79.zip/node_modules/@testing-library/jest-dom/",\
+          "packageDependencies": [\
+            ["@testing-library/jest-dom", "npm:6.0.1"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:5b3329806691ec12d52ecd29dd77e659c67530fbfd14a3481a0a53b2787ff0df815120eed5a7c1c2750c2d152d6c0e2b6ec3c66ee7729115b5725fb5231592f7#npm:6.0.1", {\
+          "packageLocation": "./.yarn/__virtual__/@testing-library-jest-dom-virtual-f6d287d627/0/cache/@testing-library-jest-dom-npm-6.0.1-90ebbcfb58-b5c35e2a79.zip/node_modules/@testing-library/jest-dom/",\
+          "packageDependencies": [\
+            ["@testing-library/jest-dom", "virtual:5b3329806691ec12d52ecd29dd77e659c67530fbfd14a3481a0a53b2787ff0df815120eed5a7c1c2750c2d152d6c0e2b6ec3c66ee7729115b5725fb5231592f7#npm:6.0.1"],\
+            ["@adobe/css-tools", "npm:4.3.1"],\
+            ["@babel/runtime", "npm:7.22.10"],\
+            ["@jest/globals", null],\
+            ["@types/jest", "npm:29.5.3"],\
+            ["@types/jest__globals", null],\
+            ["@types/vitest", null],\
+            ["aria-query", "npm:5.3.0"],\
+            ["chalk", "npm:3.0.0"],\
+            ["css.escape", "npm:1.5.1"],\
+            ["dom-accessibility-api", "npm:0.5.16"],\
+            ["jest", "virtual:c50149d6aca01ca71ced62e9ba7f7847b9f1ba08bdb0b17e0b5b6f901401e8f1801e9eebf4b445832fd14b804cb868fb099bb30b77e93ea91b6da47016d88f97#npm:29.6.2"],\
+            ["lodash", "npm:4.17.21"],\
+            ["redent", "npm:3.0.0"],\
+            ["vitest", null]\
+          ],\
+          "packagePeers": [\
+            "@jest/globals",\
+            "@types/jest",\
+            "@types/jest__globals",\
+            "@types/vitest",\
+            "jest",\
+            "vitest"\
+          ],\
+          "linkType": "HARD"\
         }],\
         ["virtual:c50149d6aca01ca71ced62e9ba7f7847b9f1ba08bdb0b17e0b5b6f901401e8f1801e9eebf4b445832fd14b804cb868fb099bb30b77e93ea91b6da47016d88f97#npm:6.0.0", {\
           "packageLocation": "./.yarn/__virtual__/@testing-library-jest-dom-virtual-23dbbabc07/0/cache/@testing-library-jest-dom-npm-6.0.0-6807afbf9d-9b978e993f.zip/node_modules/@testing-library/jest-dom/",\
