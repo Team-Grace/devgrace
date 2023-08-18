@@ -12,6 +12,7 @@
   "author": "ssi02014 <ssi02014@naver.com>",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.22.10",
     "@emotion/babel-plugin": "^11.11.0",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
@@ -20,14 +21,12 @@
     "@rollup/plugin-node-resolve": "^15.1.0",
     "@rollup/plugin-terser": "^0.4.3",
     "@rollup/plugin-typescript": "^11.1.2",
-    "@types/node": "^20.5.0",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rollup": "^3.28.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
-    "tslib": "^2.6.1",
     "typescript": "^5.1.6"
   },
   "peerDependencies": {
