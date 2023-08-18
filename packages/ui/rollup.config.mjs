@@ -12,12 +12,12 @@ export default {
   input: './src/index.ts', // 진입 경로
   output: [
     {
-      file: 'dist/cjs.js',
+      file: 'dist/index.js',
       sourcemap: true,
       format: 'cjs',
     },
     {
-      file: 'dist/esm.js',
+      file: 'dist/esm/index.js',
       sourcemap: true,
       format: 'esm',
     },
