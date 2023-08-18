@@ -12,12 +12,12 @@ export default {
   input: './src/index.ts', // 진입 경로
   output: [
     {
-      file: pkg.exports.require,
+      file: pkg.main,
       sourcemap: false,
       format: 'cjs',
     },
     {
-      file: pkg.exports.import,
+      file: pkg.module,
       sourcemap: false,
       format: 'esm',
     },
@@ -38,6 +38,6 @@ export default {
       tsconfig: './tsconfig.json',
       exclude: ['**/*.spec.tsx', '**/*.stories.tsx', '**/jest.setup.ts'],
     }),
-    terser(),
+    // terser(),
   ],
 };

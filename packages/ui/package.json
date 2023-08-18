@@ -3,10 +3,9 @@
   "sideEffects": false,
   "version": "0.0.13",
   "description": "devgrace/ui",
-  "exports": {
-    "require": "./dist/index.js",
-    "import": "./esm/index.js"
-  },
+  "main": "./dist/index.js",
+	"module": "./dist/index.es.js",
+	"types": "./dist/types/index.d.ts",
   "scripts": {
     "test": "jest --coverage",
     "build": "rm -rf dist && rollup -c",
