@@ -12,9 +12,14 @@ export default {
   input: './src/index.ts', // 진입 경로
   output: [
     {
-      file: pkg.main,
+      file: 'dist/cjs.js',
+      sourcemap: true,
+      format: 'cjs',
+    },
+    {
+      file: 'dist/esm.js',
+      sourcemap: true,
       format: 'esm',
-      sourcemap: false,
     },
   ],
   external: ['react', 'react-dom'],

@@ -4,8 +4,8 @@
   "version": "0.0.10",
   "description": "devgrace/ui",
   "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "type": "module",
+  "module": "./dist/esm/index.js",
+  "typings": "./dits/index.d.ts",
   "scripts": {
     "test": "jest --coverage",
     "build": "rm -rf dist && rollup -c",
