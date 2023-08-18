@@ -2,12 +2,13 @@
   "name": "docs",
   "version": "0.0.0",
   "private": true,
+  "homepage": "https://github.com/Team-Grace/devgrace",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
-    "deploy": "docusaurus deploy",
+    "deploy": "gh-pages -d build",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
@@ -28,6 +29,7 @@
     "@tsconfig/docusaurus": "^2.0.0",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
+    "gh-pages": "^6.0.0",
     "typescript": "^5.1.6"
   },
   "browserslist": {
