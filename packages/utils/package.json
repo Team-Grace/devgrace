@@ -5,6 +5,7 @@
   "description": "devgrace/utils",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
+  "type": "module",
   "scripts": {
     "test": "jest --coverage",
     "build": "rm -rf dist && rollup -c",
