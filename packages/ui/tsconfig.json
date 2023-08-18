@@ -1,8 +1,9 @@
 {
   "extends": "../../tsconfig.json",
-  "include": ["src"],
+  "include": ["src", "../react/stories"],
   "compilerOptions": {
     "baseUrl": "./src",
     "outDir": "./dist"
   },
+  "exclude": ["**/*.stories.tsx"]
 }

@@ -2,31 +2,46 @@
   "name": "devgrace",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/**/*"
   ],
   "author": "ssi02014 <ssi02014@naver.com>",
   "scripts": {
+    "storybook": "storybook dev -p 6006",
     "typecheck": "lerna run typecheck",
     "test": "lerna run test",
     "build": "yarn typecheck &&  yarn test && lerna run build",
     "version": "lerna version",
     "publish": "yarn version && lerna publish from-package"
   },
+  "homepage": "https://github.com/Team-Grace/devgrace",
   "devDependencies": {
     "@babel/core": "^7.22.10",
     "@babel/preset-env": "^7.22.10",
     "@babel/preset-react": "^7.22.5",
     "@babel/preset-typescript": "^7.22.5",
+    "@storybook/addon-essentials": "^7.3.1",
+    "@storybook/addon-interactions": "^7.3.1",
+    "@storybook/addon-links": "^7.3.1",
+    "@storybook/addon-onboarding": "^1.0.8",
+    "@storybook/blocks": "^7.3.1",
+    "@storybook/react": "^7.3.1",
+    "@storybook/react-vite": "^7.3.1",
+    "@storybook/testing-library": "^0.2.0",
     "@types/node": "^20.5.0",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "eslint": "^8.47.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
+    "eslint-plugin-storybook": "^0.6.13",
     "lerna": "^7.1.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.3.1",
     "ts-node": "^10.9.1",
     "tslib": "^2.6.1",
-    "typescript": "^5.1.6"
+    "typescript": "^5.1.6",
+    "vite": "^4.4.9"
   },
   "license": "MIT",
   "packageManager": "yarn@3.6.1"

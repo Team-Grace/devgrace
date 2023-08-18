@@ -12,6 +12,7 @@
 
 dist
 esm
+build
 
 *.tsbuildinfo
 *.tgz
@@ -22,3 +23,7 @@ esm
 node_modules
 junit.xml
 *.tossdocs.md
+storybook-static
+
+# testing
+/coverage

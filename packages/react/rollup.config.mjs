@@ -25,12 +25,13 @@ export default {
     }),
     commonjs(),
     babel({
+      exclude: /node_modules/,
       extensions,
       include: ['src/**/*'],
     }),
     typescript({
       tsconfig: './tsconfig.json',
-      exclude: ['**/*.spec.tsx'],
+      exclude: ['**/*.spec.tsx', '**/jest.setup.ts'],
     }),
     terser(),
   ],

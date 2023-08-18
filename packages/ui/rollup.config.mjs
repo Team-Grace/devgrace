@@ -29,7 +29,10 @@ export default {
       extensions,
       include: ['src/**/*'],
     }),
-    typescript({ tsconfig: './tsconfig.json', exclude: ['**/*.spec.tsx'] }),
+    typescript({
+      tsconfig: './tsconfig.json',
+      exclude: ['**/*.spec.tsx', '**/*.stories.tsx', '**/jest.setup.ts'],
+    }),
     terser(),
   ],
 };

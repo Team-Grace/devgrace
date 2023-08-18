@@ -16,7 +16,8 @@
 ## Usage
 
 ### @devgrace/ui <img align="center" src="https://img.shields.io/npm/v/@devgrace/ui.svg" />
-  - A library that provides React UI Components. (Example: `button`, `selects`, `checkbox`) 
+  
+- A library that provides React UI Components. (Example: `button`, `selects`, `checkbox`) 
 
 ```shell
 npm i @devgrace/ui
@@ -27,7 +28,8 @@ yarn add @devgrace/ui
 ```
 
 ### @devgrace/react <img align="center" src="https://img.shields.io/npm/v/@devgrace/react.svg" />
-  - A library that provides useful `components` and `custom hooks` related to React. 
+
+- A library that provides useful `components` and `custom hooks` related to React. 
 
 ```shell
 npm i @devgrace/react
@@ -38,7 +40,8 @@ yarn add @devgrace/react
 ```
 
 ### @devgrace/utils <img align="center" src="https://img.shields.io/npm/v/@devgrace/utils.svg" />
-  - A library that provides useful `utility functions`. 
+
+- A library that provides useful `utility functions`. 
 
 ```shell
 npm i @devgrace/utils
