@@ -13,8 +13,13 @@ export default {
   output: [
     {
       file: pkg.main,
-      format: 'esm',
       sourcemap: false,
+      format: 'cjs',
+    },
+    {
+      file: pkg.module,
+      sourcemap: false,
+      format: 'esm',
     },
   ],
   external: ['react', 'react-dom'],

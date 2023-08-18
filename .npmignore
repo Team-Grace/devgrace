@@ -31,3 +31,7 @@ rollup.config.mjs
 stories
 .storybook
 storybook-static
+
+# test
+coverage
+jest.config.ts

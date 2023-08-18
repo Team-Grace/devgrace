@@ -38,6 +38,6 @@ export default {
       tsconfig: './tsconfig.json',
       exclude: ['**/*.spec.tsx', '**/*.stories.tsx', '**/jest.setup.ts'],
     }),
-    // terser(),
+    terser(),
   ],
 };

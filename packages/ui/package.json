@@ -3,9 +3,12 @@
   "sideEffects": false,
   "version": "0.0.14",
   "description": "devgrace/ui",
-  "main": "./dist/index.js",
-  "module": "./dist/index.es.js",
-  "types": "./dist/types/index.d.ts",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "jest --coverage",
     "build": "rm -rf dist && rollup -c",
