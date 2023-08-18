@@ -1,7 +1,7 @@
 {
   "name": "@devgrace/ui",
   "sideEffects": false,
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "devgrace/ui",
   "exports": {
     "require": "./dist/index.js",
