@@ -26,4 +26,4 @@ junit.xml
 storybook-static
 
 # testing
-/coverage
+coverage

@@ -6,7 +6,7 @@
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "build": "rm -rf dist && rollup -c",
     "typecheck": "tsc --noEmit"
   },
