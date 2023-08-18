@@ -12,13 +12,13 @@ export default {
   input: './src/index.ts', // 진입 경로
   output: [
     {
-      file: 'dist/index.js',
-      sourcemap: true,
+      file: pkg.exports.require,
+      sourcemap: false,
       format: 'cjs',
     },
     {
-      file: 'dist/esm/index.js',
-      sourcemap: true,
+      file: pkg.exports.import,
+      sourcemap: false,
       format: 'esm',
     },
   ],
