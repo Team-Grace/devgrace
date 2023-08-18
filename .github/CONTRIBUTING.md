@@ -12,6 +12,17 @@ If you have any suggestions for improvements to `@devgrace` documentation, featu
 ## Pull Requests
 In addition to raising issues, you can fork `@devgrace` and raise pull requests after working on improvements yourself.
 
+Please see the caveats below 🙏
+- if you are adding a new feature, please open an issue to discuss it in advance.
+- Please `test` and `type check` your Pull Request before creating it. 
+
+```shell
+yarn test
+```
+```shell
+yarn typecheck
+```
+
 <br />
 
 ## Conventional Commits

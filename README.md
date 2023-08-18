@@ -7,7 +7,7 @@
 
 <br />
 
-`@devgrace` is an open source library that provides useful `React UI components`, `React Custom hooks`, and various `utility functions`.
+`@devgrace` is an open source library that provides useful `React UI Components`, `React Custom Hooks`, and various `Utility Functions`.
 
 🙏 <b>We're still working on the `v1.0.0` release.</b>
 
@@ -17,7 +17,7 @@
 
 ### @devgrace/ui <img align="center" src="https://img.shields.io/npm/v/@devgrace/ui.svg" />
   
-- A library that provides React UI Components. (Example: `button`, `selects`, `checkbox`) 
+- A library that provides React UI Components. (Example: `Button`, `Select`, `Checkbox`) 
 
 ```shell
 npm i @devgrace/ui
@@ -53,9 +53,26 @@ yarn add @devgrace/utils
 
 <br />
 
+## Tests
+
+```shell
+yarn test
+```
+- You can run tests with `jest` and `react-testing-library`.
+```shell
+yarn typecheck
+```
+- You can run `type check`.
+```shell
+yarn storybook
+```
+- You can run UI tests with `storybook`.
+
+<br />
+
 ## Contributing
 All contributions are appreciated, and anyone is welcome to contribute to the library. 
-[CONTRIBUTING](./.github/CONTRIBUTING.md)
+[Contributing Guide](./.github/CONTRIBUTING.md)
 
 #### Contributors
 <a href="https://github.com/Team-Grace/devgrace/graphs/contributors">
@@ -76,3 +93,5 @@ All contributions are appreciated, and anyone is welcome to contribute to the li
 
 ## License
 MIT © devgrace. See [LICENSE](./LICENSE) for details.
+
+<br />
