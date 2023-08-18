@@ -94,6 +94,7 @@ All contributions are appreciated, and anyone is welcome to contribute to the li
 - Rollup, Babel
 - Yarn Berry & Workspaces
 - Lerna 4 (for Versioning & Publishing)
+- docusaurus (documentation)
 
 <br />
 
