@@ -8,7 +8,6 @@
   "files": [
     "dist"
   ],
-  "types": "dist/index.d.ts",
   "scripts": {
     "test": "jest --coverage",
     "build": "rm -rf dist && rollup -c",
