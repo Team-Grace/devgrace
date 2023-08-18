@@ -1,4 +1,4 @@
 module.exports = {
   extends: '../../babel.config.js',
-  plugins: ['@emotion/babel-plugin'],
+  presets: ['@emotion/babel-preset-css-prop'],
 };
