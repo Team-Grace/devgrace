@@ -1,11 +1,11 @@
 {
   "name": "@devgrace/ui",
   "sideEffects": false,
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "devgrace/ui",
   "main": "./dist/index.js",
-	"module": "./dist/index.es.js",
-	"types": "./dist/types/index.d.ts",
+  "module": "./dist/index.es.js",
+  "types": "./dist/types/index.d.ts",
   "scripts": {
     "test": "jest --coverage",
     "build": "rm -rf dist && rollup -c",
