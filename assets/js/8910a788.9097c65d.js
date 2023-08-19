@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[649],{2834:e=>{e.exports=JSON.parse('{"title":"@devgrace/react","slug":"/category/devgracereact","permalink":"/devgrace/docs/category/devgracereact","navigation":{"previous":{"title":"TEST2","permalink":"/devgrace/docs/ui/test"},"next":{"title":"TEST1","permalink":"/devgrace/docs/react/test"}}}')}}]);

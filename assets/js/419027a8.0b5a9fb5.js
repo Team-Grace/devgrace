@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[837],{708:e=>{e.exports=JSON.parse('{"title":"@devgrace/utils","slug":"/category/devgraceutils","permalink":"/devgrace/docs/category/devgraceutils","navigation":{"previous":{"title":"TEST1","permalink":"/devgrace/docs/react/test"},"next":{"title":"TEST3","permalink":"/devgrace/docs/utils/test"}}}')}}]);
