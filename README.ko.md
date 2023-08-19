@@ -5,8 +5,6 @@
   <img align="center" src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FTeam-Grace%2Fdevgrace&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/>
 </p>
 
-##### [🇰🇷 Korean README.md](./README.ko.md)
-
 <br />
 
 `@devgrace`는 유용한 `리액트 UI 컴포넌트`, `리액트 커스텀 훅` 및 다양한 `유틸리티 함수`를 제공하는 라이브러리 입니다.
