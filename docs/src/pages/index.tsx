@@ -41,7 +41,7 @@ export default function Home(): JSX.Element {
           content="@devgrace is an open source library that provides useful React UI Components, React Custom Hooks, and various Utility Functions"
         />
         <meta property="og:url" content="https://team-grace.github.io/devgrace/" />
-        <meta property="og:image" content="https://github.com/Team-Grace/devgrace/assets/64779472/d7328fb5-c2f6-46c7-a45c-766cc40f40b8" />
+        <meta property="og:image" content="https://github.com/Team-Grace/devgrace/assets/64779472/dcf0fed7-0411-45b4-adbf-363bdf38a5d2" />
       </Head>
       
       <main></main>
