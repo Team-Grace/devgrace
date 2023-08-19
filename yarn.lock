@@ -2343,7 +2343,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@docusaurus/theme-classic@npm:2.4.1":
+"@docusaurus/theme-classic@npm:2.4.1, @docusaurus/theme-classic@npm:^2.4.1":
   version: 2.4.1
   resolution: "@docusaurus/theme-classic@npm:2.4.1"
   dependencies:
@@ -2443,7 +2443,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@docusaurus/types@npm:2.4.1":
+"@docusaurus/types@npm:2.4.1, @docusaurus/types@npm:^2.4.1":
   version: 2.4.1
   resolution: "@docusaurus/types@npm:2.4.1"
   dependencies:
@@ -6335,6 +6335,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node@npm:^20.5.1":
+  version: 20.5.1
+  resolution: "@types/node@npm:20.5.1"
+  checksum: 3dbe611cd67afa987102c8558ee70f848949c5dcfee5f60abc073e55c0d7b048e391bf06bb1e0dc052cb7210ca97136ac496cbaf6e89123c989de6bd125fde82
+  languageName: node
+  linkType: hard
+
 "@types/normalize-package-data@npm:^2.4.0":
   version: 2.4.1
   resolution: "@types/normalize-package-data@npm:2.4.1"
@@ -9724,8 +9731,11 @@ __metadata:
     "@docusaurus/core": 2.4.1
     "@docusaurus/module-type-aliases": ^2.4.1
     "@docusaurus/preset-classic": 2.4.1
+    "@docusaurus/theme-classic": ^2.4.1
+    "@docusaurus/types": ^2.4.1
     "@mdx-js/react": ^1.6.22
     "@tsconfig/docusaurus": ^2.0.0
+    "@types/node": ^20.5.1
     "@types/react": ^18.2.20
     "@types/react-dom": ^18.2.7
     clsx: ^1.2.1
