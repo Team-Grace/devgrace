@@ -97,7 +97,7 @@ const config = {
             items: [
               {
                 label: 'Getting Started',
-                to: '/docs/category/devgracereact',
+                to: '/docs/introduce/',
               },
             ],
           },
