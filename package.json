@@ -12,7 +12,9 @@
     "test": "lerna run test",
     "build": "yarn typecheck &&  yarn test && lerna run build",
     "version": "lerna version",
-    "publish": "yarn version && lerna publish from-package"
+    "publish": "yarn version && lerna publish from-package",
+    "docs:build": "lerna run docs:build",
+    "docs:deploy": "lerna run docs:deploy"
   },
   "homepage": "https://github.com/Team-Grace/devgrace",
   "devDependencies": {

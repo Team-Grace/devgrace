@@ -6,6 +6,7 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
+    "start:ko": "yarn start --locale ko",
     "docs:build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "docs:deploy": "gh-pages -d build",
