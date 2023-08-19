@@ -14,7 +14,7 @@
     "version": "lerna version",
     "publish": "yarn version && lerna publish from-package",
     "docs:build": "lerna run docs:build",
-    "docs:deploy": "lerna run docs:deploy"
+    "docs:publish": "lerna run docs:publish"
   },
   "homepage": "https://github.com/Team-Grace/devgrace",
   "devDependencies": {
