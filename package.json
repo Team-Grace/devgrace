@@ -13,6 +13,7 @@
     "build": "yarn typecheck &&  yarn test && lerna run build",
     "version": "lerna version",
     "publish": "yarn version && lerna publish from-package",
+    "docs:prepare": "lerna run prepare:docs",
     "docs:build": "lerna run docs:build",
     "docs:publish": "lerna run docs:publish"
   },

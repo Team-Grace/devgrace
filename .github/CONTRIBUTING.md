@@ -25,7 +25,7 @@ yarn typecheck
 
 <br />
 
-If you would like to contribute to the documentation page, please add the files `en.md` to the `docs/docs` folder and `ko.md` to the `docs/i18n/docusaurus-plugin-content-docs/current` folder.
+If you would like to contribute to the official documentation, please create a `.md` file in the `docs/prepareDocs` folder for `en` and `ko`.
 
 ![스크린샷 2023-08-20 오전 1 30 55](https://github.com/Team-Grace/devgrace/assets/64779472/b5e772c9-89e1-4e31-8647-ffb1dfc26588)
 
