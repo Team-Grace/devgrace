@@ -9,6 +9,7 @@ const config = {
   title: '@devgrace',
   tagline: '',
   favicon: 'img/favicon.ico',
+  staticDirectories: ['public', 'static'],
 
   // Set the production url of your site here
   url: 'https://your-docusaurus-test-site.com',
