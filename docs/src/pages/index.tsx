@@ -31,7 +31,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      description="Provides React UI Components, React Custom Hooks, and Utility functions.">
       <HomepageHeader />
       
       <Head>
@@ -41,7 +41,7 @@ export default function Home(): JSX.Element {
           content="@devgrace is an open source library that provides useful React UI Components, React Custom Hooks, and various Utility Functions"
         />
         <meta property="og:url" content="https://team-grace.github.io/devgrace/" />
-        <meta property="og:image" content="https://github.com/Team-Grace/devgrace/assets/64779472/276a5a68-160f-4bf4-8df6-d2d8d663d9b0" />
+        <meta property="og:image" content="https://github.com/Team-Grace/devgrace/assets/64779472/d7328fb5-c2f6-46c7-a45c-766cc40f40b8" />
       </Head>
       
       <main></main>
