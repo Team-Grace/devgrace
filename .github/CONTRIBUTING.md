@@ -14,7 +14,7 @@ In addition to raising issues, you can fork `@devgrace` and raise pull requests 
 
 Please see the caveats below 🙏
 - if you are adding a new feature, please open an issue to discuss it in advance.
-- Please `test` and `type check` your Pull Request before creating it. 
+- Please `test` and `type check` your Pull Request before creating it.
 
 ```shell
 yarn test
@@ -22,6 +22,13 @@ yarn test
 ```shell
 yarn typecheck
 ```
+
+<br />
+
+If you would like to contribute to the documentation page, please add the files `en.md` to the `docs/docs` folder and `ko.md` to the `docs/i18n/docusaurus-plugin-content-docs/current` folder.
+
+![스크린샷 2023-08-20 오전 1 30 55](https://github.com/Team-Grace/devgrace/assets/64779472/b5e772c9-89e1-4e31-8647-ffb1dfc26588)
+
 
 <br />
 
