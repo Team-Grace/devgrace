@@ -33,7 +33,7 @@ describe('useTimeout', () => {
     expect(mockFn).toBeCalled();
   });
 
-  it('', () => {
+  it('callback function always guarantees the latest state', () => {
     render(<TestComponent />);
 
     expect(screen.getByText('0')).toBeInTheDocument();
