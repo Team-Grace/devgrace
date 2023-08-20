@@ -1,7 +1,7 @@
 {
   "name": "@devgrace/utils",
   "sideEffects": false,
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "devgrace/utils",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
