@@ -1,4 +1,4 @@
-import { isServer } from './isServer';
+import { isServer } from '../isServer';
 
 export const isClient = () => {
   return !isServer();
