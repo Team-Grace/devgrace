@@ -4,7 +4,7 @@ on:
     branches:
       - master
 jobs:
-  npm-publish:
+  pull-request-test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🔔
@@ -14,7 +14,9 @@ jobs:
         with:
           node-version: 18
           registry-url: 'https://registry.npmjs.org'
-      - name: typecheck 🔨
+      - name: install 🔨
+        run: yarn
+      - name: typecheck 🚀
         run: yarn typecheck
       - name: testing 🚀
         run: yarn test
