@@ -6,7 +6,7 @@ If it returns `true`, it is a server environment.
 
 <br />
 
-## Install
+## Interface
 ```tsx
 const isServer: () => boolean
 ```
