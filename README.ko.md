@@ -15,7 +15,7 @@
 
 ## Documentation
 `@devgrace`의 공식 문서는 아래 웹사이트에서 확인하실 수 있습니다
-- [https://team-grace.github.io/devgrace](https://team-grace.github.io/devgrace/)
+- <a href="https://team-grace.github.io/devgrace/" target="_blank">https://team-grace.github.io/devgrace</a>
 
 <br />
 

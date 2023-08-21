@@ -17,7 +17,7 @@
 
 ## Documentation
 The official documentation for `@devgrace` can be found on the website below.
-- [https://team-grace.github.io/devgrace](https://team-grace.github.io/devgrace/)
+- <a href="https://team-grace.github.io/devgrace/" target="_blank">https://team-grace.github.io/devgrace</a>
 
 <br />
 
