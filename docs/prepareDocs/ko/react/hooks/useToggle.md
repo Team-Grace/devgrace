@@ -1,6 +1,6 @@
 # useToggle
 
-boolean 타입의 state를 Toggle로 쉽게 사용할 수 있는 hook 입니다.
+boolean 타입의 state를 Toggle로 쉽게 사용할 수 있는 커스텀 훅 입니다.
 
 ## Example
 

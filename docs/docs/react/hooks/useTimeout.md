@@ -10,7 +10,7 @@ import { useTimeout } from '@devgrace/react'
 const Example = () => {
   const [number, setNumber] = useState(0);
 
- useTimeout(() => {
+  useTimeout(() => {
     setNumber(number + 1)
   }, 1000);
 

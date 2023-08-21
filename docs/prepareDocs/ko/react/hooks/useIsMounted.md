@@ -1,0 +1,16 @@
+# useIsMounted
+컴포넌트가 브라우저에 mount 되었는지 여부를 확인 할 수 있는 hook 입니다.
+
+`SSR` 환경에서 실제 컴포넌트가 브라우저에 mount 되었다는 것을 보장하기 위해 사용할 수 있습니다. (Feat. Hydration Error)
+
+## Example
+
+```tsx
+import { useIsMounted } from '@devgrace/react'
+
+const Example = () => {
+  const isMounted = useIsMounted();
+
+  return <div>{isMounted ? 'done' : 'in progress'}</div>;
+};
+```
