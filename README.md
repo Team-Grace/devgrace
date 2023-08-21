@@ -23,18 +23,6 @@ The official documentation for `@devgrace` can be found on the website below.
 
 ## Usage
 
-### @devgrace/ui <img align="center" src="https://img.shields.io/npm/v/@devgrace/ui.svg" />
-  
-- A library that provides `React UI Components`. (Example: `Button`, `Select`, `Checkbox`) 
-
-```shell
-npm i @devgrace/ui
-```
-
-```shell
-yarn add @devgrace/ui
-```
-
 ### @devgrace/react <img align="center" src="https://img.shields.io/npm/v/@devgrace/react.svg" />
 
 - A library that provides useful `Components` and `Custom Hooks` related to React. 
@@ -57,6 +45,17 @@ npm i @devgrace/utils
 
 ```shell
 yarn add @devgrace/utils
+```
+### @devgrace/ui <img align="center" src="https://img.shields.io/npm/v/@devgrace/ui.svg" />
+  
+- A library that provides `React UI Components`. (Example: `Button`, `Select`, `Checkbox`) 
+
+```shell
+npm i @devgrace/ui
+```
+
+```shell
+yarn add @devgrace/ui
 ```
 
 <br />
