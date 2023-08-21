@@ -3,6 +3,15 @@ A custom hook to check whether a Component is mounted in the browser.
 
 It can also be used in `SSR` environments to guarantee that the actual component is mounted in the browser. (Feat. Hydration Error)
 
+<br />
+
+## Interface
+```tsx
+const useIsMounted: () => boolean
+```
+
+<br />
+
 ## Example
 
 ```tsx

@@ -9,7 +9,7 @@
     "dist"
   ],
   "scripts": {
-    "test": "jest --coverage",
+    "test": "jest",
     "build": "rm -rf dist && rollup -c",
     "typecheck": "tsc --noEmit"
   },

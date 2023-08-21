@@ -2,6 +2,15 @@
 
 A custom hook to conveniently use `window.setTimeout`.
 
+<br />
+
+## Interface
+```tsx
+const useTimeout: (callback: () => void, delay?: number) => void
+```
+
+<br />
+
 ## Example
 
 ```tsx

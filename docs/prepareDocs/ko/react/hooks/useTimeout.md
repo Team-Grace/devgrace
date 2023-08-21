@@ -2,6 +2,15 @@
 
 `window.setTimeout`을 편리하게 사용할 수 있는 커스텀 훅 입니다. 
 
+<br />
+
+## Interface
+```tsx
+const useTimeout: (callback: () => void, delay?: number) => void
+```
+
+<br />
+
 ## Example
 
 ```tsx
