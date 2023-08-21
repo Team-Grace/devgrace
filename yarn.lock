@@ -1904,7 +1904,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@devgrace/ui@workspace:packages/ui":
+"@devgrace/ui@workspace:*, @devgrace/ui@workspace:packages/ui":
   version: 0.0.0-use.local
   resolution: "@devgrace/ui@workspace:packages/ui"
   dependencies:
@@ -9728,6 +9728,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "docs@workspace:docs"
   dependencies:
+    "@devgrace/ui": "workspace:*"
     "@docusaurus/core": 2.4.1
     "@docusaurus/module-type-aliases": ^2.4.1
     "@docusaurus/preset-classic": 2.4.1
