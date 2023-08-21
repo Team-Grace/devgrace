@@ -10,8 +10,6 @@
 const useIsMounted: () => boolean
 ```
 
-<br />
-
 ## Example
 
 ```tsx

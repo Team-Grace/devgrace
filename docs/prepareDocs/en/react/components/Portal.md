@@ -14,16 +14,12 @@ The Portal Component is ideal for use with features like `Modal`, `Dialog`, and 
 
 ## Interface
 ```tsx
-function Portal({
-  children,
-  containerRef,
-}: {
+const Portal: ({ children, className, containerRef }: {
   children: React.ReactNode;
-  containerRef?: React.RefObject<HTMLElement | null>;
-}): JSX.Element;
+  className?: string;
+  containerRef?: React.RefObject<HTMLElement>;
+}) => JSX.Element
 ```
-
-<br />
 
 ## Default Example
 
@@ -38,8 +34,6 @@ const Example = () => {
   );
 };
 ```
-
-<br />
 
 ## Container Example
 
@@ -60,8 +54,6 @@ const Example = () => {
   );
 };
 ```
-
-<br />
 
 ## Nested Example
 

@@ -9,8 +9,6 @@
 const useTimeout: (callback: () => void, delay?: number) => void
 ```
 
-<br />
-
 ## Example
 
 ```tsx

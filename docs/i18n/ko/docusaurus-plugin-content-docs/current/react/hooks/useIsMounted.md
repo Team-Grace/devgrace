@@ -3,6 +3,13 @@
 
 `SSR` 환경에서 실제 컴포넌트가 브라우저에 mount 되었다는 것을 보장하기 위해 사용할 수 있습니다. (Feat. Hydration Error)
 
+<br />
+
+## Interface
+```tsx
+const useIsMounted: () => boolean
+```
+
 ## Example
 
 ```tsx

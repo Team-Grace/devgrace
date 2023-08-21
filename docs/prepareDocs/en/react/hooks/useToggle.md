@@ -9,8 +9,6 @@ A hook to easily toggle a boolean type of state.
 const useToggle: (defaultValue?: boolean) => readonly [boolean, () => void]
 ```
 
-<br />
-
 ## Example
 
 ```tsx

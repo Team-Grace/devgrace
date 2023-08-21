@@ -10,8 +10,6 @@ It can also be used in `SSR` environments to guarantee that the actual component
 const useIsMounted: () => boolean
 ```
 
-<br />
-
 ## Example
 
 ```tsx

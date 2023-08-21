@@ -4,6 +4,14 @@
 
 `true`를 반환 할 경우 클라이언트 환경입니다.
 
+<br />
+
+## Interface
+```tsx
+const isServer: () => boolean
+```
+
+## Example
 ```ts
 import { isServer } from '@devgrace/utils'
 

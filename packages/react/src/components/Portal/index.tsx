@@ -57,7 +57,7 @@ function RenderPortal({ children, className = PORTAL_DEFAULT_CLASS, containerRef
   );
 }
 
-export function Portal({ children, ...restProps }: PortalProps) {
+export const Portal = ({ children, ...restProps }: PortalProps) => {
   const isMounted = useIsMounted();
 
   // With this code, it is possible to solve the "window is not defined" and "Hydration Error" that can occur in SSR.
