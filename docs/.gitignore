@@ -21,4 +21,4 @@ yarn-error.log*
 .yarn
 
 docs
-docusaurus-plugin-content-docs/current
+current
