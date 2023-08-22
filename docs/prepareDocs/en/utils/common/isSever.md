@@ -13,7 +13,7 @@ const isServer: () => boolean
 
 ## Example
 ```ts
-import { isServer } from '@devgrace/utils'
+import { isServer } from '@devgrace/utils';
 
 if (isServer()) {
   /* server(Node.js) environment */

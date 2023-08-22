@@ -13,7 +13,7 @@ const useIsMounted: () => boolean
 ## Example
 
 ```tsx
-import { useIsMounted } from '@devgrace/react'
+import { useIsMounted } from '@devgrace/react';
 
 const Example = () => {
   const isMounted = useIsMounted();

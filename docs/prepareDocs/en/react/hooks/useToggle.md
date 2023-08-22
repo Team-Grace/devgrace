@@ -12,7 +12,7 @@ const useToggle: (defaultValue?: boolean) => readonly [boolean, () => void]
 ## Example
 
 ```tsx
-import { useToggle } from '@devgrace/react'
+import { useToggle } from '@devgrace/react';
 
 const App = () => {
   const [bool, toggle] = useToggle(false);

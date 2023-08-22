@@ -13,7 +13,7 @@ const isClient: () => boolean
 
 ## Example
 ```ts
-import { isClient } from '@devgrace/utils'
+import { isClient } from '@devgrace/utils';
 
 if (isClient()) {
   /* client environment */
