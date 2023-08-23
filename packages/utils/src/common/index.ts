@@ -1,2 +1,2 @@
-export * from './isClient';
-export * from './isServer';
+export * from './getUniqId';
+export * from './getUniqTime';
