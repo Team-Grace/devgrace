@@ -6,6 +6,7 @@
 
 ## Interface
 ```tsx
+// type DispatchWithoutAction = () => void;
 const useForceUpdate: () => React.DispatchWithoutAction
 ```
 

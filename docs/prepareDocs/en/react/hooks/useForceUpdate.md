@@ -6,6 +6,7 @@ Executing the returned function will force the component to `re-render`.
 
 ## Interface
 ```tsx
+// type DispatchWithoutAction = () => void;
 const useForceUpdate: () => React.DispatchWithoutAction
 ```
 
