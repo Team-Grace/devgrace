@@ -105,6 +105,15 @@ export default function Home(): JSX.Element {
           </p>
         </div>
       </main>
+      <div className={styles.contributors}>
+        <h2>Thank you to all contributors! 💗</h2>
+        <p>
+          @devgrace is continuously maintained and we welcome all contributions.
+        </p>
+        <div>
+          <img src="https://contrib.rocks/image?repo=Team-Grace/devgrace" />
+        </div>
+      </div>
     </Layout>
   );
 }

@@ -3,6 +3,7 @@
  * and scoped locally.
  */
 
+
  .banner {
   padding: 5rem 0 5rem 0;
   text-align: center;
@@ -46,14 +47,8 @@ main {
 .mainContentWrapper {
   width: 1000px;
   padding: 40px 20px;
+  margin-top: 30px;
 }
-
-.mainContentWrapper span {
-  font-weight: 700;
-  font-size: 18px;
-  font-size: 21px;
-}
-
 
 .mainContentHead {
   margin-bottom: 10px;
@@ -61,8 +56,9 @@ main {
   align-items: center;
 }
 
-.mainContentHead > img {
+.mainContentHead > a {
   margin-left: 6px;
+  width: fit-content;
 }
 
 .mainContentParagraph {
@@ -77,4 +73,40 @@ main {
   max-width: 600px;
   color: rgb(136, 136, 136);
   padding: 0 20px;
+}
+
+.contributors {
+  width: 100%;
+  padding: 6rem 20px 6rem 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #ededed;
+  background-color: #fbfbfb;
+}
+
+.contributors h2 {
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+.contributors div {
+  max-width: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contributors a {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.contributors p {
+  font-size: 18px;
+  max-width: 600px;
+  color: rgb(136, 136, 136);
+  padding: 0 20px;
+  text-align: center;
 }
