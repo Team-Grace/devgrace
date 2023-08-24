@@ -45,8 +45,8 @@ const config = {
     [
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
-      
-      ({
+
+      {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
@@ -62,13 +62,13 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-      }),
+      },
     ],
   ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
+    {
       // Replace with your project's social card
       navbar: {
         title: '@devgrace',
@@ -111,6 +111,23 @@ const config = {
               },
             ],
           },
+          {
+            title: 'NPM',
+            items: [
+              {
+                label: '@devgrace/react',
+                href: 'https://www.npmjs.com/package/@devgrace/react',
+              },
+              {
+                label: '@devgrace/utils',
+                href: 'https://www.npmjs.com/package/@devgrace/utils',
+              },
+              {
+                label: '@devgrace/ui',
+                href: 'https://www.npmjs.com/package/@devgrace/ui',
+              },
+            ],
+          },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} devgrace, Inc. Built with Docusaurus.`,
       },
@@ -118,7 +135,7 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
-    }),
+    },
 };
 
 module.exports = config;

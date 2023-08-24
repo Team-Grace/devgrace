@@ -66,7 +66,11 @@ export default function Home(): JSX.Element {
         <div className={styles.mainContentWrapper}>
           <h2 className={styles.mainContentHead}>
             @devgrace/react
-            <img src="https://img.shields.io/npm/v/@devgrace/react.svg" />
+            <a
+              href="https://www.npmjs.com/package/@devgrace/react"
+              target="_blank">
+              <img src="https://img.shields.io/npm/v/@devgrace/react.svg" />
+            </a>
           </h2>
           <p className={styles.mainContentParagraph}>
             React와 관련된 유용한 컴포넌트와 커스텀 훅을 제공하는
@@ -74,7 +78,11 @@ export default function Home(): JSX.Element {
           </p>
           <h2 className={styles.mainContentHead}>
             @devgrace/utils
-            <img src="https://img.shields.io/npm/v/@devgrace/utils.svg" />
+            <a
+              href="https://www.npmjs.com/package/@devgrace/utils"
+              target="_blank">
+              <img src="https://img.shields.io/npm/v/@devgrace/utils.svg" />
+            </a>
           </h2>
 
           <p className={styles.mainContentParagraph}>
@@ -83,7 +91,11 @@ export default function Home(): JSX.Element {
           </p>
           <h2 className={styles.mainContentHead}>
             @devgrace/ui
-            <img src="https://img.shields.io/npm/v/@devgrace/ui.svg" />
+            <a
+              href="https://www.npmjs.com/package/@devgrace/ui"
+              target="_blank">
+              <img src="https://img.shields.io/npm/v/@devgrace/ui.svg" />
+            </a>
           </h2>
 
           <p className={styles.mainContentParagraph}>
