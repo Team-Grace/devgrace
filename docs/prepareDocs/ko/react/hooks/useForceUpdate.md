@@ -1,0 +1,33 @@
+# useForceUpdate
+
+반환된 함수를 실행하면 강제로 컴포넌트가 `리렌더링` 됩니다.
+
+<br />
+
+## Interface
+```tsx
+const useForceUpdate: () => React.DispatchWithoutAction
+```
+
+## Example
+
+```tsx
+import { useForceUpdate } from '@devgrace/react';
+
+const Example = () => {
+  const forceUpdate = useForceUpdate();
+
+  const handleForceUpdate = useCallback(() => {
+    forceUpdate();
+  }, [forceUpdate]);
+
+  return (
+    <div>
+      <button onClick={handleForceUpdate}>Button</button>;
+    </div>
+  );
+};
+```
+
+## Note
+https://github.com/streamich/react-use/pull/837
