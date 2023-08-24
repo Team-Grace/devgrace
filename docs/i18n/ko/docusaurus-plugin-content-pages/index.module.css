@@ -3,11 +3,20 @@
  * and scoped locally.
  */
 
-.heroBanner {
-  padding: 4rem 0;
+ .banner {
+  padding: 5rem 0 5rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
+  border-bottom: 1px solid #ededed;
+}
+
+.bannerContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 @media screen and (max-width: 996px) {
@@ -20,4 +29,52 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 20px;
+}
+
+.buttons a + a {
+  margin-left: 10px;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainContentWrapper {
+  width: 1000px;
+  padding: 40px 20px;
+}
+
+.mainContentWrapper span {
+  font-weight: 700;
+  font-size: 18px;
+  font-size: 21px;
+}
+
+
+.mainContentHead {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.mainContentHead > img {
+  margin-left: 6px;
+}
+
+.mainContentParagraph {
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
+
+.mainContentTitle {
+  margin-left: 0px;
+  margin-bottom: 40px;
+  font-size: 21px;
+  max-width: 600px;
+  color: rgb(136, 136, 136);
+  padding: 0 20px;
 }
