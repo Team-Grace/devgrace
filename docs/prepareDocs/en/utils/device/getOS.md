@@ -1,0 +1,23 @@
+# getOS
+
+Function that returns the OS value based on the `userAgent`.
+
+- server: Server Environment
+- ios: iOS Environment
+- android: Android Environment
+- otherMobile: Other Mobile Environment(ex: BlackBerry)
+- web: Web Environment
+
+<br />
+
+## Interface
+```tsx
+const getOS: () => "server" | "ios" | "android" | "otherMobile" | "web"
+```
+
+## Example
+```ts
+import { getOS } from '@devgrace/utils';
+
+const os = getOS();
+```
