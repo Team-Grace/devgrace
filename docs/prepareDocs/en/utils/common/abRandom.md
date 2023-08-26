@@ -1,6 +1,7 @@
 # abRandom
 
 Function that returns `0` or `1` with 50% probability.
+
 This can be utilized when doing an `AB testing`.
 
 
