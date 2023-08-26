@@ -13,8 +13,14 @@ export const AB = ({ children }: ABProps) => {
   let aCount = 0;
   let bCount = 0;
 
+  if (childrenList.length !== 2) {
+    return null;
+  }
+
   for (const child of childrenList) {
-    if (![AB.CaseA, AB.CaseB].includes(child.type)) {
+    const isValidComponentType = [AB.CaseA, AB.CaseB].includes(child.type);
+
+    if (!isValidComponentType) {
       return null;
     }
 
@@ -25,14 +31,9 @@ export const AB = ({ children }: ABProps) => {
     }
   }
 
-  if (childrenList.length !== 2) {
-    return null;
-  }
-
   if (aCount >= OVER_COUNT || bCount >= OVER_COUNT) {
     return null;
   }
-
   return ab ? childrenList[0] : childrenList[1];
 };
 
