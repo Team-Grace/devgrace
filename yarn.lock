@@ -1873,11 +1873,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@devgrace/react@workspace:packages/react":
+"@devgrace/react@workspace:*, @devgrace/react@workspace:packages/react":
   version: 0.0.0-use.local
   resolution: "@devgrace/react@workspace:packages/react"
   dependencies:
     "@babel/core": ^7.22.10
+    "@devgrace/utils": "workspace:*"
     "@rollup/plugin-babel": ^6.0.3
     "@rollup/plugin-commonjs": ^25.0.4
     "@rollup/plugin-node-resolve": ^15.1.0
@@ -1942,7 +1943,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@devgrace/utils@workspace:packages/utils":
+"@devgrace/utils@workspace:*, @devgrace/utils@workspace:packages/utils":
   version: 0.0.0-use.local
   resolution: "@devgrace/utils@workspace:packages/utils"
   dependencies:
@@ -9740,6 +9741,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "docs@workspace:docs"
   dependencies:
+    "@devgrace/react": "workspace:*"
     "@devgrace/ui": "workspace:*"
     "@docusaurus/core": 2.4.1
     "@docusaurus/module-type-aliases": ^2.4.1

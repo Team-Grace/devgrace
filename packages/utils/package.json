@@ -33,5 +33,14 @@
     "ts-jest": "^29.1.1",
     "typescript": "^5.1.6"
   },
+  "keywords": [
+    "react",
+    "next",
+    "utils",
+    "component",
+    "ui",
+    "hooks",
+    "custom hooks"
+  ],
   "gitHead": "7722785374b897572934e335817ec297ad45a943"
 }

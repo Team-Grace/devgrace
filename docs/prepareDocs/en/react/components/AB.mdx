@@ -1,0 +1,50 @@
+import { AB } from '@devgrace/react';
+
+# AB
+Component that can be used when `AB testing`.
+
+<br />
+
+## Interface
+```tsx
+const AB: {
+  ({ children }: { children: React.ReactNode }): JSX.Element | null;
+  CaseA({ children }: { children: React.ReactNode }): JSX.Element;
+  CaseB({ children }: { children: React.ReactNode }): JSX.Element;
+}
+```
+
+## Example
+
+```tsx
+import { AB } from '@devgrace/react';
+
+const { CaseA, CaseB } = AB;
+
+const Example = () => {
+  return (
+    <AB>
+      <CaseA>
+        <div>A</div>
+      </CaseA>
+      <CaseB>
+        <div>B</div>
+      </CaseB>
+    </AB>
+  );
+}; 
+```
+
+## Output
+
+<div>
+  <p>Refreshing the page will change the value.</p>
+  <AB>
+    <AB.CaseA>
+      <div style={{ fontSize: '2rem'}}>A</div>
+    </AB.CaseA>
+    <AB.CaseB>
+      <div style={{ fontSize: '2rem'}}>B</div>
+    </AB.CaseB>
+  </AB>
+</div>

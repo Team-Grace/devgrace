@@ -47,5 +47,17 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "dependencies": {
+    "@devgrace/utils": "workspace:*"
+  },
+  "keywords": [
+    "react",
+    "next",
+    "utils",
+    "component",
+    "ui",
+    "hooks",
+    "custom hooks"
+  ]
 }
