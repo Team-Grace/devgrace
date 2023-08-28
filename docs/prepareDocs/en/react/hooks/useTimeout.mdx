@@ -2,11 +2,13 @@
 
 A custom hook to conveniently use `window.setTimeout`.
 
+You can stop the timer by putting `null` as the value of `delay`.
+
 <br />
 
 ## Interface
 ```tsx
-const useTimeout: (callback: () => void, delay?: number) => void
+const useTimeout: (callback: () => void, delay: number | null) => void
 ```
 
 ## Example
