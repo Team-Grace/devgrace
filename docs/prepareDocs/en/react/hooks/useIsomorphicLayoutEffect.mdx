@@ -2,6 +2,8 @@
 
 The `useIsomorphicLayoutEffect` provides a hook to ensure that it runs synchronously even in server-side rendering environments.
 
+Returns `useLayoutEffect` in the `client environment` and `useEffect` in the `server environment`.
+
 <br />
 
 ## Example
@@ -12,7 +14,7 @@ import { useIsomorphicLayoutEffect } from '@devgrace/react';
 const Example = () => {
   useIsomorphicLayoutEffect(() => {
     console.log(
-      "I'm `useLayoutEffect` OR `useEffect`.",
+      "I'm `useLayoutEffect` in the client environment, `useEffect` in the server environment.",
     )
   }, []);
 };
