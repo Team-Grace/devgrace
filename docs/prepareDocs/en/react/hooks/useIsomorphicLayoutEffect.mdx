@@ -8,7 +8,10 @@ Use `useLayoutEffect` in the client environment and `useEffect` in the server en
 
 ## Interface
 ```tsx
-const useIsomorphicLayoutEffect: (effect: React.EffectCallback, deps?: React.DependencyList | undefined) => void;
+const useIsomorphicLayoutEffect: (
+  effect: React.EffectCallback, 
+  deps?: React.DependencyList | undefined
+) => void;
 ```
 
 ## Example
@@ -19,7 +22,9 @@ import { useIsomorphicLayoutEffect } from '@devgrace/react';
 const Example = () => {
   useIsomorphicLayoutEffect(() => {
     console.log(
-      "I'm `useLayoutEffect` in the client environment, `useEffect` in the server environment.",
+      "This is useLayoutEffect in the client environment and useEffect in the server environment.",
     )
   }, []);
+
+  return <div>{/* ... */}</div>;
 };
