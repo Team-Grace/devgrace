@@ -1,4 +1,4 @@
-import { isClient } from './../../../../utils/src/device/isClient/index';
+import { isClient } from '@devgrace/utils';
 import { useEffect, useLayoutEffect } from 'react';
 
 export const useIsomorphicLayoutEffect = isClient()
