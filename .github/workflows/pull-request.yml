@@ -16,6 +16,8 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - name: Link 🔨
         run: yarn
+      - name: build 🔨
+        run: lerna run build
       - name: typecheck 🚀
         run: yarn typecheck
       - name: testing 🚀

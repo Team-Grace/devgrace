@@ -10,7 +10,7 @@
     "storybook": "storybook dev -p 6006",
     "typecheck": "lerna run typecheck",
     "test": "lerna run test",
-    "build": "yarn typecheck &&  yarn test && lerna run build",
+    "build": "lerna run build && yarn typecheck && yarn test",
     "version": "lerna version",
     "publish": "yarn version && lerna publish from-package",
     "docs:prepare": "lerna run prepare:docs",
