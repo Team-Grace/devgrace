@@ -1,5 +1,7 @@
+import { extractNumber } from '../extractNumber';
+
 export const formatPhoneNumber = (value: string) => {
-  const cleanedValue = value.replace(/\D/g, '');
+  const cleanedValue = extractNumber(value);
   const isSeoul = cleanedValue.startsWith('02');
 
   if (cleanedValue.length === 8) {
