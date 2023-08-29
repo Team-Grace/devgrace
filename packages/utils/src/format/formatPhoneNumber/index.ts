@@ -1,5 +1,14 @@
 export const formatPhoneNumber = (value: string) => {
-  return value
-    .replace(/\D/g, '')
-    .replace(/^(\d{2,3})(\d{3,4})(\d{4})$/, '$1-$2-$3');
+  const cleanedValue = value.replace(/\D/g, '');
+  const isSeoul = cleanedValue.startsWith('02');
+
+  if (cleanedValue.length === 8) {
+    return cleanedValue.replace(/(\d{4})(\d{4})/, '$1-$2');
+  }
+
+  if (isSeoul && (cleanedValue.length === 9 || cleanedValue.length === 10)) {
+    return cleanedValue.replace(/(\d{2})(\d{3,4})(\d{4})/, '$1-$2-$3');
+  }
+
+  return cleanedValue.replace(/(\d{3})(\d{3,4})(\d{4})/, '$1-$2-$3');
 };
