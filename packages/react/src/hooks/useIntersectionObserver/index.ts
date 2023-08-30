@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef } from 'react';
 
-interface UseIntersectionObserverProps {
+export interface UseIntersectionObserverProps {
   action: () => void;
   calledOnce?: boolean;
   threshold?: number | number[];

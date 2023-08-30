@@ -1,10 +1,10 @@
+import { render, screen, waitFor } from '@testing-library/react';
+import InView from '.';
 import {
   mockIntersecting,
   mockIntersectionObserverCleanup,
   mockIntersectionObserverSetup,
 } from '../../utils/test/mockIntersectionObserver';
-import { useIntersectionObserver } from '.';
-import { render, waitFor, screen } from '@testing-library/react';
 
 beforeEach(() => {
   mockIntersectionObserverSetup();
@@ -21,24 +21,18 @@ const TestComponent = ({
   action1: () => void;
   action2: () => void;
 }) => {
-  const boxRef1 = useIntersectionObserver<HTMLDivElement>({
-    action: action1,
-    calledOnce: true,
-  });
-  const boxRef2 = useIntersectionObserver<HTMLDivElement>({
-    action: action2,
-  });
-
   return (
     <div>
-      <div ref={boxRef1}>box1</div>
-      <div ref={boxRef2}>box2</div>
+      <InView action={action1} calledOnce>
+        box1
+      </InView>
+      <InView action={action2}>box2</InView>
     </div>
   );
 };
 
-describe('useIntersectionObserver', () => {
-  it('should call the action callback function when the target element assigned to the returned "ref" is exposed to the Viewport', async () => {
+describe('InView', () => {
+  it('should call the action function when the InView component is exposed to the viewport', async () => {
     const mockFn1 = jest.fn();
     const mockFn2 = jest.fn();
     render(<TestComponent action1={mockFn1} action2={mockFn2} />);
@@ -56,7 +50,7 @@ describe('useIntersectionObserver', () => {
     expect(mockFn2).toBeCalledTimes(1);
   });
 
-  it('should call the action callback function only once when the calledOnce option is true', async () => {
+  it('should call the action callback function once if the calledOnce prop is true', async () => {
     const mockFn1 = jest.fn();
     const mockFn2 = jest.fn();
     render(<TestComponent action1={mockFn1} action2={mockFn2} />);
@@ -76,7 +70,7 @@ describe('useIntersectionObserver', () => {
     expect(mockFn1).toBeCalledTimes(1);
   });
 
-  it('should call the action callback function every time the target element is exposed to the Viewport when the calledOnce option is false', async () => {
+  it('should call the action callback function every time it is exposed to the viewport if the calledOnce prop is false', async () => {
     const mockFn1 = jest.fn();
     const mockFn2 = jest.fn();
     render(<TestComponent action1={mockFn1} action2={mockFn2} />);

@@ -36,7 +36,7 @@ export const mockIntersectionObserverCleanup = () => {
   handlers.clear();
 };
 
-export const mockIntersect = ({
+export const mockIntersecting = ({
   type,
   element,
 }: {
