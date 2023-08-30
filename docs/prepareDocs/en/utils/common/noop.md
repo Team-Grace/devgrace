@@ -9,7 +9,7 @@ A function that does nothing and returns `undefined`.
 const noop: () => void
 ```
 
-## Example
+## Usage
 ```ts
 import { noop } from '@devgrace/utils';
 

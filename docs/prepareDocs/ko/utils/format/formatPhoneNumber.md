@@ -9,7 +9,7 @@
 const formatPhoneNumber: (value: string) => string
 ```
 
-## Example
+## Usage
 ```ts
 import { formatPhoneNumber } from '@devgrace/utils';
 

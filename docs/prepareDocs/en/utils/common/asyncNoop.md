@@ -9,7 +9,7 @@ Async function that does nothing and returns `Promise<void>`.
 const asyncNoop: () => Promise<void>
 ```
 
-## Example
+## Usage
 ```ts
 import { asyncNoop } from '@devgrace/utils';
 

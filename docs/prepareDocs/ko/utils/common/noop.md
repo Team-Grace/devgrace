@@ -9,7 +9,7 @@
 const noop: () => void
 ```
 
-## Example
+## Usage
 ```ts
 import { noop } from '@devgrace/utils';
 

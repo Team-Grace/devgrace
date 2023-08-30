@@ -11,7 +11,7 @@
 const isServer: () => boolean
 ```
 
-## Example
+## Usage
 ```ts
 import { isServer } from '@devgrace/utils';
 

@@ -13,7 +13,7 @@ const getViewportSize: () => {
 }
 ```
 
-## Example
+## Usage
 ```ts
 import { getViewportSize } from '@devgrace/utils';
 

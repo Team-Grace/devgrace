@@ -10,7 +10,7 @@ A function to check if this is a `mobile environment`.
 const isMobile: () => boolean
 ```
 
-## Example
+## Usage
 ```ts
 import { isMobile } from '@devgrace/utils';
 

@@ -11,7 +11,7 @@ If it returns `true`, it is a client environment.
 const isClient: () => boolean
 ```
 
-## Example
+## Usage
 ```ts
 import { isClient } from '@devgrace/utils';
 

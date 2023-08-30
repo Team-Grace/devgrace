@@ -10,7 +10,7 @@ A function that returns a `unique id`.
 const getUniqId: () => string
 ```
 
-## Example
+## Usage
 ```ts
 import { getUniqId } from '@devgrace/utils';
 

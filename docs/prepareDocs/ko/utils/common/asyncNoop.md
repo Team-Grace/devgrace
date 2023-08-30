@@ -9,7 +9,7 @@
 const asyncNoop: () => Promise<void>
 ```
 
-## Example
+## Usage
 ```ts
 import { asyncNoop } from '@devgrace/utils';
 

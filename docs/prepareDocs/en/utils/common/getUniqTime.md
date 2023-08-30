@@ -10,7 +10,7 @@ A function that returns the value `new Date().getTime()` by default, but returns
 const getUniqTime: () => number
 ```
 
-## Example
+## Usage
 ```ts
 import { getUniqTime } from '@devgrace/utils';
 

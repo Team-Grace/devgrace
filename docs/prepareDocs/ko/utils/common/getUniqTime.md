@@ -10,7 +10,7 @@
 const getUniqTime: () => number
 ```
 
-## Example
+## Usage
 ```ts
 import { getUniqTime } from '@devgrace/utils';
 

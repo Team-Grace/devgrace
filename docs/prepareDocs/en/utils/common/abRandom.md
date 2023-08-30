@@ -12,7 +12,7 @@ This can be utilized when doing an `AB testing`.
 const abRandom: () => 0 | 1
 ```
 
-## Example
+## Usage
 ```ts
 import { abRandom } from '@devgrace/utils';
 

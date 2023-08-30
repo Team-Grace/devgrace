@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef } from 'react';
 
 export interface UseIntersectionObserverProps {
-  action: () => void;
+  action: (entry: IntersectionObserverEntry) => void;
   calledOnce?: boolean;
   threshold?: number | number[];
   root?: Document | Element | null;
@@ -24,7 +24,7 @@ export const useIntersectionObserver = <T extends HTMLElement>({
           const targetElement = entry.target as HTMLElement;
 
           if (action) {
-            action();
+            action(entry);
           }
 
           if (ref.current && calledOnce) {

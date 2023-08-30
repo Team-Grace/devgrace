@@ -9,7 +9,7 @@ A function that takes a `string` or `number` and returns a string with a `(,)com
 const formatNumberWithCommas: (value: string | number) => string
 ```
 
-## Example
+## Usage
 ```ts
 import { formatNumberWithCommas } from '@devgrace/utils';
 

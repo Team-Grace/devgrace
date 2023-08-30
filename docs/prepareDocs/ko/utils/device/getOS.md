@@ -15,7 +15,7 @@
 const getOS: () => "server" | "ios" | "android" | "otherMobile" | "web"
 ```
 
-## Example
+## Usage
 ```ts
 import { getOS } from '@devgrace/utils';
 

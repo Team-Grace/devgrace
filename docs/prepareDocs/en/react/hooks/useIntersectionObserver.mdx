@@ -9,7 +9,7 @@ You can set the Intersection Observer Option (see `Note` below).
 ## Interface
 ```tsx
 interface UseIntersectionObserverProps {
-  action: () => void;
+  action: (entry: IntersectionObserverEntry) => void;
   calledOnce?: boolean;
   threshold?: number | number[];
   root?: Document | Element | null;
@@ -25,7 +25,7 @@ const useIntersectionObserver: <T extends HTMLElement>({
 }: UseIntersectionObserverProps) => React.RefObject<T>
 ```
 
-## Example
+## Usage
 
 ```tsx
 import { useIntersectionObserver } from '@devgrace/react';
@@ -35,7 +35,7 @@ const Example = () => {
     action: () => { /* action */},
   });
   const imgRef = useIntersectionObserver<HTMLImageElement>({
-    action: () => { /* action */},
+    action: (entry) => { /* You can use IntersectionObserverEntry if needed. */},
   });
 
   return (

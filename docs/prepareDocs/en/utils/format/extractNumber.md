@@ -9,7 +9,7 @@ A function that returns a string stripped of all characters except numbers when 
 const extractNumber: (value: string) => string
 ```
 
-## Example
+## Usage
 ```ts
 import { extractNumber } from '@devgrace/utils';
 

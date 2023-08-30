@@ -11,7 +11,7 @@ If it returns `true`, it is a server environment.
 const isServer: () => boolean
 ```
 
-## Example
+## Usage
 ```ts
 import { isServer } from '@devgrace/utils';
 

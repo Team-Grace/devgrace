@@ -9,7 +9,7 @@ Intersection Observer Option을 설정할 수 있습니다.(하단 `Note` 참고
 ## Interface
 ```tsx
 interface UseIntersectionObserverProps {
-  action: () => void;
+  action: (entry: IntersectionObserverEntry) => void;
   calledOnce?: boolean;
   threshold?: number | number[];
   root?: Document | Element | null;
@@ -25,7 +25,7 @@ const useIntersectionObserver: <T extends HTMLElement>({
 }: UseIntersectionObserverProps) => React.RefObject<T>
 ```
 
-## Example
+## Usage
 
 ```tsx
 import { useIntersectionObserver } from '@devgrace/react';
@@ -35,11 +35,12 @@ const Example = () => {
     action: () => { /* action */},
   });
   const imgRef = useIntersectionObserver<HTMLImageElement>({
-    action: () => { /* action */},
+    action: (entry) => { /* 필요하다면 IntersectionObserverEntry 를 사용할 수 있습니다. */},
   });
 
   return (
     <div>
+      {/* ... */}
       <div ref={divRef}>Box</div>
       <img ref={imgRef} src="url" alt="img" />
     </div>

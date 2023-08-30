@@ -10,7 +10,7 @@
 const getUniqId: () => string
 ```
 
-## Example
+## Usage
 ```ts
 import { getUniqId } from '@devgrace/utils';
 

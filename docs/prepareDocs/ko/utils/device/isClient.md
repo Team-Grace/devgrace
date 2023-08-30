@@ -11,7 +11,7 @@
 const isClient: () => boolean
 ```
 
-## Example
+## Usage
 ```ts
 import { isClient } from '@devgrace/utils';
 

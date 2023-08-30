@@ -10,7 +10,7 @@
 const isMobile: () => boolean
 ```
 
-## Example
+## Usage
 ```ts
 import { isMobile } from '@devgrace/utils';
 

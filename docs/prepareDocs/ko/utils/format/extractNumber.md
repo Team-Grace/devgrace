@@ -9,7 +9,7 @@
 const extractNumber: (value: string) => string
 ```
 
-## Example
+## Usage
 ```ts
 import { extractNumber } from '@devgrace/utils';
 

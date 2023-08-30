@@ -9,7 +9,7 @@
 const formatNumberWithCommas: (value: string | number) => string
 ```
 
-## Example
+## Usage
 ```ts
 import { formatNumberWithCommas } from '@devgrace/utils';
 

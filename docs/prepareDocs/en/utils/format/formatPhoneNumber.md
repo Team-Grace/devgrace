@@ -9,7 +9,7 @@ A function that takes a `string` and returns it in `phone number format` with a 
 const formatPhoneNumber: (value: string) => string
 ```
 
-## Example
+## Usage
 ```ts
 import { formatPhoneNumber } from '@devgrace/utils';
 
