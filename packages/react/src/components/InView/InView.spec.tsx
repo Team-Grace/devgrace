@@ -1,5 +1,5 @@
 import { render, screen, waitFor } from '@testing-library/react';
-import InView from '.';
+import { InView } from '.';
 import {
   mockIntersecting,
   mockIntersectionObserverCleanup,

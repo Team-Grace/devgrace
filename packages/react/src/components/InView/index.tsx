@@ -9,7 +9,7 @@ interface InViewProps extends UseIntersectionObserverProps {
   style?: CSSProperties;
 }
 
-const InView = ({ children, style, ...rest }: InViewProps) => {
+export const InView = ({ children, style, ...rest }: InViewProps) => {
   const ref = useIntersectionObserver<HTMLDivElement>({ ...rest });
 
   return (
@@ -18,5 +18,3 @@ const InView = ({ children, style, ...rest }: InViewProps) => {
     </div>
   );
 };
-
-export default InView;
