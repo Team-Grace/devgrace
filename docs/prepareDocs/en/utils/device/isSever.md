@@ -1,6 +1,6 @@
 # isServer
 
-Function to check if the JavaScript runtime environment is a `Server(Node.js)`.
+A function to check if the JavaScript runtime environment is a `Server(Node.js)`.
 
 If it returns `true`, it is a server environment.
 

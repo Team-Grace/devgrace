@@ -13,5 +13,6 @@ describe('formatNumberWithCommas', () => {
     expect(formatNumberWithCommas('3000')).toBe('3,000');
     expect(formatNumberWithCommas('50000')).toBe('50,000');
     expect(formatNumberWithCommas('123123123')).toBe('123,123,123');
+    expect(formatNumberWithCommas('price: 500000')).toBe('price: 500,000');
   });
 });

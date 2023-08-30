@@ -1,6 +1,6 @@
 # noop
 
-Function that does nothing and returns `undefined`.
+A function that does nothing and returns `undefined`.
 
 <br />
 

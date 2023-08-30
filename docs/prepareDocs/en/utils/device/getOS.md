@@ -1,6 +1,6 @@
 # getOS
 
-Function that returns the OS value based on the `userAgent`.
+A function that returns the OS value based on the `userAgent`.
 
 - server: Server Environment
 - ios: iOS Environment

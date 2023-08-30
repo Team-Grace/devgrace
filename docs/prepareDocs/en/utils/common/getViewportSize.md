@@ -1,6 +1,6 @@
 # getViewportSize
 
-Returns the current `Viewport Size`.
+A function that returns `Viewport Size`.
 In a server environment, it returns `{ width: 0, height: 0}`.
 
 <br />

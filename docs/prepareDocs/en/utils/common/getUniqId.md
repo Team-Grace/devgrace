@@ -1,6 +1,6 @@
 # getUniqId
 
-Function that returns a `unique id`.
+A function that returns a `unique id`.
 
 
 <br />

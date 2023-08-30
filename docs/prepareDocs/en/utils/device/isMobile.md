@@ -1,6 +1,6 @@
 # isMobile
 
-Function to check if this is a `mobile environment`.
+A function to check if this is a `mobile environment`.
 
 
 <br />

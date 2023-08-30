@@ -1,6 +1,6 @@
 # formatPhoneNumber
 
-Function that takes a `string` and returns it in `phone number format` with a `-(hyphen)`.
+A function that takes a `string` and returns it in `phone number format` with a `-(hyphen)`.
 
 <br />
 

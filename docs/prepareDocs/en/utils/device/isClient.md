@@ -1,6 +1,6 @@
 # isClient
 
-Function to check if the JavaScript runtime environment is a `Client(browser)`.
+A function to check if the JavaScript runtime environment is a `Client(browser)`.
 
 If it returns `true`, it is a client environment.
 

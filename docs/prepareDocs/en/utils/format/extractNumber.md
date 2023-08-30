@@ -1,6 +1,6 @@
 # extractNumber
 
-Function that returns a string stripped of all characters except numbers when `string` is entered.
+A function that returns a string stripped of all characters except numbers when `string` is entered.
 
 <br />
 
