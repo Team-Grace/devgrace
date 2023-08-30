@@ -1,4 +1,6 @@
 export * from './useDebounce';
+export * from './useForceUpdate';
+export * from './useIntersectionObserver';
 export * from './useIsMounted';
 export * from './useTimeout';
 export * from './useInterval';
