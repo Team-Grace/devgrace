@@ -2,7 +2,7 @@ import { LazyImage } from '@devgrace/react';
 
 # LazyImage
 
-An image component that lazily loads an assigned image when exposed to a `Viewport`.
+An image component that `Lazy loading` an assigned image when exposed to a `Viewport`.
 
 You can resize the image by entering `width`, `height` values and at the same time improve the `Layout Shift`.
 
@@ -84,6 +84,7 @@ const Example = () => {
     Please scroll down.
   </div>
   <LazyImage
+    fallback={<div style={{ width: '100%', height: '400px', background: '#E79E90'}}>Skeleton1</div>}
     width={"100%"}
     height={400}
     duration={300}
@@ -98,7 +99,7 @@ const Example = () => {
 
   <div style={{ display: 'flex', gap: '8px'}}>
     <LazyImage
-      fallback={<div style={{ width: '100%', height: '400px', background: '#34e09b'}}>Skeleton1</div>}
+      fallback={<div style={{ width: '100%', height: '250px', background: '#34e09b'}}>Skeleton2</div>}
       width={"100%"}
       height={250}
       duration={300}
@@ -109,7 +110,7 @@ const Example = () => {
       onClick={() => console.log('img click2')}
     />
     <LazyImage
-      fallback={<div style={{ width: '100%', height: '400px', background: '#3cbce7'}}>Skeleton2</div>}
+      fallback={<div style={{ width: '100%', height: '250px', background: '#3cbce7'}}>Skeleton3</div>}
       width={"100%"}
       height={250}
       duration={300}
@@ -124,7 +125,7 @@ const Example = () => {
   <div style={{ width: '100%', height: '150px' }} />
 
   <LazyImage
-    fallback={<div style={{ width: '100%', height: '400px', background: '#E79E90'}}>Skeleton3</div>}
+    fallback={<div style={{ width: '100%', height: '400px', background: '#E79E90'}}>Skeleton4</div>}
     width={"100%"}
     height={400}
     duration={300}
