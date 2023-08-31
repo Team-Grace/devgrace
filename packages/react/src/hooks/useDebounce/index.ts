@@ -1,11 +1,11 @@
 import { useMemo } from 'react';
-import { DebounceSettings, debounce } from 'lodash-es';
+import debounce from 'lodash.debounce';
 import { useUnmount } from '../useUnMount';
 
 export const useDebounce = <T extends (...args: any[]) => any>(
   callback: T,
   wait: number,
-  options?: DebounceSettings
+  options: Parameters<typeof debounce>[2] = {}
 ) => {
   const debounced = useMemo(() => {
     return debounce(callback, wait, options);
