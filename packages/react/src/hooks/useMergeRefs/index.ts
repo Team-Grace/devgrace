@@ -1,15 +1,15 @@
-import { MutableRefObject, useCallback, RefCallback, LegacyRef } from 'react';
+import React, { useCallback } from 'react';
 
 export const useMergeRefs = <T = any>(
-  ...refs: (MutableRefObject<T> | LegacyRef<T>)[]
-): RefCallback<T> => {
+  ...refs: (React.MutableRefObject<T> | React.LegacyRef<T>)[]
+): React.RefCallback<T> => {
   return useCallback(
     (value: T) => {
       refs.forEach((ref) => {
         if (typeof ref === 'function') {
           ref(value);
         } else if (ref != null) {
-          (ref as MutableRefObject<T>).current = value;
+          (ref as React.MutableRefObject<T>).current = value;
         }
       });
     },
