@@ -1,6 +1,6 @@
 # removeSpecialCharacters
 
-A function that takes a `string` and returns a string stripped of `special characters`.
+A function that takes a string and returns a string stripped of `special characters`.
 
 <br />
 
@@ -13,5 +13,5 @@ const removeSpecialCharacters: (value: string) => string
 ```ts
 import { removeSpecialCharacters } from '@devgrace/utils';
 
-const str = removeSpecialCharacters('H@#!ello, @Wo!@!&@rld!');
+const str = removeSpecialCharacters('H@#!ello, @Wo!@!&@rld!'); // Hello World
 ```
