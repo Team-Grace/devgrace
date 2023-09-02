@@ -6,7 +6,7 @@ A function that performs a `deep comparison` between two values given as argumen
 
 ## Interface
 ```tsx
-const deepEqual: (a: any, b: any) => boolean
+const deepEqual: (source: any, target: any) => boolean
 ```
 
 ## Usage
