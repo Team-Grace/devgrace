@@ -1,4 +1,4 @@
-# @devgrace/utils <img align="center" src="https://img.shields.io/npm/v/@devgrace/utils.svg" />
+# @devgrace/utils <a href="https://www.npmjs.com/package/@devgrace/utils" target="_blank"><img align="center" src="https://img.shields.io/npm/v/@devgrace/utils.svg" /></a> <a href="https://bundlephobia.com/package/@devgrace/utils" target="_blank"><img align="center" src="https://img.shields.io/bundlephobia/minzip/@devgrace/utils/latest"></a>
 
 A library that provides useful `Utility functions` related to client development. 
 

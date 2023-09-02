@@ -70,6 +70,11 @@ export default function Home(): JSX.Element {
               href="https://www.npmjs.com/package/@devgrace/react"
               target="_blank">
               <img src="https://img.shields.io/npm/v/@devgrace/react.svg" />
+            </a>{' '}
+            <a
+              href="https://bundlephobia.com/package/@devgrace/react"
+              target="_blank">
+              <img src="https://img.shields.io/bundlephobia/minzip/@devgrace/react/latest" />
             </a>
           </h2>
           <p className={styles.mainContentParagraph}>
@@ -82,6 +87,11 @@ export default function Home(): JSX.Element {
               href="https://www.npmjs.com/package/@devgrace/utils"
               target="_blank">
               <img src="https://img.shields.io/npm/v/@devgrace/utils.svg" />
+            </a>{' '}
+            <a
+              href="https://bundlephobia.com/package/@devgrace/utils"
+              target="_blank">
+              <img src="https://img.shields.io/bundlephobia/minzip/@devgrace/utils/latest" />
             </a>
           </h2>
 
@@ -95,6 +105,11 @@ export default function Home(): JSX.Element {
               href="https://www.npmjs.com/package/@devgrace/ui"
               target="_blank">
               <img src="https://img.shields.io/npm/v/@devgrace/ui.svg" />
+            </a>{' '}
+            <a
+              href="https://bundlephobia.com/package/@devgrace/ui"
+              target="_blank">
+              <img src="https://img.shields.io/bundlephobia/minzip/@devgrace/ui/latest" />
             </a>
           </h2>
 
