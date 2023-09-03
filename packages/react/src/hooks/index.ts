@@ -1,5 +1,6 @@
 export * from './useDebounce';
 export * from './useForceUpdate';
+export * from './useImageStatus';
 export * from './useIntersectionObserver';
 export * from './useInterval';
 export * from './useIsMounted';
