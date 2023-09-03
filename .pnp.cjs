@@ -3569,6 +3569,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@devgrace/ui", "virtual:b5b5dfb1662b30d0d5b62f084f8b8fddd0eee56dd8737572197395ab6309e644fa76525392b1d0250ce3c07c5eeeb90901439953af682fc76f8ab38f71b8b09d#workspace:packages/ui"],\
             ["@babel/core", "npm:7.22.10"],\
+            ["@devgrace/utils", "workspace:packages/utils"],\
             ["@emotion/babel-preset-css-prop", "virtual:31e2ae15cdc735979c9313bbaa42d6afe61bd3070b0c558965e07e629e4e83baeecc88a3dc0b52cecf46b56b88a798ee8ac50ee98338bce6cd3ca7a9ccc01d84#npm:11.11.0"],\
             ["@emotion/react", "virtual:31e2ae15cdc735979c9313bbaa42d6afe61bd3070b0c558965e07e629e4e83baeecc88a3dc0b52cecf46b56b88a798ee8ac50ee98338bce6cd3ca7a9ccc01d84#npm:11.11.1"],\
             ["@emotion/styled", "virtual:31e2ae15cdc735979c9313bbaa42d6afe61bd3070b0c558965e07e629e4e83baeecc88a3dc0b52cecf46b56b88a798ee8ac50ee98338bce6cd3ca7a9ccc01d84#npm:11.11.0"],\
@@ -3607,6 +3608,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@devgrace/ui", "workspace:packages/ui"],\
             ["@babel/core", "npm:7.22.10"],\
+            ["@devgrace/utils", "workspace:packages/utils"],\
             ["@emotion/babel-preset-css-prop", "virtual:31e2ae15cdc735979c9313bbaa42d6afe61bd3070b0c558965e07e629e4e83baeecc88a3dc0b52cecf46b56b88a798ee8ac50ee98338bce6cd3ca7a9ccc01d84#npm:11.11.0"],\
             ["@emotion/react", "virtual:31e2ae15cdc735979c9313bbaa42d6afe61bd3070b0c558965e07e629e4e83baeecc88a3dc0b52cecf46b56b88a798ee8ac50ee98338bce6cd3ca7a9ccc01d84#npm:11.11.1"],\
             ["@emotion/styled", "virtual:31e2ae15cdc735979c9313bbaa42d6afe61bd3070b0c558965e07e629e4e83baeecc88a3dc0b52cecf46b56b88a798ee8ac50ee98338bce6cd3ca7a9ccc01d84#npm:11.11.0"],\
