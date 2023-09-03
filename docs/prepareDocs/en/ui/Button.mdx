@@ -2,18 +2,196 @@ import { Button } from '@devgrace/ui'
 
 # Button
 
-We're still working on it.
+`@devgrace/ui` Button Component
 
 <br />
 
+## Interface
+```tsx
+export interface ButtonProps extends React.ComponentProps<'button'> {
+  children: React.ReactNode;
+  fontColor?: CSSProperties['color'];
+  fullWidth?: boolean; // defaut: false
+  size?: 'small' | 'medium' | 'large'; // default: 'medium'
+  shape?: 'rect' | 'round'; // default: 'contained'
+  variant?: 'contained' | 'outlined' | 'text'; // default: 'round'
+  colorTheme?: CSSProperties['backgroundColor']; // default: '#1976d2' only hex
+}
+
+const Button: React.ForwardRefExoticComponent<
+  Omit<ButtonProps, 'ref'> & React.RefAttributes<HTMLButtonElement>
+>;
+```
+
 ## Usage
+### Default Case
 ```tsx
 import { Button } from '@devgrace/ui'
 
 const Exampe = () => {
-  return <Button>@devgrace/ui Button</Button>
+  const wrapperStyle = useMemo(() => {
+    return {
+      padding: '20px',
+      border: '1px solid #e7e7e7',
+      display: 'flex',
+      flexDirection: 'column',
+      width: '400px',
+      gap: '10px',
+    }
+  }, []);
+
+  return (
+    <div style={wrapperStyle}>
+      {/* Small */}
+      <Button size="small">Contained Button</Button>
+      <Button variant="outlined" size="small">Outlined Button</Button>
+      <Button variant="text" size="small">Text Button</Button>
+      
+      {/* Medium */}
+      <Button size="medium" colorTheme="#eb3c27">Contained Button</Button>
+      <Button size="medium" variant="outlined" colorTheme="#eb3c27">Outlined Button</Button>
+      <Button size="medium" variant="text" colorTheme="#eb3c27">Text Button</Button>
+
+      {/* Large */}
+      <Button 
+        size="large" 
+        colorTheme="#ffbe0a" 
+        shape="rect"
+      >
+        Contained Button
+      </Button>
+      <Button 
+        size="large" 
+        variant="outlined" 
+        colorTheme="#ffbe0a" 
+        shape="rect"
+      >
+        Outlined Button
+      </Button>
+      <Button 
+        size="large" 
+        variant="text" 
+        colorTheme="#ffbe0a" 
+        shape="rect"
+      >
+        Text Button
+      </Button>
+    </div>
+  )
 }
 ```
 
-## Example
-<Button>@devgrace/ui Button</Button>
+<div style={{ padding: '20px', border: '1px solid #e7e7e7', width: '400px', gap: '10px', display: 'flex', flexDirection: 'column' }}>
+  <Button size="small">Contained Button</Button>
+  <Button variant="outlined" size="small">Outlined Button</Button>
+  <Button variant="text" size="small">Text Button</Button>
+  
+  <Button size="medium" colorTheme="#eb3c27">Contained Button</Button>
+  <Button size="medium" variant="outlined" colorTheme="#eb3c27">Outlined Button</Button>
+  <Button size="medium" variant="text" colorTheme="#eb3c27">Text Button</Button>
+
+  <Button 
+    size="large" 
+    colorTheme="#ffbe0a" 
+    shape="rect"
+  >
+    Contained Button
+  </Button>
+  <Button 
+    size="large" 
+    variant="outlined" 
+    colorTheme="#ffbe0a" 
+    shape="rect"
+  >
+    Outlined Button
+  </Button>
+  <Button 
+    size="large" 
+    variant="text" 
+    colorTheme="#ffbe0a" 
+    shape="rect"
+  >
+    Text Button
+  </Button>
+</div>
+
+<br />
+
+### FullWidth Case
+```tsx
+import { Button } from '@devgrace/ui'
+
+const Exampe = () => {
+  const wrapperStyle = useMemo(() => {
+    return {
+      padding: '20px',
+      border: '1px solid #e7e7e7',
+      display: 'flex',
+      flexDirection: 'column',
+      width: '400px',
+      gap: '10px',
+    }
+  }, []);
+
+  return (
+    <div style={wrapperStyle}>
+      <Button fullWidth>Contained Button</Button>
+      <Button fullWidth variant="outlined">Outlined Button</Button>
+      <Button fullWidth variant="text">Text Button</Button>
+    </div>
+  )
+}
+```
+
+<div style={{ padding: '20px', border: '1px solid #e7e7e7', width: '400px', gap: '10px', display: 'flex', flexDirection: 'column' }}>
+  <Button fullWidth={true}>Default Button</Button>
+  <Button variant="outlined" fullWidth={true}>Outlined Button</Button>
+  <Button variant="text" fullWidth={true}>Text Button</Button>
+</div>
+
+<br />
+
+### Custom Style
+```tsx
+import { Button } from '@devgrace/ui'
+
+const Exampe = () => {
+  const wrapperStyle = useMemo(() => {
+    return {
+      padding: '20px',
+      border: '1px solid #e7e7e7',
+      display: 'flex',
+      flexDirection: 'column',
+      width: '300px',
+      gap: '10px',
+    }
+  }, []);
+
+  return (
+    <div style={wrapperStyle}>
+      <Button 
+        style={{ 
+          width: '150px', 
+          height: '100px',
+          color: '#eb3c27',
+          /* ...custom styles */ 
+        }}
+      >
+        CustomButton Button
+      </Button>
+    </div>
+  )
+}
+```
+
+<div style={{ padding: '20px', border: '1px solid #e7e7e7', width: '400px', gap: '10px', display: 'flex', flexDirection: 'column' }}>
+  <Button 
+    style={{ 
+      width: '150px', 
+      height: '100px',
+      color: '#eb3c27',
+    }}
+  >
+    CustomButton Button
+  </Button>
+</div>

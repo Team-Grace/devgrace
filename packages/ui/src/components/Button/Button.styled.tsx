@@ -1,11 +1,11 @@
 import styled from '@emotion/styled';
+import { hexToRGBA } from '@devgrace/utils';
 import { ButtonOptions } from './Button.types';
 import {
   getButtonBorderRadiusByShape,
   getButtonSize,
   getButtonColorThemeByVariant,
 } from './Button.utils';
-import { hexToRgba } from '@devgrace/utils';
 
 export const StyledButton = styled.button<ButtonOptions>`
   cursor: pointer;
@@ -39,14 +39,14 @@ export const StyledButton = styled.button<ButtonOptions>`
   &:hover {
     background-color: ${({ variant, colorTheme }) =>
       variant === 'contained'
-        ? colorTheme && hexToRgba(colorTheme, 0.8)
-        : colorTheme && hexToRgba(colorTheme, 0.1)};
+        ? colorTheme && hexToRGBA(colorTheme, 0.8)
+        : colorTheme && hexToRGBA(colorTheme, 0.1)};
   }
 
   &:active {
     background-color: ${({ variant, colorTheme }) =>
       variant === 'contained'
-        ? colorTheme && hexToRgba(colorTheme, 0.9)
-        : colorTheme && hexToRgba(colorTheme, 0.2)};
+        ? colorTheme && hexToRGBA(colorTheme, 0.9)
+        : colorTheme && hexToRGBA(colorTheme, 0.2)};
   }
 `;
