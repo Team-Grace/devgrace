@@ -1,17 +1,26 @@
-import React from 'react';
-import styled from '@emotion/styled';
+import { ButtonProps } from './Button.types';
+import { StyledButton } from './Button.styled';
 
-interface ButtonProps {
-  children: React.ReactNode;
-}
-
-export const Button = ({ children }: ButtonProps) => {
-  return <StyledButton>{children}</StyledButton>;
+export const Button = ({
+  children,
+  fontColor,
+  fullWidth = false,
+  size = 'medium',
+  variant = 'contained',
+  shape = 'round',
+  colorTheme = '#1976d2',
+  ...restProps
+}: ButtonProps) => {
+  return (
+    <StyledButton
+      {...restProps}
+      fullWidth={fullWidth}
+      size={size}
+      colorTheme={colorTheme}
+      variant={variant}
+      shape={shape}
+      fontColor={fontColor}>
+      {children}
+    </StyledButton>
+  );
 };
-
-const StyledButton = styled.button`
-  padding: 10px 15px;
-  border: 1px solid #111;
-  border-radius: 6px;
-  cursor: pointer;
-`;
