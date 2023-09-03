@@ -21,19 +21,15 @@ export const getButtonSize = (size: ButtonOptions['size']) => {
   return buttonSizeObj[size || 'medium'];
 };
 
-export const getButtonShape = (shape: ButtonOptions['shape']) => {
+export const getButtonBorderRadiusByShape = (shape: ButtonOptions['shape']) => {
   const buttonShapeObj = {
-    rect: {
-      borderRadius: '0px',
-    },
-    round: {
-      borderRadius: '6px',
-    },
+    rect: '0px',
+    round: '6px',
   };
   return buttonShapeObj[shape || 'round'];
 };
 
-export const getButtonVariant = (
+export const getButtonColorThemeByVariant = (
   variant: ButtonOptions['variant'],
   colorTheme: ButtonOptions['colorTheme'],
   fontColor: ButtonOptions['fontColor']

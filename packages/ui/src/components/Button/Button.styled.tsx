@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
 import { ButtonOptions } from './Button.types';
 import {
-  getButtonShape,
+  getButtonBorderRadiusByShape,
   getButtonSize,
-  getButtonVariant,
+  getButtonColorThemeByVariant,
 } from './Button.utils';
 import { hexToRgba } from '@devgrace/utils';
 
@@ -14,7 +14,7 @@ export const StyledButton = styled.button<ButtonOptions>`
   border: none;
   font-weight: 700;
   color: ${({ fontColor }) => fontColor};
-  border-radius: ${({ shape }) => getButtonShape(shape).borderRadius};
+  border-radius: ${({ shape }) => getButtonBorderRadiusByShape(shape)};
   width: ${({ fullWidth }) => (fullWidth ? '100%' : 'max-content')};
 
   ${({ size }) => {
@@ -27,11 +27,8 @@ export const StyledButton = styled.button<ButtonOptions>`
   }};
 
   ${({ variant, colorTheme, fontColor }) => {
-    const { backgroundColor, borderColor, color } = getButtonVariant(
-      variant,
-      colorTheme,
-      fontColor
-    );
+    const { backgroundColor, borderColor, color } =
+      getButtonColorThemeByVariant(variant, colorTheme, fontColor);
     return `
       background-color: ${backgroundColor};
       border: 1px solid ${borderColor};
