@@ -1,3 +1,4 @@
+import { colors, ColorThemeKeys } from '../../config/theme';
 import { ButtonOptions } from './Button.types';
 
 export const getButtonSize = (size: ButtonOptions['size']) => {
@@ -31,26 +32,42 @@ export const getButtonBorderRadiusByShape = (shape: ButtonOptions['shape']) => {
 
 export const getButtonColorThemeByVariant = (
   variant: ButtonOptions['variant'],
-  colorTheme: ButtonOptions['colorTheme'],
-  fontColor: ButtonOptions['fontColor']
+  fontColor: ButtonOptions['fontColor'],
+  colorTheme?: ColorThemeKeys
 ) => {
-  const buttonVariantObj = {
+  if (!colorTheme) {
+    return {
+      defaultBgColor: colors['blue'][500],
+      hoverBgColor: colors['blue'][600],
+      activeBgColor: colors['blue'][700],
+      borderColor: colors['blue'],
+      color: fontColor || '#fff',
+    } as const;
+  }
+
+  const buttonColorThemeObj = {
     contained: {
-      backgroundColor: colorTheme,
-      borderColor: colorTheme,
+      defaultBgColor: colors[colorTheme][500],
+      hoverBgColor: colors[colorTheme][600],
+      activeBgColor: colors[colorTheme][700],
+      borderColor: colors[colorTheme][500],
       color: fontColor || '#fff',
     },
     outlined: {
-      backgroundColor: '#fff',
-      borderColor: colorTheme,
-      color: fontColor || colorTheme,
+      defaultBgColor: '#fff',
+      hoverBgColor: colors[colorTheme][50],
+      activeBgColor: colors[colorTheme][100],
+      borderColor: colors[colorTheme][500],
+      color: fontColor || colors[colorTheme][500],
     },
     text: {
-      backgroundColor: '#fff',
+      defaultBgColor: '#fff',
+      hoverBgColor: colors[colorTheme][50],
+      activeBgColor: colors[colorTheme][100],
       borderColor: '#fff',
-      color: colorTheme,
+      color: fontColor || colors[colorTheme][500],
     },
-  };
+  } as const;
 
-  return buttonVariantObj[variant || 'contained'];
+  return buttonColorThemeObj[variant || 'contained'];
 };
