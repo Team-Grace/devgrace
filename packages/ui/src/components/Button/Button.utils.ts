@@ -18,7 +18,8 @@ export const getButtonSize = (size: ButtonOptions['size']) => {
       padding: '0 24px',
       fontSize: '18px',
     },
-  };
+  } as const;
+
   return buttonSizeObj[size || 'medium'];
 };
 
@@ -26,7 +27,8 @@ export const getButtonBorderRadiusByShape = (shape: ButtonOptions['shape']) => {
   const buttonShapeObj = {
     rect: '0px',
     round: '6px',
-  };
+  } as const;
+
   return buttonShapeObj[shape || 'round'];
 };
 
@@ -70,4 +72,15 @@ export const getButtonColorThemeByVariant = (
   } as const;
 
   return buttonColorThemeObj[variant || 'contained'];
+};
+
+export const getButtonLoaderSize = (size: ButtonOptions['size']) => {
+  switch (size) {
+    case 'large':
+      return { width: 18, height: 18 };
+    case 'medium':
+      return { width: 16, height: 16 };
+    default:
+      return { width: 14, height: 14 };
+  }
 };

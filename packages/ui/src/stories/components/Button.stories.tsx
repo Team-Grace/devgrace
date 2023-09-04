@@ -11,20 +11,21 @@ const Template: StoryFn<any> = () => {
     <>
       <h2>Large</h2>
       <div style={{ display: 'flex', gap: '8px' }}>
-        <Button size="large" onClick={() => console.log('click button type1')}>
-          Default Contained Button
-        </Button>
+        <Button size="large">Contained Button</Button>
         <Button
           size="large"
           variant="outlined"
           onClick={() => console.log('click button type2')}>
-          Default Outlined Button
+          Outlined Button
         </Button>
         <Button
           size="large"
           variant="text"
           onClick={() => console.log('click button type3')}>
-          Default Text Button
+          Text Button
+        </Button>
+        <Button size="large" disabled>
+          Disabled Contained Button
         </Button>
       </div>
 
@@ -35,7 +36,7 @@ const Template: StoryFn<any> = () => {
           size="medium"
           colorTheme="indigo"
           onClick={() => console.log('click button type4')}>
-          Rect Contained Button
+          Contained Button
         </Button>
         <Button
           shape="rect"
@@ -43,7 +44,15 @@ const Template: StoryFn<any> = () => {
           colorTheme="indigo"
           variant="outlined"
           onClick={() => console.log('click button type5')}>
-          Rect OutLined Button
+          OutLined Button
+        </Button>
+        <Button
+          shape="rect"
+          size="medium"
+          colorTheme="indigo"
+          variant="outlined"
+          onClick={() => console.log('click button type5')}>
+          OutLined Button
         </Button>
         <Button
           shape="rect"
@@ -51,7 +60,15 @@ const Template: StoryFn<any> = () => {
           colorTheme="indigo"
           variant="text"
           onClick={() => console.log('click button type6')}>
-          Rect Text Button
+          Text Button
+        </Button>
+        <Button
+          shape="rect"
+          size="medium"
+          colorTheme="indigo"
+          variant="outlined"
+          disabled>
+          Disabled Outlined Button
         </Button>
       </div>
 
@@ -77,6 +94,9 @@ const Template: StoryFn<any> = () => {
           onClick={() => console.log('click button type6')}>
           Default Text Button
         </Button>
+        <Button size="small" colorTheme="orange" variant="text" disabled>
+          Disabled Text Button
+        </Button>
       </div>
 
       <h2 style={{ marginTop: '20px' }}>Full Width</h2>
@@ -85,22 +105,46 @@ const Template: StoryFn<any> = () => {
           fullWidth
           colorTheme="pink"
           onClick={() => console.log('click button type7')}>
-          Default Contained Button
+          Contained Button
         </Button>
         <Button
           fullWidth
           colorTheme="pink"
           variant="outlined"
           onClick={() => console.log('click button type8')}>
-          Default Outlined Button
+          Outlined Button
         </Button>
       </div>
 
-      <div
-        style={{ marginTop: '20px', display: 'flex', gap: '8px' }}
-        onClick={() => console.log('click button type9')}>
-        <Button shape="rect" colorTheme="pink" fullWidth>
-          Rect Contained Button
+      <div style={{ marginTop: '20px', display: 'flex', gap: '8px' }}>
+        <Button
+          shape="rect"
+          colorTheme="pink"
+          fullWidth
+          onClick={() => console.log('click button type9')}>
+          Contained Button
+        </Button>
+      </div>
+
+      <div style={{ marginTop: '20px' }}>
+        <Button shape="rect" colorTheme="pink" fullWidth disabled>
+          Disabled Contained Button
+        </Button>
+      </div>
+
+      <h2 style={{ marginTop: '20px' }}>Loading Button</h2>
+      <div style={{ marginTop: '20px', display: 'flex', gap: '8px' }}>
+        <Button isLoading size="large">
+          Contained Loading Button
+        </Button>
+        <Button isLoading variant="outlined" size="medium" colorTheme="indigo">
+          Outlined Loading Button
+        </Button>
+        <Button isLoading variant="text" size="small" colorTheme="pink">
+          Text Loading Button
+        </Button>
+        <Button disabled isLoading size="medium">
+          Disabled Contained Loading Button
         </Button>
       </div>
     </>

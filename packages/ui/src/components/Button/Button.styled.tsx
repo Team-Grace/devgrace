@@ -5,16 +5,42 @@ import {
   getButtonSize,
   getButtonColorThemeByVariant,
 } from './Button.utils';
+import { colors } from '../../config/theme';
 
 export const StyledButton = styled.button<ButtonOptions>`
   cursor: pointer;
   position: relative;
+  white-space: nowrap;
   outline: none;
   border: none;
-  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: ${({ fontWeight }) => fontWeight};
   color: ${({ fontColor }) => fontColor};
   border-radius: ${({ shape }) => getButtonBorderRadiusByShape(shape)};
-  width: ${({ fullWidth }) => (fullWidth ? '100%' : 'max-content')};
+  width: ${({ fullWidth }) => (fullWidth ? '100%' : 'fit-content')};
+  transition: all 0.2s;
+  line-height: 1;
+
+  svg {
+    margin-right: 6px;
+  }
+
+  &:disabled {
+    background-color: ${({ variant }) =>
+      variant === 'text' ? '#fff' : colors.gray[100]};
+    border: ${({ variant }) =>
+      variant === 'text' ? '1px solid #fff' : `1px solid ${colors.gray[400]}`};
+    color: ${colors.gray[400]};
+    cursor: not-allowed;
+  }
+
+  &:disabled:hover,
+  &:disabled:active {
+    background-color: ${({ variant }) =>
+      variant === 'text' ? '#fff' : colors.gray[100]};
+  }
 
   ${({ size }) => {
     const { height, padding, fontSize } = getButtonSize(size);

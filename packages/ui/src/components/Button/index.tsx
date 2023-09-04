@@ -1,12 +1,16 @@
+import { forwardRef } from 'react';
 import { ButtonProps } from './Button.types';
 import { StyledButton } from './Button.styled';
-import { forwardRef } from 'react';
+import { Loader } from '../Loader';
+import { getButtonLoaderSize } from './Button.utils';
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
       children,
       fontColor,
+      isLoading = false,
+      fontWeight = 700,
       fullWidth = false,
       size = 'medium',
       variant = 'contained',
@@ -16,16 +20,21 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     }: ButtonProps,
     ref
   ) => {
+    const { width: loaderWidth, height: loaderHeight } =
+      getButtonLoaderSize(size);
+
     return (
       <StyledButton
         {...restProps}
         ref={ref}
         fullWidth={fullWidth}
+        fontWeight={fontWeight}
         size={size}
         colorTheme={colorTheme}
         variant={variant}
         shape={shape}
         fontColor={fontColor}>
+        {isLoading && <Loader width={loaderWidth} height={loaderHeight} />}
         {children}
       </StyledButton>
     );
