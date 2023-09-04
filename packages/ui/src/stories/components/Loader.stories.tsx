@@ -18,7 +18,7 @@ const Template: StoryFn<any> = () => {
         <Loader width={20} height={20} />
       </div>
 
-      <h2>Color</h2>
+      <h2 style={{ marginTop: '60px' }}>Color</h2>
       <div style={{ display: 'flex', gap: '8px' }}>
         <Loader width={100} height={100} />
         <Loader width={80} height={80} color="red" />
@@ -27,7 +27,7 @@ const Template: StoryFn<any> = () => {
         <Loader width={20} height={20} color="orange" />
       </div>
 
-      <h2>Duration</h2>
+      <h2 style={{ marginTop: '60px' }}>Duration</h2>
       <div style={{ display: 'flex', gap: '8px' }}>
         <Loader width={100} height={100} />
         <Loader width={80} height={80} color="red" duration={1} />

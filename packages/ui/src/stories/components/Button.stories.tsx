@@ -8,7 +8,7 @@ export default {
 
 const Template: StoryFn<any> = () => {
   return (
-    <>
+    <div>
       <h2>Large</h2>
       <div style={{ display: 'flex', gap: '8px' }}>
         <Button size="large">Contained Button</Button>
@@ -29,7 +29,7 @@ const Template: StoryFn<any> = () => {
         </Button>
       </div>
 
-      <h2 style={{ marginTop: '20px' }}>Medium</h2>
+      <h2 style={{ marginTop: '40px' }}>Medium</h2>
       <div style={{ display: 'flex', gap: '8px' }}>
         <Button
           shape="rect"
@@ -72,7 +72,7 @@ const Template: StoryFn<any> = () => {
         </Button>
       </div>
 
-      <h2 style={{ marginTop: '20px' }}>Small</h2>
+      <h2 style={{ marginTop: '40px' }}>Small</h2>
       <div style={{ display: 'flex', gap: '8px' }}>
         <Button
           size="small"
@@ -99,7 +99,7 @@ const Template: StoryFn<any> = () => {
         </Button>
       </div>
 
-      <h2 style={{ marginTop: '20px' }}>Full Width</h2>
+      <h2 style={{ marginTop: '40px' }}>Full Width</h2>
       <div style={{ display: 'flex', gap: '8px' }}>
         <Button
           fullWidth
@@ -116,7 +116,7 @@ const Template: StoryFn<any> = () => {
         </Button>
       </div>
 
-      <div style={{ marginTop: '20px', display: 'flex', gap: '8px' }}>
+      <div style={{ marginTop: '8px', display: 'flex', gap: '8px' }}>
         <Button
           shape="rect"
           colorTheme="pink"
@@ -126,14 +126,14 @@ const Template: StoryFn<any> = () => {
         </Button>
       </div>
 
-      <div style={{ marginTop: '20px' }}>
+      <div style={{ marginTop: '8px' }}>
         <Button shape="rect" colorTheme="pink" fullWidth disabled>
           Disabled Contained Button
         </Button>
       </div>
 
-      <h2 style={{ marginTop: '20px' }}>Loading Button</h2>
-      <div style={{ marginTop: '20px', display: 'flex', gap: '8px' }}>
+      <h2 style={{ marginTop: '40px' }}>Loading Button</h2>
+      <div style={{ display: 'flex', gap: '8px' }}>
         <Button isLoading size="large">
           Contained Loading Button
         </Button>
@@ -147,7 +147,7 @@ const Template: StoryFn<any> = () => {
           Disabled Contained Loading Button
         </Button>
       </div>
-    </>
+    </div>
   );
 };
 

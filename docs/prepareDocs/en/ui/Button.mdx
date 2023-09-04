@@ -8,11 +8,25 @@ import { Button } from '@devgrace/ui'
 
 ## Interface
 ```tsx
-type ColorThemeKeys = "blue" | "brown" | "cyan" | "gray" | "green" | "indigo" | "orange" | "pink" | "purple" | "red" | "teal" | "yellow"
+type ColorThemeKeys =
+  | 'blue'
+  | 'brown'
+  | 'cyan'
+  | 'gray'
+  | 'green'
+  | 'indigo'
+  | 'orange'
+  | 'pink'
+  | 'purple'
+  | 'red'
+  | 'teal'
+  | 'yellow';
 
 export interface ButtonProps extends React.ComponentProps<'button'> {
   children: React.ReactNode;
+  isLoading?: boolean; // defaut: false
   fullWidth?: boolean; // defaut: false
+  fontWeight?: CSSProperties['fontWeight']; // default: 700
   size?: 'small' | 'medium' | 'large'; // default: 'medium'
   shape?: 'rect' | 'round'; // default: 'contained'
   variant?: 'contained' | 'outlined' | 'text'; // default: 'round'
@@ -37,7 +51,8 @@ const Exampe = () => {
       border: '1px solid #e7e7e7',
       display: 'flex',
       flexDirection: 'column',
-      width: '400px',
+      minWidth: '300px'
+      maxWidth: '400px',
       gap: '10px',
     }
   }, []);
@@ -46,12 +61,12 @@ const Exampe = () => {
     <div style={wrapperStyle}>
       {/* Small */}
       <Button size="small">Contained Button</Button>
-      <Button variant="outlined" size="small">Outlined Button</Button>
+      <Button variant="outlined" size="small">OutLined Button</Button>
       <Button variant="text" size="small">Text Button</Button>
       
       {/* Medium */}
       <Button size="medium" colorTheme="indigo">Contained Button</Button>
-      <Button size="medium" variant="outlined" colorTheme="indigo">Outlined Button</Button>
+      <Button size="medium" variant="outlined" colorTheme="indigo">OutLined Button</Button>
       <Button size="medium" variant="text" colorTheme="indigo">Text Button</Button>
 
       {/* Large */}
@@ -78,20 +93,33 @@ const Exampe = () => {
       >
         Text Button
       </Button>
+
+      {/* Disabled */}
+      <Button disabled>Contained Button</Button>
+      <Button disabled variant="outlined">OutLined Button</Button>
+      <Button disabled variant="text">Text Button</Button>
+
+      {/* Loading */}
+      <Button isLoading>Contained Button</Button>
+      <Button isLoading variant="outlined" color="indigo">OutLined Button</Button>
+      <Button isLoading variant="text" color="pink">Text Button</Button>
     </div>
   )
 }
 ```
 
-<div style={{ padding: '20px', border: '1px solid #e7e7e7', width: '400px', gap: '10px', display: 'flex', flexDirection: 'column' }}>
+<div style={{ padding: '20px', border: '1px solid #e7e7e7', minWidth: '300px', maxWidth: '400px', gap: '10px', display: 'flex', flexDirection: 'column' }}>
+  <h2>Small</h2>
   <Button size="small">Contained Button</Button>
-  <Button variant="outlined" size="small">Outlined Button</Button>
+  <Button variant="outlined" size="small">OutLined Button</Button>
   <Button variant="text" size="small">Text Button</Button>
   
+  <h2 style={{ marginTop: '30px' }}>Medium</h2>
   <Button size="medium" colorTheme="indigo">Contained Button</Button>
-  <Button size="medium" variant="outlined" colorTheme="indigo">Outlined Button</Button>
+  <Button size="medium" variant="outlined" colorTheme="indigo">OutLined Button</Button>
   <Button size="medium" variant="text" colorTheme="indigo">Text Button</Button>
 
+  <h2 style={{ marginTop: '30px' }}>Large</h2>
   <Button 
     size="large" 
     colorTheme="pink" 
@@ -115,6 +143,16 @@ const Exampe = () => {
   >
     Text Button
   </Button>
+
+  <h2 style={{ marginTop: '30px' }}>Disabled</h2>
+  <Button disabled>Contained Button</Button>
+  <Button disabled variant="outlined">OutLined Button</Button>
+  <Button disabled variant="text">Text Button</Button>
+
+  <h2 style={{ marginTop: '30px' }}>Loading</h2>
+  <Button isLoading>Contained Button</Button>
+  <Button isLoading variant="outlined" color="indigo">OutLined Button</Button>
+  <Button isLoading variant="text" color="pink">Text Button</Button>
 </div>
 
 <br />
@@ -130,7 +168,8 @@ const Exampe = () => {
       border: '1px solid #e7e7e7',
       display: 'flex',
       flexDirection: 'column',
-      width: '400px',
+      minWidth: '300px'
+      maxWidth: '400px',
       gap: '10px',
     }
   }, []);
@@ -138,49 +177,21 @@ const Exampe = () => {
   return (
     <div style={wrapperStyle}>
       <Button fullWidth>Contained Button</Button>
-      <Button fullWidth variant="outlined">Outlined Button</Button>
+      <Button fullWidth variant="outlined">OutLined Button</Button>
       <Button fullWidth variant="text">Text Button</Button>
+      <Button fullWidth disabled>Disabled Button</Button>
+      <Button fullWidth isLoading>Loading Button</Button>
     </div>
   )
 }
 ```
 
-<div style={{ padding: '20px', border: '1px solid #e7e7e7', width: '400px', gap: '10px', display: 'flex', flexDirection: 'column' }}>
-  <Button fullWidth={true}>Default Button</Button>
-  <Button variant="outlined" fullWidth={true}>Outlined Button</Button>
-  <Button variant="text" fullWidth={true}>Text Button</Button>
+<div style={{ padding: '20px', border: '1px solid #e7e7e7', minWidth: '300px', maxWidth: '400px', gap: '10px', display: 'flex', flexDirection: 'column' }}>
+  <Button fullWidth>Contained Button</Button>
+  <Button fullWidth variant="outlined">OutLined Button</Button>
+  <Button fullWidth variant="text">Text Button</Button>
+  <Button fullWidth disabled>Disabled Button</Button>
+  <Button fullWidth isLoading>Loading Button</Button>
 </div>
 
 <br />
-
-### FontColor Case
-```tsx
-import { Button } from '@devgrace/ui'
-
-const Exampe = () => {
-  const wrapperStyle = useMemo(() => {
-    return {
-      padding: '20px',
-      border: '1px solid #e7e7e7',
-      display: 'flex',
-      flexDirection: 'column',
-      width: '300px',
-      gap: '10px',
-    }
-  }, []);
-
-  return (
-    <div style={wrapperStyle}>
-      <Button colorTheme="yellow" fontColor="#eb3c27">
-        Contained Button
-      </Button>
-    </div>
-  )
-}
-```
-
-<div style={{ padding: '20px', border: '1px solid #e7e7e7', width: '400px', gap: '10px', display: 'flex', flexDirection: 'column' }}>
-  <Button colorTheme="yellow" fontColor="#eb3c27">
-    Contained Button
-  </Button>
-</div>

@@ -63,10 +63,10 @@ export const getButtonColorThemeByVariant = (
       color: fontColor || colors[colorTheme][500],
     },
     text: {
-      defaultBgColor: '#fff',
+      defaultBgColor: 'transparent',
       hoverBgColor: colors[colorTheme][50],
       activeBgColor: colors[colorTheme][100],
-      borderColor: '#fff',
+      borderColor: 'transparent',
       color: fontColor || colors[colorTheme][500],
     },
   } as const;
@@ -77,10 +77,10 @@ export const getButtonColorThemeByVariant = (
 export const getButtonLoaderSize = (size: ButtonOptions['size']) => {
   switch (size) {
     case 'large':
-      return { width: 18, height: 18 };
+      return { width: 18, height: 18 } as const;
     case 'medium':
-      return { width: 16, height: 16 };
+      return { width: 16, height: 16 } as const;
     default:
-      return { width: 14, height: 14 };
+      return { width: 14, height: 14 } as const;
   }
 };
