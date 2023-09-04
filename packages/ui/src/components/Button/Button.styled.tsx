@@ -29,9 +29,11 @@ export const StyledButton = styled.button<ButtonStyledOptions>`
 
   &:disabled {
     background-color: ${({ variant }) =>
-      variant === 'text' ? '#fff' : colors.gray[100]};
+      variant === 'text' ? 'transparent' : colors.gray[100]};
     border: ${({ variant }) =>
-      variant === 'text' ? '1px solid #fff' : `1px solid ${colors.gray[400]}`};
+      variant === 'text'
+        ? '1px solid transparent'
+        : `1px solid ${colors.gray[400]}`};
     color: ${colors.gray[400]};
     cursor: not-allowed;
   }
@@ -39,7 +41,7 @@ export const StyledButton = styled.button<ButtonStyledOptions>`
   &:disabled:hover,
   &:disabled:active {
     background-color: ${({ variant }) =>
-      variant === 'text' ? '#fff' : colors.gray[100]};
+      variant === 'text' ? 'transparent' : colors.gray[100]};
   }
 
   ${({ size }) => {
