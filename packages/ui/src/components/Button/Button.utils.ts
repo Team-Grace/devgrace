@@ -1,7 +1,7 @@
 import { colors, ColorThemeKeys } from '../../config/theme';
-import { ButtonOptions } from './Button.types';
+import { ButtonStyledOptions } from './Button.types';
 
-export const getButtonSize = (size: ButtonOptions['size']) => {
+export const getButtonSize = (size: ButtonStyledOptions['size']) => {
   const buttonSizeObj = {
     small: {
       height: '32px',
@@ -23,7 +23,9 @@ export const getButtonSize = (size: ButtonOptions['size']) => {
   return buttonSizeObj[size || 'medium'];
 };
 
-export const getButtonBorderRadiusByShape = (shape: ButtonOptions['shape']) => {
+export const getButtonBorderRadiusByShape = (
+  shape: ButtonStyledOptions['shape']
+) => {
   const buttonShapeObj = {
     rect: '0px',
     round: '6px',
@@ -33,8 +35,8 @@ export const getButtonBorderRadiusByShape = (shape: ButtonOptions['shape']) => {
 };
 
 export const getButtonColorThemeByVariant = (
-  variant: ButtonOptions['variant'],
-  fontColor: ButtonOptions['fontColor'],
+  variant: ButtonStyledOptions['variant'],
+  fontColor: ButtonStyledOptions['fontColor'],
   colorTheme?: ColorThemeKeys
 ) => {
   if (!colorTheme) {
@@ -74,7 +76,7 @@ export const getButtonColorThemeByVariant = (
   return buttonColorThemeObj[variant || 'contained'];
 };
 
-export const getButtonLoaderSize = (size: ButtonOptions['size']) => {
+export const getButtonLoaderSize = (size: ButtonStyledOptions['size']) => {
   switch (size) {
     case 'large':
       return { width: 18, height: 18 } as const;

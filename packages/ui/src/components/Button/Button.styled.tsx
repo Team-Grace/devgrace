@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { ButtonOptions } from './Button.types';
+import { ButtonStyledOptions } from './Button.types';
 import {
   getButtonBorderRadiusByShape,
   getButtonSize,
@@ -7,8 +7,7 @@ import {
 } from './Button.utils';
 import { colors } from '../../config/theme';
 
-export const StyledButton = styled.button<ButtonOptions>`
-  cursor: pointer;
+export const StyledButton = styled.button<ButtonStyledOptions>`
   position: relative;
   white-space: nowrap;
   outline: none;
@@ -22,6 +21,7 @@ export const StyledButton = styled.button<ButtonOptions>`
   width: ${({ fullWidth }) => (fullWidth ? '100%' : 'fit-content')};
   transition: all 0.2s;
   line-height: 1;
+  cursor: ${({ isLoading }) => (isLoading ? 'default' : 'pointer')};
 
   svg {
     margin-right: 6px;

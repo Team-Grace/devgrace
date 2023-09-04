@@ -23,17 +23,26 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     const { width: loaderWidth, height: loaderHeight } =
       getButtonLoaderSize(size);
 
+    const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+      const { onClick } = restProps;
+
+      if (isLoading) return;
+      if (onClick) onClick(e);
+    };
+
     return (
       <StyledButton
         {...restProps}
         ref={ref}
+        isLoading={isLoading}
         fullWidth={fullWidth}
         fontWeight={fontWeight}
         size={size}
         colorTheme={colorTheme}
         variant={variant}
         shape={shape}
-        fontColor={fontColor}>
+        fontColor={fontColor}
+        onClick={handleClick}>
         {isLoading && <Loader width={loaderWidth} height={loaderHeight} />}
         {children}
       </StyledButton>

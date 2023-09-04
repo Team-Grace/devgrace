@@ -13,7 +13,7 @@ export interface ButtonProps extends React.ComponentProps<'button'> {
   fontColor?: CSSProperties['color'];
 }
 
-export type ButtonOptions = Pick<
+export type ButtonStyledOptions = Pick<
   ButtonProps,
   | 'size'
   | 'variant'
@@ -22,4 +22,5 @@ export type ButtonOptions = Pick<
   | 'colorTheme'
   | 'fullWidth'
   | 'fontWeight'
+  | 'isLoading'
 >;
