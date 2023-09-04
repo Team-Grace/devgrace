@@ -11,7 +11,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       size = 'medium',
       variant = 'contained',
       shape = 'round',
-      colorTheme = '#1976d2',
+      colorTheme = 'blue',
       ...restProps
     }: ButtonProps,
     ref

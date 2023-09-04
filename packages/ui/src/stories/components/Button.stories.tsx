@@ -11,19 +11,19 @@ const Template: StoryFn<any> = () => {
     <>
       <h2>Large</h2>
       <div style={{ display: 'flex', gap: '8px' }}>
-        <Button size="large" onClick={() => alert('click button type1')}>
+        <Button size="large" onClick={() => console.log('click button type1')}>
           Default Contained Button
         </Button>
         <Button
           size="large"
           variant="outlined"
-          onClick={() => alert('click button type2')}>
+          onClick={() => console.log('click button type2')}>
           Default Outlined Button
         </Button>
         <Button
           size="large"
           variant="text"
-          onClick={() => alert('click button type3')}>
+          onClick={() => console.log('click button type3')}>
           Default Text Button
         </Button>
       </div>
@@ -33,24 +33,24 @@ const Template: StoryFn<any> = () => {
         <Button
           shape="rect"
           size="medium"
-          colorTheme="#eb3c27"
-          onClick={() => alert('click button type4')}>
+          colorTheme="indigo"
+          onClick={() => console.log('click button type4')}>
           Rect Contained Button
         </Button>
         <Button
           shape="rect"
           size="medium"
+          colorTheme="indigo"
           variant="outlined"
-          colorTheme="#eb3c27"
-          onClick={() => alert('click button type5')}>
+          onClick={() => console.log('click button type5')}>
           Rect OutLined Button
         </Button>
         <Button
           shape="rect"
           size="medium"
+          colorTheme="indigo"
           variant="text"
-          colorTheme="#eb3c27"
-          onClick={() => alert('click button type6')}>
+          onClick={() => console.log('click button type6')}>
           Rect Text Button
         </Button>
       </div>
@@ -59,22 +59,22 @@ const Template: StoryFn<any> = () => {
       <div style={{ display: 'flex', gap: '8px' }}>
         <Button
           size="small"
-          colorTheme="#ffbe0a"
-          onClick={() => alert('click button type4')}>
+          colorTheme="orange"
+          onClick={() => console.log('click button type4')}>
           Default Contained Button
         </Button>
         <Button
           size="small"
+          colorTheme="orange"
           variant="outlined"
-          colorTheme="#ffbe0a"
-          onClick={() => alert('click button type5')}>
+          onClick={() => console.log('click button type5')}>
           Default OutLined Button
         </Button>
         <Button
           size="small"
+          colorTheme="orange"
           variant="text"
-          colorTheme="#ffbe0a"
-          onClick={() => alert('click button type6')}>
+          onClick={() => console.log('click button type6')}>
           Default Text Button
         </Button>
       </div>
@@ -82,24 +82,24 @@ const Template: StoryFn<any> = () => {
       <h2 style={{ marginTop: '20px' }}>Full Width</h2>
       <div style={{ display: 'flex', gap: '8px' }}>
         <Button
-          colorTheme="#ffbe0a"
           fullWidth
-          onClick={() => alert('click button type7')}>
+          colorTheme="pink"
+          onClick={() => console.log('click button type7')}>
           Default Contained Button
         </Button>
         <Button
-          colorTheme="#ffbe0a"
           fullWidth
+          colorTheme="pink"
           variant="outlined"
-          onClick={() => alert('click button type8')}>
+          onClick={() => console.log('click button type8')}>
           Default Outlined Button
         </Button>
       </div>
 
       <div
         style={{ marginTop: '20px', display: 'flex', gap: '8px' }}
-        onClick={() => alert('click button type9')}>
-        <Button shape="rect" colorTheme="#5dbb63" fullWidth>
+        onClick={() => console.log('click button type9')}>
+        <Button shape="rect" colorTheme="pink" fullWidth>
           Rect Contained Button
         </Button>
       </div>

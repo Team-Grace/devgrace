@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { hexToRGBA } from '@devgrace/utils';
 import { ButtonOptions } from './Button.types';
 import {
   getButtonBorderRadiusByShape,
@@ -27,26 +26,21 @@ export const StyledButton = styled.button<ButtonOptions>`
   }};
 
   ${({ variant, colorTheme, fontColor }) => {
-    const { backgroundColor, borderColor, color } =
-      getButtonColorThemeByVariant(variant, colorTheme, fontColor);
+    const { defaultBgColor, hoverBgColor, activeBgColor, borderColor, color } =
+      getButtonColorThemeByVariant(variant, fontColor, colorTheme);
+
     return `
-      background-color: ${backgroundColor};
+      background-color: ${defaultBgColor};
       border: 1px solid ${borderColor};
       color: ${color};
+
+      &:hover {
+        background-color: ${hoverBgColor};
+      }
+    
+      &:active {
+        background-color: ${activeBgColor};
+      }
     `;
   }}
-
-  &:hover {
-    background-color: ${({ variant, colorTheme }) =>
-      variant === 'contained'
-        ? colorTheme && hexToRGBA(colorTheme, 0.8)
-        : colorTheme && hexToRGBA(colorTheme, 0.1)};
-  }
-
-  &:active {
-    background-color: ${({ variant, colorTheme }) =>
-      variant === 'contained'
-        ? colorTheme && hexToRGBA(colorTheme, 0.9)
-        : colorTheme && hexToRGBA(colorTheme, 0.2)};
-  }
 `;

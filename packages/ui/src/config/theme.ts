@@ -1,3 +1,4 @@
+// https://react-md.dev/colors-and-theming/color-palette
 export const colors = {
   red: {
     50: '#FFEBEE',
@@ -143,4 +144,6 @@ export const colors = {
     800: '#424242',
     900: '#212121',
   },
-};
+} as const;
+
+export type ColorThemeKeys = keyof typeof colors;
