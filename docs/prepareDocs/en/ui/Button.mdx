@@ -48,14 +48,14 @@ const Exampe = () => {
       <Button variant="text" size="small">Text Button</Button>
       
       {/* Medium */}
-      <Button size="medium" colorTheme="#eb3c27">Contained Button</Button>
-      <Button size="medium" variant="outlined" colorTheme="#eb3c27">Outlined Button</Button>
-      <Button size="medium" variant="text" colorTheme="#eb3c27">Text Button</Button>
+      <Button size="medium" colorTheme="indigo">Contained Button</Button>
+      <Button size="medium" variant="outlined" colorTheme="indigo">Outlined Button</Button>
+      <Button size="medium" variant="text" colorTheme="indigo">Text Button</Button>
 
       {/* Large */}
       <Button 
         size="large" 
-        colorTheme="#ffbe0a" 
+        colorTheme="pink" 
         shape="rect"
       >
         Contained Button
@@ -63,7 +63,7 @@ const Exampe = () => {
       <Button 
         size="large" 
         variant="outlined" 
-        colorTheme="#ffbe0a" 
+        colorTheme="pink" 
         shape="rect"
       >
         Outlined Button
@@ -71,7 +71,7 @@ const Exampe = () => {
       <Button 
         size="large" 
         variant="text" 
-        colorTheme="#ffbe0a" 
+        colorTheme="pink" 
         shape="rect"
       >
         Text Button
@@ -86,13 +86,13 @@ const Exampe = () => {
   <Button variant="outlined" size="small">Outlined Button</Button>
   <Button variant="text" size="small">Text Button</Button>
   
-  <Button size="medium" colorTheme="#eb3c27">Contained Button</Button>
-  <Button size="medium" variant="outlined" colorTheme="#eb3c27">Outlined Button</Button>
-  <Button size="medium" variant="text" colorTheme="#eb3c27">Text Button</Button>
+  <Button size="medium" colorTheme="indigo">Contained Button</Button>
+  <Button size="medium" variant="outlined" colorTheme="indigo">Outlined Button</Button>
+  <Button size="medium" variant="text" colorTheme="indigo">Text Button</Button>
 
   <Button 
     size="large" 
-    colorTheme="#ffbe0a" 
+    colorTheme="pink" 
     shape="rect"
   >
     Contained Button
@@ -100,7 +100,7 @@ const Exampe = () => {
   <Button 
     size="large" 
     variant="outlined" 
-    colorTheme="#ffbe0a" 
+    colorTheme="pink" 
     shape="rect"
   >
     Outlined Button
@@ -108,7 +108,7 @@ const Exampe = () => {
   <Button 
     size="large" 
     variant="text" 
-    colorTheme="#ffbe0a" 
+    colorTheme="pink" 
     shape="rect"
   >
     Text Button
@@ -151,7 +151,7 @@ const Exampe = () => {
 
 <br />
 
-### Custom Style
+### FontColor Case
 ```tsx
 import { Button } from '@devgrace/ui'
 
@@ -169,15 +169,8 @@ const Exampe = () => {
 
   return (
     <div style={wrapperStyle}>
-      <Button 
-        style={{ 
-          width: '150px', 
-          height: '100px',
-          color: '#eb3c27',
-          /* ...custom styles */ 
-        }}
-      >
-        CustomButton Button
+      <Button colorTheme="yellow" fontColor="#eb3c27">
+        Contained Button
       </Button>
     </div>
   )
@@ -185,13 +178,7 @@ const Exampe = () => {
 ```
 
 <div style={{ padding: '20px', border: '1px solid #e7e7e7', width: '400px', gap: '10px', display: 'flex', flexDirection: 'column' }}>
-  <Button 
-    style={{ 
-      width: '150px', 
-      height: '100px',
-      color: '#eb3c27',
-    }}
-  >
-    CustomButton Button
+  <Button colorTheme="yellow" fontColor="#eb3c27">
+    Contained Button
   </Button>
 </div>
