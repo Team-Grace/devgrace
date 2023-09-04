@@ -8,14 +8,16 @@ import { Button } from '@devgrace/ui'
 
 ## Interface
 ```tsx
+type ColorThemeKeys = "blue" | "brown" | "cyan" | "gray" | "green" | "indigo" | "orange" | "pink" | "purple" | "red" | "teal" | "yellow"
+
 export interface ButtonProps extends React.ComponentProps<'button'> {
   children: React.ReactNode;
-  fontColor?: CSSProperties['color'];
   fullWidth?: boolean; // defaut: false
   size?: 'small' | 'medium' | 'large'; // default: 'medium'
   shape?: 'rect' | 'round'; // default: 'contained'
   variant?: 'contained' | 'outlined' | 'text'; // default: 'round'
-  colorTheme?: CSSProperties['backgroundColor']; // default: '#1976d2' only hex
+  colorTheme?: ColorThemeKeys; // default: blue
+  fontColor?: CSSProperties['color'];
 }
 
 const Button: React.ForwardRefExoticComponent<
