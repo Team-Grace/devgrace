@@ -13,6 +13,6 @@ const isValidEmail: (email: string) => boolean
 ```ts
 import { isValidEmail } from '@devgrace/utils';
 
-const email1 = isValidEmail('example@email.com'); // true
-const email2 = isValidEmail('invalid-email'); // false
+const isEmail1 = isValidEmail('example@email.com'); // true
+const isEmail2 = isValidEmail('invalid-email'); // false
 ```
