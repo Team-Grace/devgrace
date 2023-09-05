@@ -8,7 +8,7 @@ import { Button } from '@devgrace/ui'
 
 ## Interface
 ```tsx
-type ColorThemeKeys =
+type ColorThemes =
   | 'blue'
   | 'brown'
   | 'cyan'
@@ -30,7 +30,7 @@ export interface ButtonProps extends React.ComponentProps<'button'> {
   size?: 'small' | 'medium' | 'large'; // default: 'medium'
   shape?: 'rect' | 'round'; // default: 'contained'
   variant?: 'contained' | 'outlined' | 'text'; // default: 'round'
-  colorTheme?: ColorThemeKeys; // default: blue
+  colorTheme?: ColorThemes; // default: blue
   fontColor?: CSSProperties['color'];
 }
 
