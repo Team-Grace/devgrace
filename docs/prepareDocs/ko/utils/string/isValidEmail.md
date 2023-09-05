@@ -23,4 +23,5 @@ const isEmail2 = isValidEmail('invalid-email'); // false
 
 ## Note
 [RFC 5322](https://www.ietf.org/rfc/rfc5322.txt)
+
 [emailregex](https://emailregex.com/)
