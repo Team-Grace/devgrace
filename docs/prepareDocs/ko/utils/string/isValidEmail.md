@@ -6,13 +6,13 @@
 
 ## Interface
 ```tsx
-const isValidEmail: (email: string) => void
+const isValidEmail: (email: string) => boolean
 ```
 
 ## Usage
 ```ts
 import { isValidEmail } from '@devgrace/utils';
 
-const email1 = "example@email.com"; // true
-const email2 = "invalid-email"; // false
+const email1 = isValidEmail("example@email.com"); // true
+const email2 = isValidEmail("invalid-email"); // false
 ```
