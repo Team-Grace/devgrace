@@ -146,4 +146,4 @@ export const colors = {
   },
 } as const;
 
-export type ColorThemeKeys = keyof typeof colors;
+export type ColorThemes = keyof typeof colors;

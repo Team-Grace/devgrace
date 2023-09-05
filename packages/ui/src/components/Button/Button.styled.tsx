@@ -6,6 +6,7 @@ import {
   getButtonColorThemeByVariant,
 } from './Button.utils';
 import { colors } from '../../config/theme';
+import { css } from '@emotion/react';
 
 export const StyledButton = styled.button<ButtonStyledOptions>`
   position: relative;
@@ -21,6 +22,7 @@ export const StyledButton = styled.button<ButtonStyledOptions>`
   width: ${({ fullWidth }) => (fullWidth ? '100%' : 'fit-content')};
   transition: all 0.2s;
   line-height: 1;
+  opacity: ${({ isLoading }) => (isLoading ? 0.7 : 1)};
   cursor: ${({ isLoading }) => (isLoading ? 'default' : 'pointer')};
 
   svg {
@@ -46,7 +48,7 @@ export const StyledButton = styled.button<ButtonStyledOptions>`
 
   ${({ size }) => {
     const { height, padding, fontSize } = getButtonSize(size);
-    return `
+    return css`
       height: ${height};
       padding: ${padding};
       font-size: ${fontSize};
@@ -57,7 +59,7 @@ export const StyledButton = styled.button<ButtonStyledOptions>`
     const { defaultBgColor, hoverBgColor, activeBgColor, borderColor, color } =
       getButtonColorThemeByVariant(variant, fontColor, colorTheme);
 
-    return `
+    return css`
       background-color: ${defaultBgColor};
       border: 1px solid ${borderColor};
       color: ${color};
@@ -65,7 +67,7 @@ export const StyledButton = styled.button<ButtonStyledOptions>`
       &:hover {
         background-color: ${hoverBgColor};
       }
-    
+
       &:active {
         background-color: ${activeBgColor};
       }

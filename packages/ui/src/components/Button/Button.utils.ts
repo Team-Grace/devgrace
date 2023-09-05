@@ -1,4 +1,4 @@
-import { colors, ColorThemeKeys } from '../../config/theme';
+import { colors, ColorThemes } from '../../config/theme';
 import { ButtonStyledOptions } from './Button.types';
 
 export const getButtonSize = (size: ButtonStyledOptions['size']) => {
@@ -37,14 +37,14 @@ export const getButtonBorderRadiusByShape = (
 export const getButtonColorThemeByVariant = (
   variant: ButtonStyledOptions['variant'],
   fontColor: ButtonStyledOptions['fontColor'],
-  colorTheme?: ColorThemeKeys
+  colorTheme?: ColorThemes
 ) => {
   if (!colorTheme) {
     return {
       defaultBgColor: colors['blue'][500],
       hoverBgColor: colors['blue'][600],
       activeBgColor: colors['blue'][700],
-      borderColor: colors['blue'],
+      borderColor: colors['blue'][500],
       color: fontColor || '#fff',
     } as const;
   }
