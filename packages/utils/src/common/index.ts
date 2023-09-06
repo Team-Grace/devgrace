@@ -5,5 +5,4 @@ export * from './deepEqual';
 export * from './getUniqId';
 export * from './getUniqTime';
 export * from './getViewportSize';
-export * from './hexToRGB';
 export * from './noop';
