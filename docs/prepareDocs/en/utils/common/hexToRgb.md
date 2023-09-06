@@ -1,6 +1,8 @@
 # hexToRgb
 
-a function to change a hexadecimal color code (Hex) to RGB format. (HEX -> RGB)
+a function to change a hexadecimal color code (Hex) to RGB format. `(HEX -> RGB)`
+
+Returns `null` if it is not a valid hex code.
 
 <br />
 
@@ -23,5 +25,3 @@ const rgbColor1 = hexToRgb(hex1); // { r: 26, g: 43, b: 60 }
 const hex2 = '#1A2';
 const rgbColor2 = hexToRgb(hex2); // { r: 17, g: 170, b: 34 }
 ```
-
-## Note
