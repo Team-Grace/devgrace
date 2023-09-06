@@ -8,15 +8,15 @@ export const hexToRGB = (hex: string) => {
     return null;
   }
 
-  hex = hex.replace('#', '');
+  let convertedHex = hex.replace('#', '');
 
-  if (hex.length === 3) {
-    hex = repeatCharacters(hex, 2);
+  if (convertedHex.length === 3) {
+    convertedHex = repeatCharacters(hex, 2);
   }
 
-  const r = parseInt(hex.slice(0, 2), HEXADECIMAL);
-  const g = parseInt(hex.slice(2, 4), HEXADECIMAL);
-  const b = parseInt(hex.slice(4, 6), HEXADECIMAL);
+  const r = parseInt(convertedHex.slice(0, 2), HEXADECIMAL);
+  const g = parseInt(convertedHex.slice(2, 4), HEXADECIMAL);
+  const b = parseInt(convertedHex.slice(4, 6), HEXADECIMAL);
 
   return { r, g, b } as const;
 };
