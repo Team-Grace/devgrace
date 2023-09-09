@@ -48,14 +48,6 @@ const Template: StoryFn<any> = () => {
           size="medium"
           colorTheme="indigo"
           variant="outlined"
-          onClick={() => console.log('click button type5')}>
-          OutLined Button
-        </Button>
-        <Button
-          shape="rect"
-          size="medium"
-          colorTheme="indigo"
-          variant="outlined"
           onClick={() => console.log('click button type6')}>
           OutLined Button
         </Button>
