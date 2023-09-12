@@ -6,6 +6,8 @@ export * from './useInterval';
 export * from './useIsMounted';
 export * from './useIsomorphicLayoutEffect';
 export * from './useMergeRefs';
+export * from './usePreservedCallback';
+export * from './useResizeObserver';
 export * from './useTimeout';
 export * from './useToggle';
 export * from './useUnMount';
