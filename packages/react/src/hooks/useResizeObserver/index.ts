@@ -23,7 +23,7 @@ export const useResizeObserver = <T extends HTMLElement>(
     ([entry]: ResizeObserverEntry[]) => {
       if (entry) {
         onResizeCallback(entry);
-        setContentRect({ ...entry.contentRect });
+        setContentRect(entry.contentRect);
       }
     },
     [onResizeCallback]
