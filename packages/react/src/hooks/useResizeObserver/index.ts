@@ -4,7 +4,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 type ContentRect = Omit<DOMRectReadOnly, 'toJSON'>;
 
 export const useResizeObserver = <T extends HTMLElement>(
-  onResize: (entry: ResizeObserverEntry) => void
+  action: (entry: ResizeObserverEntry) => void
 ) => {
   const [contentRect, setContentRect] = useState<ContentRect>({
     bottom: 0,
@@ -17,16 +17,16 @@ export const useResizeObserver = <T extends HTMLElement>(
     y: 0,
   });
   const ref = useRef<T>(null);
-  const onResizeCallback = usePreservedCallback(onResize);
+  const callbackAction = usePreservedCallback(action);
 
   const observerCallback = useCallback(
     ([entry]: ResizeObserverEntry[]) => {
       if (entry) {
-        onResizeCallback(entry);
+        callbackAction(entry);
         setContentRect(entry.contentRect);
       }
     },
-    [onResizeCallback]
+    [callbackAction]
   );
 
   useEffect(() => {
