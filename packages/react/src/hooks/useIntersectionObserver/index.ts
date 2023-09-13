@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef } from 'react';
+import { usePreservedCallback } from '../usePreservedCallback';
 
 export interface UseIntersectionObserverProps {
   action: (entry: IntersectionObserverEntry) => void;
@@ -16,6 +17,7 @@ export const useIntersectionObserver = <T extends HTMLElement>({
   rootMargin = '0px 0px 0px 0px',
 }: UseIntersectionObserverProps) => {
   const ref = useRef<T>(null);
+  const callbackAction = usePreservedCallback(action);
 
   const observerCallback = useCallback(
     ([entry]: IntersectionObserverEntry[], observer: IntersectionObserver) => {
@@ -23,17 +25,17 @@ export const useIntersectionObserver = <T extends HTMLElement>({
         if (entry.isIntersecting) {
           const targetElement = entry.target as HTMLElement;
 
-          if (action) {
-            action(entry);
+          if (callbackAction) {
+            callbackAction(entry);
           }
 
-          if (ref.current && calledOnce) {
+          if (calledOnce) {
             observer.unobserve(targetElement);
           }
         }
       }
     },
-    [action, calledOnce]
+    [callbackAction, calledOnce]
   );
 
   useEffect(() => {
