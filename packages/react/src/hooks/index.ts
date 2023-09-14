@@ -12,3 +12,4 @@ export * from './useTimeout';
 export * from './useToggle';
 export * from './useUnMount';
 export * from './useWindowSize';
+export * from './usePrevious';
