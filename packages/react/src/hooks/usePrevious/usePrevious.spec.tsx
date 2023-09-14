@@ -3,7 +3,7 @@ import { usePrevious } from ".";
 
 describe('usePrevious', () => {
   it('should return the value of the argument from the previous render', () => {
-    const {result, rerender} = renderHook(({value}) => usePrevious(value), {
+    const { result, rerender } = renderHook(({ value }) => usePrevious(value), {
       initialProps: { value : 0 },
     });
 

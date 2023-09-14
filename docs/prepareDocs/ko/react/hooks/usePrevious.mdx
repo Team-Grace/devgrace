@@ -19,15 +19,15 @@ const Example = () => {
   const previousCount = usePrevious(count);
 
   const onIncrementCount = () => {
-    setCount(count++);
+    setCount(count + 1);
   };
 
-    return (
-      <>
-        <div>Current Count is - {count}</div>
-        <div>Previous Count is - {previousCount}</div>
-        <button onClick={onIncrementCount}>Increment</button>
-      </>
-  )
+  return (
+    <div>
+      <div>Current Count is - {count}</div>
+      <div>Previous Count is - {previousCount}</div>
+      <button onClick={onIncrementCount}>Increment</button>
+    </div>
+  );
 };
 ```
