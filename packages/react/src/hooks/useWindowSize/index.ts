@@ -1,6 +1,6 @@
-import React, { useCallback, useState } from 'react';
-import { useIsomorphicLayoutEffect } from '@devgrace/react';
-import { useDebounce } from '@devgrace/react';
+import { useCallback, useMemo, useState } from 'react';
+import { useIsomorphicLayoutEffect } from '../useIsomorphicLayoutEffect';
+import { useDebounce } from '../useDebounce';
 
 interface Size {
   width: number | null;
@@ -27,7 +27,10 @@ export const useWindowSize = (options: useWindowSizeProps = {}) => {
   }, []);
 
   const debouncedResize = useDebounce(onResize, wait);
-  const handleResize = isDebounce ? debouncedResize : onResize;
+
+  const handleResize = useMemo(() => {
+    return isDebounce ? debouncedResize : onResize;
+  }, [onResize, isDebounce, debouncedResize]);
 
   useIsomorphicLayoutEffect(() => {
     onResize();
