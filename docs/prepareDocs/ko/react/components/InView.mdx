@@ -16,20 +16,12 @@ interface UseIntersectionObserverProps {
   rootMargin?: string;
 }
 
-interface InViewProps extends UseIntersectionObserverProps {
-  children: React.ReactNode;
-  style?: CSSProperties;
-}
+type InViewProps = React.ComponentProps<'div'> & UseIntersectionObserverProps;
 
-const InView: ({ 
-  children, 
-  style, 
-  action, 
-  calledOnce, 
-  threshold, 
-  root, 
-  rootMargin 
-}: InViewProps) => JSX.Element
+const InView: React.ForwardRefExoticComponent<
+  Omit<React.PropsWithChildren<InViewProps>, 'ref'> &
+    React.RefAttributes<HTMLDivElement>
+>;
 ```
 
 ## Usage

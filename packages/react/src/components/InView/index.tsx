@@ -2,19 +2,29 @@ import {
   useIntersectionObserver,
   UseIntersectionObserverProps,
 } from '../../hooks/useIntersectionObserver';
-import React, { CSSProperties } from 'react';
+import { useMergeRefs } from '../../hooks/useMergeRefs';
+import React, { forwardRef, PropsWithChildren } from 'react';
 
-interface InViewProps extends UseIntersectionObserverProps {
-  children: React.ReactNode;
-  style?: CSSProperties;
-}
+type InViewProps = React.ComponentProps<'div'> & UseIntersectionObserverProps;
 
-export const InView = ({ children, style, ...rest }: InViewProps) => {
-  const ref = useIntersectionObserver<HTMLDivElement>({ ...rest });
+export const InView = forwardRef<
+  HTMLDivElement,
+  PropsWithChildren<InViewProps>
+>((props, ref) => {
+  const { action, calledOnce, threshold, root, rootMargin, ...restProps } =
+    props;
+
+  const intersectionObserverRef = useIntersectionObserver<HTMLDivElement>({
+    action,
+    calledOnce,
+    threshold,
+    root,
+    rootMargin,
+  });
 
   return (
-    <div ref={ref} style={style}>
-      {children}
+    <div ref={useMergeRefs(ref, intersectionObserverRef)} {...restProps}>
+      {props.children}
     </div>
   );
-};
+});
