@@ -7,3 +7,4 @@ export * from './getUniqTime';
 export * from './getViewportSize';
 export * from './hexToRgb';
 export * from './noop';
+export * from './wrapInArray';
