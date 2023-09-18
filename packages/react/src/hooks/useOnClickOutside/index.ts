@@ -26,5 +26,5 @@ export const useOnClickOutside = <T extends HTMLElement>(
     };
   }, [callbackAction]);
 
-  return ref;
+  return { ref };
 };
