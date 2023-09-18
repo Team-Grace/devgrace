@@ -1,6 +1,7 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { screen, waitFor } from '@testing-library/react';
 import { useRef, useState } from 'react';
 import { Portal } from '.';
+import { renderSetup } from '../../utils/test/renderSetup';
 
 const DefaultTestComponent = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -58,7 +59,7 @@ const NestedTestComponent = () => {
 
 describe('Default Portal Test', () => {
   it("should render the portalElement in 'document.body' by default", () => {
-    const { container } = render(<DefaultTestComponent />);
+    const { container } = renderSetup(<DefaultTestComponent />);
 
     const parentElement = container.querySelector('#parent');
     const parentPortal = parentElement?.querySelector('.portal');
@@ -71,8 +72,8 @@ describe('Default Portal Test', () => {
     expect(documentPortalChild).toBeInTheDocument();
   });
 
-  it('should render children of the Portal component based on multiple states', () => {
-    render(<DefaultTestComponent />);
+  it('should render children of the Portal component based on multiple states', async () => {
+    const { user } = renderSetup(<DefaultTestComponent />);
 
     const documentPortal = document.querySelector('.portal');
     const toggleButton = screen.getByRole('button', { name: 'Toggle' });
@@ -80,29 +81,37 @@ describe('Default Portal Test', () => {
 
     const getChildElement = () => documentPortal?.querySelector('.child');
 
-    fireEvent.click(plusButton);
+    await waitFor(() => {
+      user.click(plusButton);
 
-    expect(getChildElement()).toBeInTheDocument();
-    expect(getChildElement()).toHaveTextContent('1');
+      expect(getChildElement()).toBeInTheDocument();
+      expect(getChildElement()).toHaveTextContent('1');
+    });
 
-    fireEvent.click(toggleButton);
-    fireEvent.click(plusButton);
+    await waitFor(() => {
+      user.click(toggleButton);
+      user.click(plusButton);
 
-    expect(getChildElement()).not.toBeInTheDocument();
+      expect(getChildElement()).not.toBeInTheDocument();
+    });
 
-    fireEvent.click(toggleButton);
-    fireEvent.click(plusButton);
+    await waitFor(() => {
+      user.click(toggleButton);
+      user.click(plusButton);
 
-    expect(getChildElement()).toBeInTheDocument();
-    expect(getChildElement()).toHaveTextContent('3');
+      expect(getChildElement()).toBeInTheDocument();
+      expect(getChildElement()).toHaveTextContent('3');
+    });
 
-    fireEvent.click(toggleButton);
+    await waitFor(() => {
+      user.click(toggleButton);
 
-    expect(getChildElement()).not.toBeInTheDocument();
+      expect(getChildElement()).not.toBeInTheDocument();
+    });
   });
 
   it('should remove the portalElement on unmount.', () => {
-    const { unmount } = render(<DefaultTestComponent />);
+    const { unmount } = renderSetup(<DefaultTestComponent />);
 
     const documentPortal = document.querySelector('.portal');
 
@@ -114,7 +123,7 @@ describe('Default Portal Test', () => {
 
 describe('Container Portal Test', () => {
   it("should render to any other DOM element you want instead of the 'document.body' by passing in the 'containerRef' prop", () => {
-    const { container } = render(<ContainerTestComponent />);
+    const { container } = renderSetup(<ContainerTestComponent />);
 
     const outerElement = container.querySelector('#outer');
     const outerInnerPortal = outerElement?.querySelector('.portal');
@@ -124,7 +133,7 @@ describe('Container Portal Test', () => {
   });
 
   it('should remove the portalElement on unmount', () => {
-    const { container, unmount } = render(<ContainerTestComponent />);
+    const { container, unmount } = renderSetup(<ContainerTestComponent />);
 
     const outerElement = container.querySelector('#outer');
     const outerInnerPortal = outerElement?.querySelector('.portal');
@@ -137,7 +146,7 @@ describe('Container Portal Test', () => {
 
 describe('Nested Portal Test', () => {
   it('should create a nested Portal DOM hierarchy when nesting multiple Portal Components', () => {
-    render(<NestedTestComponent />);
+    renderSetup(<NestedTestComponent />);
 
     const documentPortal = document.querySelector('.portal');
     const documentPortalChild = documentPortal?.querySelector('.child');
@@ -156,7 +165,7 @@ describe('Nested Portal Test', () => {
   });
 
   it("should render a nested Portal Component to the parent portalElement if the nested Portal Component has a 'containerRef' prop", () => {
-    const { container } = render(<NestedTestComponent />);
+    const { container } = renderSetup(<NestedTestComponent />);
 
     const outerElement = container.querySelector('#outer');
     const outerPortal = outerElement?.querySelector('.portal');

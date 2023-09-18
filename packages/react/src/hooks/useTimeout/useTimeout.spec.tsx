@@ -1,6 +1,7 @@
-import { act, render, renderHook, screen } from '@testing-library/react';
+import { act, renderHook, screen } from '@testing-library/react';
 import { useTimeout } from '.';
 import { useState } from 'react';
+import { renderSetup } from '../../utils/test/renderSetup';
 
 const delayTime = 1000;
 
@@ -46,7 +47,7 @@ describe('useTimeout', () => {
   });
 
   it('callback function always guarantees the latest state', () => {
-    render(<TestComponent />);
+    renderSetup(<TestComponent />);
 
     expect(screen.getByText('0')).toBeInTheDocument();
 

@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
 import { useMergeRefs } from '.';
-import { fireEvent, render, screen } from '@testing-library/react';
+import { screen, waitFor } from '@testing-library/react';
+import { renderSetup } from '../../utils/test/renderSetup';
 
 const TestComponent = () => {
   const [result, setResult] = useState(false);
@@ -26,15 +27,16 @@ const TestComponent = () => {
 };
 
 describe('useMergeRefs', () => {
-  it('can merge multiple refs into one', () => {
-    render(<TestComponent />);
+  it('can merge multiple refs into one', async () => {
+    const { user } = renderSetup(<TestComponent />);
 
     const button = screen.getByText('button');
 
     expect(screen.getByRole('paragraph')).toHaveTextContent('false');
 
-    fireEvent.click(button);
-
-    expect(screen.getByRole('paragraph')).toHaveTextContent('true');
+    await waitFor(() => {
+      user.click(button);
+      expect(screen.getByRole('paragraph')).toHaveTextContent('true');
+    });
   });
 });

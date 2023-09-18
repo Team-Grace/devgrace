@@ -1,5 +1,6 @@
 import { render } from '@testing-library/react';
 import { AB } from '.';
+import { renderSetup } from '../../utils/test/renderSetup';
 
 const { CaseA, CaseB } = AB;
 
@@ -52,22 +53,22 @@ const FailTestComponent3 = () => {
 
 describe('AB', () => {
   it('should render CaseA or CaseB in the normal case', () => {
-    const { container } = render(<NormalTestComponent />);
+    const { container } = renderSetup(<NormalTestComponent />);
     expect(container.childElementCount).toBe(1);
   });
 
   it('should not render anything if rendering a duplicate component type', () => {
-    const { container } = render(<FailTestComponent1 />);
+    const { container } = renderSetup(<FailTestComponent1 />);
     expect(container.childElementCount).toBe(0);
   });
 
   it('should not render anything if rendering an invalid component type', () => {
-    const { container } = render(<FailTestComponent2 />);
+    const { container } = renderSetup(<FailTestComponent2 />);
     expect(container.childElementCount).toBe(0);
   });
 
   it('should not render anything if the children length is 1', () => {
-    const { container } = render(<FailTestComponent3 />);
+    const { container } = renderSetup(<FailTestComponent3 />);
     expect(container.childElementCount).toBe(0);
   });
 });

@@ -1,10 +1,11 @@
-import { render, screen, waitFor } from '@testing-library/react';
+import { screen, waitFor } from '@testing-library/react';
 import { LazyImage } from '.';
 import {
   mockIntersecting,
   mockIntersectionObserverCleanup,
   mockIntersectionObserverSetup,
 } from '../../utils/test/mockIntersectionObserver';
+import { renderSetup } from '../../utils/test/renderSetup';
 
 beforeEach(() => {
   mockIntersectionObserverSetup();
@@ -25,7 +26,7 @@ const TestComponent = () => {
 
 describe('LazyImage', () => {
   it('should not load the image before it is exposed to the viewport', () => {
-    render(<TestComponent />);
+    renderSetup(<TestComponent />);
 
     const img1 = screen.getByAltText('img1');
     const img2 = screen.getByAltText('img2');
@@ -35,7 +36,7 @@ describe('LazyImage', () => {
   });
 
   it('should load the image when it is exposed to the viewport', async () => {
-    render(<TestComponent />);
+    renderSetup(<TestComponent />);
 
     const img1 = screen.getByAltText('img1');
     const img2 = screen.getByAltText('img2');
