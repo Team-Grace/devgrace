@@ -10,7 +10,7 @@ This hook is especially useful when callback functions change during rendering. 
 ```tsx
 const usePreservedCallback: <T extends (...args: any[]) => any>(
   callback: T
-) => (...args: any[]) => void;
+) => (...args: any[]) => any;
 ```
 
 ## Usage

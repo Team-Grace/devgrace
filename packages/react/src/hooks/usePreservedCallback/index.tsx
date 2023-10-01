@@ -10,6 +10,6 @@ export const usePreservedCallback = <T extends (...args: any[]) => any>(
   }, [callback]);
 
   return useCallback((...args: any[]) => {
-    callbackRef.current(args.length === 1 ? args[0] : args);
+    return callbackRef.current(args.length === 1 ? args[0] : args);
   }, []);
 };
