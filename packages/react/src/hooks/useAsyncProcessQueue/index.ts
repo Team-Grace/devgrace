@@ -1,45 +1,59 @@
-import { useAsyncPreservedCallback } from '../useAsyncPreservedCallback';
 import { useCallback, useState, useRef } from 'react';
 
-export const useAsyncProcessQueue = (
-  asyncAction: (data?: any) => Promise<any>
-) => {
-  const requestQueue = useRef<any[]>([]);
+type RequestFunction<Data> = (requestData?: any) => Promise<Data>;
+
+interface useAsyncProcessQueueOptions {
+  keepPreviousData?: boolean;
+}
+
+export const useAsyncProcessQueue = <Data = unknown, Error = unknown>({
+  keepPreviousData = false,
+}: useAsyncProcessQueueOptions = {}) => {
+  const requestQueue = useRef<RequestFunction<Data>[]>([]);
+
+  const [data, setData] = useState<Data>();
+  const [error, setError] = useState<Error>();
   const [isLoading, setIsLoading] = useState(false);
-  const [data, setData] = useState<any>(null);
 
-  const callbackAsyncAction = useAsyncPreservedCallback(asyncAction);
-
-  const processQueue = useCallback(async () => {
+  const handleRequestQueue = useCallback(async () => {
     if (requestQueue.current.length === 0) {
       return;
     }
 
-    const requestData = requestQueue.current[0];
+    const requestFunc = requestQueue.current[0];
 
     try {
       setIsLoading(true);
-      const res = await callbackAsyncAction(requestData);
+      const res = await requestFunc();
 
       setData(res);
+      setError(undefined);
+    } catch (err) {
+      setData(undefined);
+      setError(err as Error);
     } finally {
       requestQueue.current.shift();
       setIsLoading(false);
 
-      await processQueue();
+      await handleRequestQueue();
     }
-  }, [callbackAsyncAction]);
+  }, []);
 
-  const addToAsyncQueue = useCallback(
-    async (data: any) => {
-      requestQueue.current.push(data);
+  const addToProcessQueue = useCallback(
+    async (callbackFunc: RequestFunction<Data>) => {
+      requestQueue.current.push(callbackFunc);
 
       if (requestQueue.current.length === 1) {
-        await processQueue();
+        if (!keepPreviousData) {
+          setData(undefined);
+          setError(undefined);
+        }
+
+        await handleRequestQueue();
       }
     },
-    [processQueue]
+    [keepPreviousData, handleRequestQueue]
   );
 
-  return { data, isLoading, addToAsyncQueue };
+  return { data, error, isLoading, addToProcessQueue };
 };
