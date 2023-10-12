@@ -1,7 +1,10 @@
 import { deepCopy } from '../../common/deepCopy';
 import { wrapInArray } from '../../common/wrapInArray';
 
-export const omit = <T extends Record<string, any>, K extends keyof T>(
+export const omit = <
+  T extends Record<PropertyKey, T[keyof T]>,
+  K extends keyof T
+>(
   obj: T,
   keys: K | K[]
 ): Omit<T, K> => {
