@@ -8,14 +8,7 @@ describe('objectEntries', () => {
       c: 3,
     } as const;
 
-    /**
-     * const entries: ["a" | "b" | "c", ObjectValues<{
-        readonly a: 1;
-        readonly b: 2;
-        readonly c: 3;
-      }>][]
-     */
-    const entries = objectEntries(obj);
+    const entries = objectEntries(obj); // ["a" | "b" | "c", 1 | 2 | 3][]
 
     expect(entries).toStrictEqual(Object.entries(obj));
     expect(entries).toStrictEqual([
