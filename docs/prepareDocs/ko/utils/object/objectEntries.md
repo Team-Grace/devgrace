@@ -6,8 +6,12 @@
 
 ## Interface
 ```tsx
-type ObjectKeys<T> = keyof T;
-type ObjectValues<T> = T[keyof T];
+type ObjectKeys<T extends Record<PropertyKey, T[keyof T]>> = Exclude<
+  keyof T,
+  symbol
+>;
+type ObjectValues<T extends Record<PropertyKey, T[keyof T]>> =
+  T[keyof T];
 
 const objectEntries: <T extends Record<PropertyKey, ObjectValues<T>>>(
   obj: T

@@ -6,7 +6,8 @@
 
 ## Interface
 ```tsx
-type ObjectValues<T> = T[keyof T];
+type ObjectValues<T extends Record<PropertyKey, T[keyof T]>> =
+  T[keyof T];
 
 const objectValues: <T extends Record<PropertyKey, ObjectValues<T>>>(
   obj: T

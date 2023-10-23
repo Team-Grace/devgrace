@@ -2,8 +2,9 @@ import { omit } from '.';
 
 describe('omit function', () => {
   it('should return a new object omitting a single key from an object', () => {
-    const inputObj = { a: 1, b: 2, c: 3 };
-    const omittedObj = omit(inputObj, 'b');
+    const symbol = Symbol(1);
+    const inputObj = { a: 1, b: 2, c: 3, [symbol]: 1 };
+    const omittedObj = omit(inputObj, ['b', symbol]);
 
     expect(omittedObj).toEqual({ a: 1, c: 3 });
   });

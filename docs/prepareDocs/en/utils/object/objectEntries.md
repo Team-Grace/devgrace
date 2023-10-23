@@ -6,8 +6,12 @@ a function that works the same as `Object.entries()`, but protects the key type.
 
 ## Interface
 ```tsx
-type ObjectKeys<T> = keyof T;
-type ObjectValues<T> = T[keyof T];
+type ObjectKeys<T extends Record<PropertyKey, T[keyof T]>> = Exclude<
+  keyof T,
+  symbol
+>;
+type ObjectValues<T extends Record<PropertyKey, T[keyof T]>> =
+  T[keyof T];
 
 const objectEntries: <T extends Record<PropertyKey, ObjectValues<T>>>(
   obj: T

@@ -2,12 +2,18 @@
 
 a function that works the same as `Object.keys()`, but protects the key type.
 
+Note that the symbol property is excluded because it is not an enumeration.
+
 <br />
 
 ## Interface
 ```tsx
-type ObjectKeys<T> = keyof T;
-type ObjectValues<T> = T[keyof T];
+type ObjectKeys<T extends Record<PropertyKey, T[keyof T]>> = Exclude<
+  keyof T,
+  symbol
+>;
+type ObjectValues<T extends Record<PropertyKey, T[keyof T]>> =
+  T[keyof T];
 
 const objectKeys: <T extends Record<PropertyKey, ObjectValues<T>>>(
   obj: T
