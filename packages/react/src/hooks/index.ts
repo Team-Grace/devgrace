@@ -15,4 +15,5 @@ export * from './useResizeObserver';
 export * from './useTimeout';
 export * from './useToggle';
 export * from './useUnMount';
+export * from './useVisibilityChange';
 export * from './useWindowSize';
