@@ -1,17 +1,25 @@
 # pick
 
-A function that returns an object consisting of the `keys` given as arguments.
+A function that returns an object consisting of the `keys` given as arguments. The returned object is `a new deeply copied object`.
 
-The returned object is `a new deeply copied object`.
+`symbol` is excluded.
 
 <br />
 
 ## Interface
 ```tsx
-const pick: <T extends Record<string, any>, K extends keyof T>(
+type ObjectKeys<T extends Record<PropertyKey, T[keyof T]>> = Exclude<
+  keyof T,
+  symbol
+>;
+
+const pick: <
+  T extends Record<PropertyKey, T[keyof T]>,
+  K extends ObjectKeys<T>
+>(
   obj: T,
   keys: K | K[]
-) => Pick<T, K>;
+) => Pick<Record<ObjectKeys<T>, T[ObjectKeys<T>]>, K>;
 ```
 
 ## Usage

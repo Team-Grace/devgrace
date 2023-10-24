@@ -1,17 +1,25 @@
 # pick
 
-인자로 넣은 `keys`로 구성된 객체를 반환하는 함수입니다.
+인자로 넣은 `keys`로 구성된 객체를 반환하는 함수입니다. 반환된 객체는 `깊은 복사된 새로운 객체`입니다.
 
-반환된 객체는 `깊은 복사된 새로운 객체`입니다.
+`symbol`은 제외됩니다.
 
 <br />
 
 ## Interface
 ```tsx
-const pick: <T extends Record<string, any>, K extends keyof T>(
+type ObjectKeys<T extends Record<PropertyKey, T[keyof T]>> = Exclude<
+  keyof T,
+  symbol
+>;
+
+const pick: <
+  T extends Record<PropertyKey, T[keyof T]>,
+  K extends ObjectKeys<T>
+>(
   obj: T,
   keys: K | K[]
-) => Pick<T, K>;
+) => Pick<Record<ObjectKeys<T>, T[ObjectKeys<T>]>, K>;
 ```
 
 ## Usage
