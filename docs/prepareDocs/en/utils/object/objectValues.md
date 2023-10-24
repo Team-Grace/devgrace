@@ -6,22 +6,26 @@ A function that works the same as `Object.values()`.
 
 ## Interface
 ```tsx
-type ObjectValues<T extends Record<PropertyKey, T[keyof T]>> =
-  T[keyof T];
+type ObjectKeys<T extends Record<PropertyKey, T[keyof T]>> = Exclude<
+  keyof T,
+  symbol
+>;
 
-const objectValues: <T extends Record<PropertyKey, ObjectValues<T>>>(
+const objectValues: <T extends Record<PropertyKey, T[keyof T]>>(
   obj: T
-) => ObjectValues<T>[];
+) => T[ObjectKeys<T>][];
 ```
 
 ## Usage
 ```ts
 import { objectValues } from '@devgrace/utils';
 
+const symbol = Symbol('d');
 const obj = {
   a: 1,
   b: 2,
   c: 3,
+  [symbol]: 4,
 } as const;
 
  /**

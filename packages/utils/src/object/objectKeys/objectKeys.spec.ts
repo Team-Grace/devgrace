@@ -2,10 +2,12 @@ import { objectKeys } from '.';
 
 describe('objectKeys', () => {
   it('should behave identical to Object.Keys()', () => {
+    const symbol = Symbol('d');
     const obj = {
       a: 1,
       b: 2,
       c: 3,
+      [symbol]: 4,
     } as const;
 
     const keys = objectKeys(obj); // ("a" | "b" | "c")[]

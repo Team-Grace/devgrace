@@ -1,7 +1,7 @@
-import { ObjectValues } from '../types';
+import { ObjectKeys } from '../types';
 
-export const objectValues = <T extends Record<PropertyKey, ObjectValues<T>>>(
+export const objectValues = <T extends Record<PropertyKey, T[keyof T]>>(
   obj: T
-): ObjectValues<T>[] => {
-  return Object.values(obj);
+): T[ObjectKeys<T>][] => {
+  return Object.values(obj) as T[ObjectKeys<T>][];
 };

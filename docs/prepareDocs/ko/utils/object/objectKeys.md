@@ -11,10 +11,8 @@ type ObjectKeys<T extends Record<PropertyKey, T[keyof T]>> = Exclude<
   keyof T,
   symbol
 >;
-type ObjectValues<T extends Record<PropertyKey, T[keyof T]>> =
-  T[keyof T];
 
-const objectKeys: <T extends Record<PropertyKey, ObjectValues<T>>>(
+const objectKeys: <T extends Record<ObjectKeys<T>, T[keyof T]>>(
   obj: T
 ) => ObjectKeys<T>[];
 ```
@@ -23,10 +21,12 @@ const objectKeys: <T extends Record<PropertyKey, ObjectValues<T>>>(
 ```ts
 import { objectKeys } from '@devgrace/utils';
 
+const symbol = Symbol('d');
 const obj = {
   a: 1,
   b: 2,
   c: 3,
+  [symbol]: 4,
 } as const;
 
  /**
