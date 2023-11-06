@@ -1,6 +1,5 @@
 import { isClient } from '@devgrace/utils';
 import { useEffect, useLayoutEffect } from 'react';
 
-export const useIsomorphicLayoutEffect = isClient()
-  ? useLayoutEffect
-  : useEffect;
+export const useIsomorphicLayoutEffect =
+  typeof window !== 'undefined' ? useLayoutEffect : useEffect;
