@@ -12,12 +12,12 @@ export default {
   output: [
     {
       file: pkg.main,
-      sourcemap: false,
+      sourcemap: true,
       format: 'cjs',
     },
     {
       file: pkg.module,
-      sourcemap: false,
+      sourcemap: true,
       format: 'esm',
     },
   ],
