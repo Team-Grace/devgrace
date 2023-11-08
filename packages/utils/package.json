@@ -1,13 +1,13 @@
 {
   "name": "@devgrace/utils",
   "sideEffects": false,
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "devgrace/utils",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "require": "./dist/index.js",
-      "import": "./dist/index.mjs"    
+      "import": "./dist/index.mjs"
     }
   },
   "main": "./dist/index.js",

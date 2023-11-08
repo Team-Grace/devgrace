@@ -1,13 +1,13 @@
 {
   "name": "@devgrace/ui",
   "sideEffects": false,
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "devgrace/ui",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "require": "./dist/index.js",
-      "import": "./dist/index.mjs"    
+      "import": "./dist/index.mjs"
     }
   },
   "main": "./dist/index.js",
