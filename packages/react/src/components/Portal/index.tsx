@@ -1,6 +1,13 @@
-import { createContext, useCallback, useContext, useLayoutEffect, useMemo } from 'react';
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useLayoutEffect,
+  useMemo,
+} from 'react';
 import { createPortal } from 'react-dom';
 import { useIsMounted } from '../../hooks/useIsMounted';
+import { useIsomorphicLayoutEffect } from '../../hooks/useIsomorphicLayoutEffect';
 
 interface PortalProps {
   children: React.ReactNode;
@@ -8,13 +15,19 @@ interface PortalProps {
   containerRef?: React.RefObject<HTMLElement>;
 }
 
-const PortalContext = createContext<{ parentPortalElement: HTMLElement | null }>({
+const PortalContext = createContext<{
+  parentPortalElement: HTMLElement | null;
+}>({
   parentPortalElement: null,
 });
 
 const PORTAL_DEFAULT_CLASS = 'portal';
 
-function RenderPortal({ children, className = PORTAL_DEFAULT_CLASS, containerRef }: PortalProps) {
+function RenderPortal({
+  children,
+  className = PORTAL_DEFAULT_CLASS,
+  containerRef,
+}: PortalProps) {
   const { parentPortalElement } = useContext(PortalContext);
 
   const createPortalElement = useCallback(
@@ -40,7 +53,7 @@ function RenderPortal({ children, className = PORTAL_DEFAULT_CLASS, containerRef
     return createPortalElement(mountElement);
   }, [createPortalElement, mountElement]);
 
-  useLayoutEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     mountElement.appendChild(portalElement);
 
     // "portalElement" is removed from "mountElement" on unmount.
@@ -52,7 +65,9 @@ function RenderPortal({ children, className = PORTAL_DEFAULT_CLASS, containerRef
   }, [portalElement, mountElement]);
 
   return createPortal(
-    <PortalContext.Provider value={{ parentPortalElement: portalElement }}>{children}</PortalContext.Provider>,
+    <PortalContext.Provider value={{ parentPortalElement: portalElement }}>
+      {children}
+    </PortalContext.Provider>,
     portalElement
   );
 }
@@ -66,4 +81,4 @@ export const Portal = ({ children, ...restProps }: PortalProps) => {
   }
 
   return <RenderPortal {...restProps}>{children}</RenderPortal>;
-}
+};
