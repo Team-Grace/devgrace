@@ -1,0 +1,54 @@
+import { DebounceWrapper } from '@devgrace/react';
+import { Button } from '@devgrace/ui';
+
+# DebounceWrapper
+
+A utility component that debounces events that occur on child elements `(e.g. Click Event)`.
+
+<br />
+
+## Interface
+```tsx
+// https://team-grace.github.io/devgrace/docs/react/hooks/useDebounce
+type DebounceParameters = Parameters<typeof debounce>;
+
+interface DebounceWrapperProps {
+  children: JSX.Element; // Only one element can be passed to the children prop.
+  capture: string;
+  wait: DebounceParameters[1]; // number
+  options?: DebounceParameters[2]; // DebounceSettings
+}
+
+const DebounceWrapper: ({
+  children,
+  capture,
+  wait,
+  options,
+}: DebounceWrapperProps) => React.FunctionComponentElement<any>;
+```
+
+## Usage
+### Default
+```tsx
+import { DebounceWrapper } from '@devgrace/react'
+
+const Example = () => {
+  const onClick = () => {
+    console.log('debounce');
+  };
+  return (
+    <DebounceWrapper capture="onClick" wait={500}>
+      <Button onClick={onClick}>Button</Button>
+    </DebounceWrapper>
+  );
+};
+```
+
+## Example
+
+<p>Please verify the behavior in the browser's developer console.</p>
+<DebounceWrapper capture="onClick" wait={500}>
+  <Button onClick={() => {
+    console.log('debounce');
+  }}>Button</Button>
+</DebounceWrapper>
