@@ -14,11 +14,13 @@ interface DebounceSettings {
   trailing?: boolean | undefined;
 }
 
-const useDebounce: <T extends (...args: any[]) => any>(
-  callback: T, 
-  wait: number, 
-  options?: DebounceSettings
-) => DebouncedFunc<T>
+type DebounceParameters = Parameters<typeof debounce>;
+
+const useDebounce: (
+  callback: DebounceParameters[0], //  (...args: any) => any
+  wait: DebounceParameters[1], // number
+  options?: DebounceParameters[2] // DebounceSettings
+) => DebouncedFunc<(...args: any) => any>;
 ```
 
 ## Usage
