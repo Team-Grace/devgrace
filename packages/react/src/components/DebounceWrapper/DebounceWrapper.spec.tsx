@@ -1,29 +1,67 @@
-import { screen } from '@testing-library/react';
+import { act, screen, waitFor } from '@testing-library/react';
 import { renderSetup } from '../../utils/test/renderSetup';
 import { DebounceWrapper } from '.';
+import { ChangeEvent, useState } from 'react';
 
 beforeAll(() => {
   jest.useFakeTimers();
 });
 
 interface TestComponentProps {
-  onClick: () => void;
+  capture: string;
   wait: number;
 }
-const TestComponent = ({ onClick, wait }: TestComponentProps) => {
+
+interface ButtonTestComponentProps extends TestComponentProps {
+  onClick: () => void;
+}
+
+const ButtonTestComponent = ({
+  capture,
+  onClick,
+  wait,
+}: ButtonTestComponentProps) => {
   return (
-    <DebounceWrapper capture="onClick" wait={wait}>
+    <DebounceWrapper capture={capture} wait={wait}>
       <button onClick={onClick}>Button</button>
     </DebounceWrapper>
   );
 };
 
+const InputTestComponent = ({ capture, wait }: TestComponentProps) => {
+  const [text, setText] = useState('');
+
+  const onChange = (value: string) => {
+    act(() => setText(value));
+  };
+
+  const TestInput = ({ onChange }: { onChange: (value: string) => void }) => {
+    const [value, setValue] = useState('');
+
+    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+      act(() => setValue(e.target.value));
+      onChange(e.target.value);
+    };
+
+    return <input type="text" onChange={handleChange} value={value} />;
+  };
+
+  return (
+    <>
+      <DebounceWrapper capture={capture} wait={wait}>
+        <TestInput onChange={onChange} />
+      </DebounceWrapper>
+      <p role="paragraph">{text}</p>
+    </>
+  );
+};
+
 describe('DebounceWrapper', () => {
-  it('should debounce events from a child element with the same value passed through capture', async () => {
+  it('should debounce click event from child element', async () => {
     const mockFn = jest.fn();
     // https://github.com/testing-library/user-event/issues/833
     const { user } = renderSetup(
-      <TestComponent onClick={mockFn} wait={500} />,
+      <ButtonTestComponent capture="onClick" onClick={mockFn} wait={500} />,
       { delay: null }
     );
 
@@ -40,7 +78,31 @@ describe('DebounceWrapper', () => {
     await user.click(button);
     await user.click(button);
 
-    jest.advanceTimersByTime(500);
+    jest.advanceTimersByTime(300);
+    expect(mockFn).toBeCalledTimes(1);
+
+    jest.advanceTimersByTime(200);
     expect(mockFn).toBeCalledTimes(2);
+  });
+
+  it('should debounce change event from child element', async () => {
+    // https://github.com/testing-library/user-event/issues/833
+    const { user } = renderSetup(
+      <InputTestComponent capture="onChange" wait={500} />,
+      { delay: null }
+    );
+
+    const input = screen.getByRole('textbox');
+    const paragraph = screen.getByRole('paragraph');
+
+    await user.type(input, 'Debounce');
+
+    jest.advanceTimersByTime(300);
+    expect(paragraph).toHaveTextContent('');
+    expect(input).toHaveValue('Debounce');
+
+    jest.advanceTimersByTime(200);
+    expect(paragraph).toHaveTextContent('Debounce');
+    expect(input).toHaveValue('Debounce');
   });
 });
