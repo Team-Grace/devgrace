@@ -1,4 +1,4 @@
-import { act, screen, waitFor } from '@testing-library/react';
+import { act, screen } from '@testing-library/react';
 import { renderSetup } from '../../utils/test/renderSetup';
 import { DebounceWrapper } from '.';
 import { ChangeEvent, useState } from 'react';
@@ -16,7 +16,7 @@ interface ButtonTestComponentProps extends TestComponentProps {
   onClick: () => void;
 }
 
-const ButtonTestComponent = ({
+const TestComponentWithButton = ({
   capture,
   onClick,
   wait,
@@ -39,7 +39,7 @@ const TestInput = ({ onChange }: { onChange: (value: string) => void }) => {
   return <input type="text" onChange={handleChange} value={value} />;
 };
 
-const InputTestComponent = ({ capture, wait }: TestComponentProps) => {
+const TestComponentWithInput = ({ capture, wait }: TestComponentProps) => {
   const [text, setText] = useState('');
 
   const onChange = (value: string) => {
@@ -61,7 +61,7 @@ describe('DebounceWrapper', () => {
     const mockFn = jest.fn();
     // https://github.com/testing-library/user-event/issues/833
     const { user } = renderSetup(
-      <ButtonTestComponent capture="onClick" onClick={mockFn} wait={500} />,
+      <TestComponentWithButton capture="onClick" onClick={mockFn} wait={500} />,
       { delay: null }
     );
 
@@ -86,9 +86,8 @@ describe('DebounceWrapper', () => {
   });
 
   it('should debounce change event from child element', async () => {
-    // https://github.com/testing-library/user-event/issues/833
     const { user } = renderSetup(
-      <InputTestComponent capture="onChange" wait={500} />,
+      <TestComponentWithInput capture="onChange" wait={500} />,
       { delay: null }
     );
 
