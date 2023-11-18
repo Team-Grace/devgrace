@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { DebounceWrapper } from '@devgrace/react';
 import { Button } from '@devgrace/ui';
 
@@ -28,7 +29,7 @@ const DebounceWrapper: ({
 ```
 
 ## Usage
-### Default
+### Button Click Case
 ```tsx
 import { DebounceWrapper } from '@devgrace/react'
 
@@ -36,6 +37,7 @@ const Example = () => {
   const onClick = () => {
     console.log('debounce');
   };
+
   return (
     <DebounceWrapper capture="onClick" wait={500}>
       <Button onClick={onClick}>Button</Button>
@@ -44,11 +46,72 @@ const Example = () => {
 };
 ```
 
-## Example
+### Input Change Case
+```tsx
+const Input = ({ onChange }: { onChange: (value: string) => void }) => {
+  const [value, setValue] = useState('');
 
-<p>Please verify the behavior in the browser's developer console.</p>
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setValue(e.target.value);
+    onChange(e.target.value);
+  };
+
+  return <input type="text" onChange={handleChange} value={value} />;
+};
+
+const Example = () => {
+  const [text, setText] = useState('');
+
+  const onChange = (value: string) => {
+    setText(value);
+  };
+
+  return (
+    <>
+      <DebounceWrapper capture={'onChange'} wait={500}>
+        <Input onChange={onChange} />
+      </DebounceWrapper>
+      <p>{text}</p>
+    </>
+  );
+}
+```
+
+## Example
+### Button Click Case
+<p style={{ marginBottom: '4px' }}>Please verify the behavior in the browser's developer console.</p>
 <DebounceWrapper capture="onClick" wait={500}>
   <Button onClick={() => {
     console.log('debounce');
   }}>Button</Button>
 </DebounceWrapper>
+
+<br />
+
+export const Input = ({ onChange }) => {
+  const [value, setValue] = useState('');
+  const handleChange = (e) => {
+    setValue(e.target.value);
+    onChange(e.target.value);
+  };
+  return <input type="text" onChange={handleChange} value={value} />;
+};
+
+export const InputExample = () => {
+  const [text, setText] = useState('');
+  const onChange = (value) => {
+    setText(value);
+  };
+  return (
+    <>
+      <DebounceWrapper capture={'onChange'} wait={500}>
+        <Input onChange={onChange} />
+      </DebounceWrapper>
+      <p>Text: {text}</p>
+    </>
+  );
+};
+
+### Input Change Case
+
+<InputExample />

@@ -28,22 +28,22 @@ const ButtonTestComponent = ({
   );
 };
 
+const TestInput = ({ onChange }: { onChange: (value: string) => void }) => {
+  const [value, setValue] = useState('');
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    act(() => setValue(e.target.value));
+    onChange(e.target.value);
+  };
+
+  return <input type="text" onChange={handleChange} value={value} />;
+};
+
 const InputTestComponent = ({ capture, wait }: TestComponentProps) => {
   const [text, setText] = useState('');
 
   const onChange = (value: string) => {
     act(() => setText(value));
-  };
-
-  const TestInput = ({ onChange }: { onChange: (value: string) => void }) => {
-    const [value, setValue] = useState('');
-
-    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-      act(() => setValue(e.target.value));
-      onChange(e.target.value);
-    };
-
-    return <input type="text" onChange={handleChange} value={value} />;
   };
 
   return (
@@ -104,5 +104,15 @@ describe('DebounceWrapper', () => {
     jest.advanceTimersByTime(200);
     expect(paragraph).toHaveTextContent('Debounce');
     expect(input).toHaveValue('Debounce');
+
+    await user.type(input, ' Test');
+
+    jest.advanceTimersByTime(300);
+    expect(paragraph).toHaveTextContent('Debounce');
+    expect(input).toHaveValue('Debounce Test');
+
+    jest.advanceTimersByTime(200);
+    expect(paragraph).toHaveTextContent('Debounce Test');
+    expect(input).toHaveValue('Debounce Test');
   });
 });
