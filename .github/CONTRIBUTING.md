@@ -14,6 +14,13 @@ In addition to raising issues, you can fork `@devgrace` and raise pull requests 
 
 Please see the caveats below 🙏
 - if you are adding a new feature, please open an issue to discuss it in advance.
+- The node version should be `v18.17.1`. You can easily version match with `nvm install`, `nvm use`.
+```shell
+nvm install
+```
+```shell
+nvm use
+```
 - Please `test` and `type check` your Pull Request before creating it.
 
 ```shell
