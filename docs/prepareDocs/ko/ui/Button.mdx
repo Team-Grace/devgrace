@@ -1,8 +1,8 @@
-import { Button } from '@devgrace/ui'
+import { Button } from '@devgrace/ui';
 
 # Button
 
-`@devgrace/ui` 버튼 컴포넌트
+`@devgrace/ui` Button 컴포넌트
 
 <br />
 
@@ -43,9 +43,9 @@ const Button: React.ForwardRefExoticComponent<
 ## Usage
 ### Default Case
 ```tsx
-import { Button } from '@devgrace/ui'
+import { Button } from '@devgrace/ui';
 
-const Exampe = () => {
+const Example = () => {
   const wrapperStyle = useMemo(() => {
     return {
       padding: '20px',
@@ -55,7 +55,7 @@ const Exampe = () => {
       minWidth: '300px'
       maxWidth: '400px',
       gap: '10px',
-    }
+    };
   }, []);
 
   return (
@@ -105,8 +105,8 @@ const Exampe = () => {
       <Button isLoading variant="outlined" color="indigo">OutLined Button</Button>
       <Button isLoading variant="text" color="pink">Text Button</Button>
     </div>
-  )
-}
+  );
+};
 ```
 
 <div style={{ padding: '20px', border: '1px solid #e7e7e7', minWidth: '300px', maxWidth: '400px', gap: '10px', display: 'flex', flexDirection: 'column' }}>
@@ -162,17 +162,17 @@ const Exampe = () => {
 ```tsx
 import { Button } from '@devgrace/ui'
 
-const Exampe = () => {
+const Example = () => {
   const wrapperStyle = useMemo(() => {
     return {
       padding: '20px',
       border: '1px solid #e7e7e7',
       display: 'flex',
       flexDirection: 'column',
-      minWidth: '300px'
+      minWidth: '300px',
       maxWidth: '400px',
       gap: '10px',
-    }
+    };
   }, []);
 
   return (
@@ -183,8 +183,8 @@ const Exampe = () => {
       <Button fullWidth disabled>Disabled Button</Button>
       <Button fullWidth isLoading>Loading Button</Button>
     </div>
-  )
-}
+  );
+};
 ```
 
 <div style={{ padding: '20px', border: '1px solid #e7e7e7', minWidth: '300px', maxWidth: '400px', gap: '10px', display: 'flex', flexDirection: 'column' }}>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { StoryFn } from '@storybook/react';
 import { Dimmed } from '../../components/Dimmed';
 import { Button } from '../../components/Button';
@@ -12,22 +12,13 @@ export default {
     isTransition: {
       control: { type: 'boolean' },
     },
-    direction: {
-      options: ['row', 'column'],
-      control: { type: 'radio' },
-    },
     alpha: {
       control: { type: 'number', min: 0, max: 1, step: 0.1 },
     },
   },
 };
 
-const Template: StoryFn<DimmedProps> = ({
-  alpha,
-  isTransition,
-  direction,
-  timeout,
-}) => {
+const Template: StoryFn<DimmedProps> = ({ alpha, isTransition, timeout }) => {
   const [isShow, setIsShow] = useState(false);
   const { ref } = useOnClickOutside<HTMLDivElement>(() => setIsShow(false));
 
@@ -37,7 +28,6 @@ const Template: StoryFn<DimmedProps> = ({
       <Dimmed
         alpha={alpha}
         timeout={timeout}
-        direction={direction}
         isShow={isShow}
         isTransition={isTransition}>
         <div
@@ -62,7 +52,6 @@ export const Default = {
   render: Template,
   args: {
     isTransition: true,
-    direction: 'row',
     timeout: 200,
     alpha: 0.6,
   },

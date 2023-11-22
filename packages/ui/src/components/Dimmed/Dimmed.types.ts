@@ -4,7 +4,6 @@ import { CSSTransitionProps } from 'react-transition-group/CSSTransition';
 export interface DimmedProps
   extends PropsWithChildren<React.ComponentProps<'div'>> {
   alpha?: string | number;
-  direction?: CSSProperties['flexDirection'];
   zIndex?: CSSProperties['zIndex'];
   isShow?: CSSTransitionProps['in'];
   isTransition?: boolean;
@@ -14,5 +13,5 @@ export interface DimmedProps
 
 export type DimmedWrapperProps = Pick<
   DimmedProps,
-  'alpha' | 'direction' | 'zIndex' | 'timeout' | 'bodyStyle'
+  'alpha' | 'zIndex' | 'timeout' | 'bodyStyle'
 >;

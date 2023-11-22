@@ -1,4 +1,4 @@
-import { forwardRef, useRef } from 'react';
+import { forwardRef, useEffect, useRef } from 'react';
 import * as S from './Dimmed.styled';
 import { DimmedProps } from './Dimmed.types';
 import { CSSTransition } from 'react-transition-group';
@@ -9,9 +9,8 @@ export const Dimmed = forwardRef<HTMLDivElement, DimmedProps>(
     {
       children,
       className,
-      isShow = true,
+      isShow = false,
       isTransition = true,
-      direction = 'row',
       timeout = 200, // ms unit
       alpha = 0.6, // rgba
       zIndex = 1000,
@@ -31,7 +30,6 @@ export const Dimmed = forwardRef<HTMLDivElement, DimmedProps>(
         <S.DimmedWrapper
           ref={useMergeRefs(nodeRef, ref)}
           alpha={alpha}
-          direction={direction}
           zIndex={zIndex}
           timeout={timeout}
           {...props}>

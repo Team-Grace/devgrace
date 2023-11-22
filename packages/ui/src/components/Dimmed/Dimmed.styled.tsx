@@ -6,7 +6,6 @@ export const DimmedWrapper = styled.div<DimmedWrapperProps>`
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: ${({ direction }) => direction};
   background-color: ${({ alpha }) => `rgba(0, 0, 0, ${alpha})`};
   position: fixed;
   top: 0;
