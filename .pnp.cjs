@@ -3512,15 +3512,15 @@ const RAW_RUNTIME_STATE =
           ["@testing-library/react", "virtual:80bc615fb71da5b81724bdd224826f577244d6332bfc0b51882a31da308543ab17a33948411fb94d004c451f00cdd1bdf8ada576b9513f1ef2b09011505bf183#npm:14.0.0"],\
           ["@testing-library/user-event", "virtual:80bc615fb71da5b81724bdd224826f577244d6332bfc0b51882a31da308543ab17a33948411fb94d004c451f00cdd1bdf8ada576b9513f1ef2b09011505bf183#npm:14.5.1"],\
           ["@types/jest", "npm:29.5.3"],\
-          ["@types/lodash.debounce", "npm:4.0.7"],\
-          ["@types/lodash.throttle", "npm:4.1.7"],\
+          ["@types/lodash", "npm:4.14.202"],\
+          ["@types/lodash-es", "npm:4.17.12"],\
           ["@types/react", "npm:18.2.20"],\
           ["@types/react-dom", "npm:18.2.7"],\
           ["core-js", "npm:3.32.0"],\
           ["jest", "virtual:f260b09ce4727a71270bfff991b4553faf588868362a2864e2ecddcb7d09b075aa16375f0f9d75c9081022775e9eba52d6fdb6b88abf2f6f48ba8f02fa3a2a62#npm:29.6.2"],\
           ["jest-environment-jsdom", "virtual:f260b09ce4727a71270bfff991b4553faf588868362a2864e2ecddcb7d09b075aa16375f0f9d75c9081022775e9eba52d6fdb6b88abf2f6f48ba8f02fa3a2a62#npm:29.6.2"],\
-          ["lodash.debounce", "npm:4.0.8"],\
-          ["lodash.throttle", "npm:4.1.1"],\
+          ["lodash", "npm:4.17.21"],\
+          ["lodash-es", "npm:4.17.21"],\
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:792eac2794d4baf13284e2048e1d1fb9724457aab62d48bc2e1bd4b2bf21e7be3dfea8f0ad969ee22ca8945dfa00d46e2a50c5bbcd78a91dcb874c3362e1871d#npm:18.2.0"],\
           ["rollup", "npm:3.28.0"],\
@@ -3553,15 +3553,15 @@ const RAW_RUNTIME_STATE =
           ["@testing-library/react", "virtual:80bc615fb71da5b81724bdd224826f577244d6332bfc0b51882a31da308543ab17a33948411fb94d004c451f00cdd1bdf8ada576b9513f1ef2b09011505bf183#npm:14.0.0"],\
           ["@testing-library/user-event", "virtual:80bc615fb71da5b81724bdd224826f577244d6332bfc0b51882a31da308543ab17a33948411fb94d004c451f00cdd1bdf8ada576b9513f1ef2b09011505bf183#npm:14.5.1"],\
           ["@types/jest", "npm:29.5.3"],\
-          ["@types/lodash.debounce", "npm:4.0.7"],\
-          ["@types/lodash.throttle", "npm:4.1.7"],\
+          ["@types/lodash", "npm:4.14.202"],\
+          ["@types/lodash-es", "npm:4.17.12"],\
           ["@types/react", "npm:18.2.20"],\
           ["@types/react-dom", "npm:18.2.7"],\
           ["core-js", "npm:3.32.0"],\
           ["jest", "virtual:f260b09ce4727a71270bfff991b4553faf588868362a2864e2ecddcb7d09b075aa16375f0f9d75c9081022775e9eba52d6fdb6b88abf2f6f48ba8f02fa3a2a62#npm:29.6.2"],\
           ["jest-environment-jsdom", "virtual:f260b09ce4727a71270bfff991b4553faf588868362a2864e2ecddcb7d09b075aa16375f0f9d75c9081022775e9eba52d6fdb6b88abf2f6f48ba8f02fa3a2a62#npm:29.6.2"],\
-          ["lodash.debounce", "npm:4.0.8"],\
-          ["lodash.throttle", "npm:4.1.1"],\
+          ["lodash", "npm:4.17.21"],\
+          ["lodash-es", "npm:4.17.21"],\
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:792eac2794d4baf13284e2048e1d1fb9724457aab62d48bc2e1bd4b2bf21e7be3dfea8f0ad969ee22ca8945dfa00d46e2a50c5bbcd78a91dcb874c3362e1871d#npm:18.2.0"],\
           ["rollup", "npm:3.28.0"],\
@@ -9648,23 +9648,20 @@ const RAW_RUNTIME_STATE =
           ["@types/lodash", "npm:4.14.197"]\
         ],\
         "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@types/lodash.debounce", [\
-      ["npm:4.0.7", {\
-        "packageLocation": "./.yarn/cache/@types-lodash.debounce-npm-4.0.7-efe92bf273-8d4063d40f.zip/node_modules/@types/lodash.debounce/",\
+      }],\
+      ["npm:4.14.202", {\
+        "packageLocation": "./.yarn/cache/@types-lodash-npm-4.14.202-76de3e302b-6064d43c8f.zip/node_modules/@types/lodash/",\
         "packageDependencies": [\
-          ["@types/lodash.debounce", "npm:4.0.7"],\
-          ["@types/lodash", "npm:4.14.197"]\
+          ["@types/lodash", "npm:4.14.202"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
-    ["@types/lodash.throttle", [\
-      ["npm:4.1.7", {\
-        "packageLocation": "./.yarn/cache/@types-lodash.throttle-npm-4.1.7-6156818330-383d5f8f4d.zip/node_modules/@types/lodash.throttle/",\
+    ["@types/lodash-es", [\
+      ["npm:4.17.12", {\
+        "packageLocation": "./.yarn/cache/@types-lodash-es-npm-4.17.12-87dce3f795-5d12d2cede.zip/node_modules/@types/lodash-es/",\
         "packageDependencies": [\
-          ["@types/lodash.throttle", "npm:4.1.7"],\
+          ["@types/lodash-es", "npm:4.17.12"],\
           ["@types/lodash", "npm:4.14.197"]\
         ],\
         "linkType": "HARD"\
@@ -18972,6 +18969,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["lodash-es", [\
+      ["npm:4.17.21", {\
+        "packageLocation": "./.yarn/cache/lodash-es-npm-4.17.21-b45832dfce-fb407355f7.zip/node_modules/lodash-es/",\
+        "packageDependencies": [\
+          ["lodash-es", "npm:4.17.21"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["lodash.curry", [\
       ["npm:4.1.1", {\
         "packageLocation": "./.yarn/cache/lodash.curry-npm-4.1.1-b573bff179-f0431947dc.zip/node_modules/lodash.curry/",\
@@ -19022,15 +19028,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/lodash.merge-npm-4.6.2-77cb4416bf-402fa16a1e.zip/node_modules/lodash.merge/",\
         "packageDependencies": [\
           ["lodash.merge", "npm:4.6.2"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["lodash.throttle", [\
-      ["npm:4.1.1", {\
-        "packageLocation": "./.yarn/cache/lodash.throttle-npm-4.1.1-856641af92-14628013e9.zip/node_modules/lodash.throttle/",\
-        "packageDependencies": [\
-          ["lodash.throttle", "npm:4.1.1"]\
         ],\
         "linkType": "HARD"\
       }]\

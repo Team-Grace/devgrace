@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import debounce from 'lodash.debounce';
+import { debounce } from 'lodash-es';
 import { useUnmount } from '../useUnMount';
 
 export type DebounceParameters = Parameters<typeof debounce>;
