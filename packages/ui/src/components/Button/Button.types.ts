@@ -11,6 +11,7 @@ export interface ButtonProps extends React.ComponentProps<'button'> {
   variant?: 'contained' | 'outlined' | 'text';
   colorTheme?: ColorThemes;
   fontColor?: CSSProperties['color'];
+  bodyStyle?: CSSProperties;
 }
 
 export type ButtonStyledOptions = Pick<
@@ -23,4 +24,5 @@ export type ButtonStyledOptions = Pick<
   | 'fullWidth'
   | 'fontWeight'
   | 'isLoading'
+  | 'bodyStyle'
 >;

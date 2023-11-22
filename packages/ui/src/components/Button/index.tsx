@@ -16,6 +16,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       variant = 'contained',
       shape = 'round',
       colorTheme = 'blue',
+      bodyStyle,
       ...restProps
     }: ButtonProps,
     ref
@@ -42,7 +43,8 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         variant={variant}
         shape={shape}
         fontColor={fontColor}
-        onClick={handleClick}>
+        onClick={handleClick}
+        bodyStyle={bodyStyle}>
         {isLoading && <Loader width={loaderWidth} height={loaderHeight} />}
         {children}
       </StyledButton>

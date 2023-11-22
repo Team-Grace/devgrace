@@ -16,12 +16,12 @@ export const StyledButton = styled.button<ButtonStyledOptions>`
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.2s;
+  line-height: 1;
   font-weight: ${({ fontWeight }) => fontWeight};
   color: ${({ fontColor }) => fontColor};
   border-radius: ${({ shape }) => getButtonBorderRadiusByShape(shape)};
   width: ${({ fullWidth }) => (fullWidth ? '100%' : 'fit-content')};
-  transition: all 0.2s;
-  line-height: 1;
   opacity: ${({ isLoading }) => (isLoading ? 0.7 : 1)};
   cursor: ${({ isLoading }) => (isLoading ? 'default' : 'pointer')};
 
@@ -73,4 +73,10 @@ export const StyledButton = styled.button<ButtonStyledOptions>`
       }
     `;
   }}
+
+  ${({ bodyStyle }) =>
+    bodyStyle &&
+    css`
+      ${{ ...bodyStyle }};
+    `}
 `;
