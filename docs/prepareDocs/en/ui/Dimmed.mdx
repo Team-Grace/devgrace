@@ -16,11 +16,11 @@ const Dimmed: React.ForwardRefExoticComponent<
 
 export interface DimmedProps
   extends PropsWithChildren<React.ComponentProps<'div'>> {
-  alpha?: string | number; // A in RGBA. default: 0.6
-  zIndex?: CSSProperties['zIndex']; // default: 1000,
-  isShow?: CSSTransitionProps['in']; // default: false
-  isTransition?: boolean; // default: true
-  timeout?: CSSTransitionProps['timeout']; // default: 200
+  alpha?: string | number; // default: 0.6, A in RGBA.
+  zIndex?: CSSProperties['zIndex']; // default: 1000, The z-index value of Dimmed.
+  isShow?: CSSTransitionProps['in']; // default: false, The value that determines whether "Dimmed" is visible or not.
+  isTransition?: boolean; // default: true, A value that determines whether to give the transition effect.
+  timeout?: CSSTransitionProps['timeout']; // default: 200, The duration value of the transition.
   bodyStyle?: CSSProperties; // custom style
 }
 ```

@@ -9,6 +9,7 @@ import { useOnClickOutside } from '@devgrace/react';
 <br />
 
 ## interface
+
 ```tsx
 const Dimmed: React.ForwardRefExoticComponent<
   Omit<DimmedProps, 'ref'> & React.RefAttributes<HTMLDivElement>
@@ -16,11 +17,11 @@ const Dimmed: React.ForwardRefExoticComponent<
 
 export interface DimmedProps
   extends PropsWithChildren<React.ComponentProps<'div'>> {
-  alpha?: string | number; // A in RGBA. default: 0.6
-  zIndex?: CSSProperties['zIndex']; // default: 1000,
-  isShow?: CSSTransitionProps['in']; // default: false
-  isTransition?: boolean; // default: true
-  timeout?: CSSTransitionProps['timeout']; // default: 200
+  alpha?: string | number; // default: 0.6, A in RGBA. 
+  zIndex?: CSSProperties['zIndex']; // default: 1000, Dimmed의 z-index 값입니다.
+  isShow?: CSSTransitionProps['in']; // default: false, "Dimmed"를 노출 여부를 판단하는 값입니다.
+  isTransition?: boolean; // default: true, transition효과를 줄 것인지 판단하는 값입니다.
+  timeout?: CSSTransitionProps['timeout']; // default: 200, transition의 duration 값입니다.
   bodyStyle?: CSSProperties; // custom style
 }
 ```
@@ -28,6 +29,7 @@ export interface DimmedProps
 <br />
 
 ## Usage
+
 ```tsx
 import { Dimmed, Button } from '@devgrace/ui';
 import { useOnClickOutside } from '@devgrace/react';
