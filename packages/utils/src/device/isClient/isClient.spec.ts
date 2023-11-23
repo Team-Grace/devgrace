@@ -1,5 +1,14 @@
 import { isClient } from '.';
-import { deleteWindow } from '@devgrace/test';
+
+let windowSpy: jest.SpyInstance;
+
+beforeEach(() => {
+  windowSpy = jest.spyOn(window, 'window', 'get');
+});
+
+afterEach(() => {
+  windowSpy.mockRestore();
+});
 
 describe('isClient', () => {
   it('should return "true" in client environment', () => {
@@ -7,7 +16,7 @@ describe('isClient', () => {
   });
 
   it('should return "false" in server environment', () => {
-    deleteWindow();
+    windowSpy.mockImplementation(() => undefined);
 
     expect(isClient()).toBe(false);
   });

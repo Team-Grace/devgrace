@@ -1,5 +1,14 @@
-import { deleteWindow } from '@devgrace/test';
 import { isMobile } from '.';
+
+let windowSpy: jest.SpyInstance;
+
+beforeEach(() => {
+  windowSpy = jest.spyOn(window, 'window', 'get');
+});
+
+afterEach(() => {
+  windowSpy.mockRestore();
+});
 
 describe('isMobile', () => {
   it('should return true for mobile user agents', () => {
@@ -26,7 +35,7 @@ describe('isMobile', () => {
   });
 
   it('should return false for server environment', () => {
-    deleteWindow();
+    windowSpy.mockImplementation(() => undefined);
     expect(isMobile()).toBe(false);
   });
 });

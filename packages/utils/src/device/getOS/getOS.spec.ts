@@ -1,5 +1,14 @@
-import { deleteWindow } from '@devgrace/test';
 import { getOS } from '.';
+
+let windowSpy: jest.SpyInstance;
+
+beforeEach(() => {
+  windowSpy = jest.spyOn(window, 'window', 'get');
+});
+
+afterEach(() => {
+  windowSpy.mockRestore();
+});
 
 describe('getOS', () => {
   it('should return the OS corresponding to the useragent value', () => {
@@ -21,7 +30,7 @@ describe('getOS', () => {
   });
 
   it('should return "server" for server environment', () => {
-    deleteWindow();
+    windowSpy.mockImplementation(() => undefined);
     expect(getOS()).toBe('server');
   });
 });

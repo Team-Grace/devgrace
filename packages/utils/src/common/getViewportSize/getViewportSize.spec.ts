@@ -1,18 +1,14 @@
 import { getViewportSize } from '.';
-import { deleteWindow } from '@devgrace/test';
 
-const setViewportSize = (width: number, height: number) => {
-  Object.defineProperty(window, 'innerWidth', {
-    writable: true,
-    configurable: true,
-    value: width,
-  });
-  Object.defineProperty(window, 'innerHeight', {
-    writable: true,
-    configurable: true,
-    value: height,
-  });
-};
+let windowSpy: jest.SpyInstance;
+
+beforeEach(() => {
+  windowSpy = jest.spyOn(window, 'window', 'get');
+});
+
+afterEach(() => {
+  windowSpy.mockRestore();
+});
 
 describe('getViewportSize', () => {
   // https://github.com/jsdom/jsdom/blob/0cba358253fd5530af0685ac48c2535992464d06/lib/jsdom/browser/Window.js#L587-L588
@@ -27,7 +23,10 @@ describe('getViewportSize', () => {
   });
 
   it('should return width 500 and height 300', () => {
-    setViewportSize(500, 300);
+    windowSpy.mockImplementation(() => ({
+      innerWidth: 500,
+      innerHeight: 300,
+    }));
 
     const { width, height } = getViewportSize();
 
@@ -39,7 +38,7 @@ describe('getViewportSize', () => {
   });
 
   it('should return width 0 and height 0 if window is undefined', () => {
-    deleteWindow();
+    windowSpy.mockImplementation(() => undefined);
 
     const { width, height } = getViewportSize();
 
