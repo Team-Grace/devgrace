@@ -2,7 +2,7 @@ name: PR Test
 on:
   pull_request:
     branches:
-      - master
+      - main
 jobs:
   Run-Test:
     runs-on: ubuntu-latest
