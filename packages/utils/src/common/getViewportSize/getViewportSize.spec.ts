@@ -1,5 +1,5 @@
 import { getViewportSize } from '.';
-import { deleteWindow } from '../../utils/test/deleteWindow';
+import { deleteWindow } from '@devgrace/test';
 
 const setViewportSize = (width: number, height: number) => {
   Object.defineProperty(window, 'innerWidth', {

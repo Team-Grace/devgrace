@@ -1,5 +1,5 @@
 import { isServer } from '.';
-import { deleteWindow } from '../../utils/test/deleteWindow';
+import { deleteWindow } from '@devgrace/test';
 
 describe('isServer', () => {
   it('should return "false" in client environment', () => {

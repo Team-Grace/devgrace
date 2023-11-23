@@ -1,10 +1,5 @@
 import { isClient } from '.';
-
-const deleteWindow = () => {
-  Object.defineProperty(global, 'window', {
-    value: undefined,
-  });
-};
+import { deleteWindow } from '@devgrace/test';
 
 describe('isClient', () => {
   it('should return "true" in client environment', () => {

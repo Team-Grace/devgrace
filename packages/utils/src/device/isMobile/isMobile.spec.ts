@@ -1,4 +1,4 @@
-import { deleteWindow } from '../../utils/test/deleteWindow';
+import { deleteWindow } from '@devgrace/test';
 import { isMobile } from '.';
 
 describe('isMobile', () => {
