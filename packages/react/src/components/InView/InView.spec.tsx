@@ -32,7 +32,7 @@ const TestComponent = ({
   );
 };
 
-describe('InView', () => {
+describe('InView Component', () => {
   it('should call the action function when the InView component is exposed to the viewport', async () => {
     const mockFn1 = jest.fn();
     const mockFn2 = jest.fn();

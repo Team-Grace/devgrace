@@ -56,7 +56,7 @@ const TestComponentWithInput = ({ capture, wait }: TestComponentProps) => {
   );
 };
 
-describe('DebounceWrapper', () => {
+describe('DebounceWrapper Component', () => {
   it('should debounce click event from child element', async () => {
     const mockFn = jest.fn();
     // https://github.com/testing-library/user-event/issues/833

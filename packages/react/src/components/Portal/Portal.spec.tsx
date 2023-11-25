@@ -57,7 +57,7 @@ const NestedTestComponent = () => {
   );
 };
 
-describe('Default Portal Test', () => {
+describe('Default Portal Component', () => {
   it("should render the portalElement in 'document.body' by default", () => {
     const { container } = renderSetup(<DefaultTestComponent />);
 
@@ -121,7 +121,7 @@ describe('Default Portal Test', () => {
   });
 });
 
-describe('Container Portal Test', () => {
+describe('Container Portal Component', () => {
   it("should render to any other DOM element you want instead of the 'document.body' by passing in the 'containerRef' prop", () => {
     const { container } = renderSetup(<ContainerTestComponent />);
 
@@ -144,7 +144,7 @@ describe('Container Portal Test', () => {
   });
 });
 
-describe('Nested Portal Test', () => {
+describe('Nested Portal Component', () => {
   it('should create a nested Portal DOM hierarchy when nesting multiple Portal Components', () => {
     renderSetup(<NestedTestComponent />);
 

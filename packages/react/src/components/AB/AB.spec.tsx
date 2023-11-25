@@ -51,7 +51,7 @@ const FailTestComponent3 = () => {
   );
 };
 
-describe('AB', () => {
+describe('AB Component', () => {
   it('should render CaseA or CaseB in the normal case', () => {
     const { container } = renderSetup(<NormalTestComponent />);
     expect(container.childElementCount).toBe(1);
