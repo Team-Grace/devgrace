@@ -2,6 +2,7 @@
   "name": "devgrace",
   "private": true,
   "workspaces": [
+    "docs",
     "packages/**/*"
   ],
   "author": "ssi02014 <ssi02014@naver.com>",
