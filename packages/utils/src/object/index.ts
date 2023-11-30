@@ -1,4 +1,4 @@
-export * from './deleteFalsyProperties';
+export * from './deleteEmptyProperties';
 export * from './objectEntries';
 export * from './objectKeys';
 export * from './objectValues';

@@ -1,6 +1,6 @@
-import { deleteFalsyProperties } from '.';
+import { deleteEmptyProperties } from '.';
 
-describe('deleteFalsyProperties', () => {
+describe('deleteEmptyProperties', () => {
   it('should remove object properties with falsy values other than boolean', () => {
     const originObj = {
       prop1: 1,
@@ -16,12 +16,13 @@ describe('deleteFalsyProperties', () => {
     };
     const expectedObj = {
       prop1: 1,
+      prop2: 0,
       prop4: '1',
       prop5: true,
       prop6: false,
     };
 
-    expect(deleteFalsyProperties(originObj)).toEqual(expectedObj);
+    expect(deleteEmptyProperties(originObj)).toEqual(expectedObj);
   });
 
   it('should remove falsy values(exclude booleans) from nested objects and nested array elements', () => {
@@ -55,7 +56,7 @@ describe('deleteFalsyProperties', () => {
     };
     const expectedObj = {
       prop1: [
-        { prop4: false, prop5: '1' },
+        { prop3: 0, prop4: false, prop5: '1' },
         { prop3: 1, prop5: true },
       ],
       prop2: {
@@ -64,6 +65,7 @@ describe('deleteFalsyProperties', () => {
           prop2_1_3: '1',
           prop2_1_5: {
             prop2_1_5_1: {
+              prop2_2_5_1_1: 0,
               prop2_2_5_1_3: 1,
             },
             prop2_1_5_2: 1,
@@ -73,7 +75,7 @@ describe('deleteFalsyProperties', () => {
       },
     };
 
-    expect(deleteFalsyProperties(originObj)).toEqual(expectedObj);
+    expect(deleteEmptyProperties(originObj)).toEqual(expectedObj);
   });
 
   it('should return an empty object if all properties are falsy(exclude booleans)', () => {
@@ -88,6 +90,32 @@ describe('deleteFalsyProperties', () => {
     };
     const expectedObj = {};
 
-    expect(deleteFalsyProperties(originObj)).toEqual(expectedObj);
+    expect(deleteEmptyProperties(originObj)).toEqual(expectedObj);
+  });
+
+  it('should not modify the original array when calling the deleteEmptyProperties function', () => {
+    const originObj = {
+      prop1: 1,
+      prop2: 0,
+      prop3: '',
+      prop4: '1',
+      prop7: null,
+      prop8: undefined,
+      prop9: [],
+      prop10: {},
+    };
+
+    deleteEmptyProperties(originObj);
+
+    expect(originObj).toEqual({
+      prop1: 1,
+      prop2: 0,
+      prop3: '',
+      prop4: '1',
+      prop7: null,
+      prop8: undefined,
+      prop9: [],
+      prop10: {},
+    });
   });
 });
