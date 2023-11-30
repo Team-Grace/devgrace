@@ -1,4 +1,5 @@
 export * from './deleteEmptyProperties';
+export * from './mergeProperties';
 export * from './objectEntries';
 export * from './objectKeys';
 export * from './objectValues';

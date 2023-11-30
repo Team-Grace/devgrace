@@ -1,11 +1,11 @@
 export const deleteEmptyProperties = <T extends Record<PropertyKey, any>>(
-  obj: T
+  source: T
 ): T => {
   const copiedObj: Record<PropertyKey, any> = {};
 
-  for (const key in obj) {
-    if (obj.hasOwnProperty(key)) {
-      const value = obj[key];
+  for (const key in source) {
+    if (source.hasOwnProperty(key)) {
+      const value = source[key];
 
       if (value !== null && typeof value === 'object') {
         // object
