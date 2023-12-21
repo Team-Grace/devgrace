@@ -16,4 +16,5 @@ export * from './useTimeout';
 export * from './useToggle';
 export * from './useUnMount';
 export * from './useVisibilityChange';
+export * from './useWindowScrollTo';
 export * from './useWindowSize';
