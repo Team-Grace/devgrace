@@ -1,4 +1,4 @@
-import { useIsomorphicLayoutEffect } from '@devgrace/react';
+import { useIsomorphicLayoutEffect } from '../useIsomorphicLayoutEffect';
 import { DependencyList } from 'react';
 
 interface UseScrollToProps {

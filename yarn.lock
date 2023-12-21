@@ -2992,6 +2992,7 @@ __metadata:
   dependencies:
     "@babel/core": "npm:^7.22.10"
     "@devgrace/react": "workspace:*"
+    "@devgrace/utils": "workspace:*"
     "@emotion/babel-preset-css-prop": "npm:^11.11.0"
     "@emotion/react": "npm:^11.11.1"
     "@emotion/styled": "npm:^11.11.0"

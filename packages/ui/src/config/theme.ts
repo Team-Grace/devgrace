@@ -156,6 +156,30 @@ export const colors = {
     800: '#424242',
     900: '#212121',
   },
+  black: {
+    50: '#000000',
+    100: '#000000',
+    200: '#000000',
+    300: '#000000',
+    400: '#000000',
+    500: '#000000',
+    600: '#000000',
+    700: '#000000',
+    800: '#000000',
+    900: '#000000',
+  },
+  white: {
+    50: '#FFFFFF',
+    100: '#FFFFFF',
+    200: '#FFFFFF',
+    300: '#FFFFFF',
+    400: '#FFFFFF',
+    500: '#FFFFFF',
+    600: '#FFFFFF',
+    700: '#FFFFFF',
+    800: '#FFFFFF',
+    900: '#FFFFFF',
+  },
 } as const;
 
 export type ColorThemes = keyof typeof colors;
