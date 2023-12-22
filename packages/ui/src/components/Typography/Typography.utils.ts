@@ -1,5 +1,5 @@
 import { css } from '@emotion/react';
-import { StyledTypographyProps } from '.';
+import { BaseTypographyProps } from '.';
 import styled from '@emotion/styled';
 import { CSSProperties } from 'react';
 import { colors } from '../../config/theme';
@@ -10,6 +10,10 @@ interface CreateTypographyStyledComponentProps {
   tag: TypographyTag;
   defaultFontSize: CSSProperties['fontSize'];
   defaultFontWeight: CSSProperties['fontWeight'];
+}
+
+interface StyledTypographyProps extends BaseTypographyProps {
+  color?: CSSProperties['color'];
 }
 
 /**
