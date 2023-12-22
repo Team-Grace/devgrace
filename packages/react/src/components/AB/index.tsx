@@ -39,21 +39,21 @@ export const AB = ({ children }: PropsWithChildren) => {
 };
 
 AB.CaseA = ({ children, onAction }: PropsWithChildren<ABProps>) => {
-  const callbackAction = usePreservedCallback(onAction || noop);
-
   useEffect(() => {
-    callbackAction();
-  }, [callbackAction]);
+    if (onAction) {
+      onAction();
+    }
+  }, []);
 
   return <React.Fragment>{children}</React.Fragment>;
 };
 
 AB.CaseB = ({ children, onAction }: PropsWithChildren<ABProps>) => {
-  const callbackAction = usePreservedCallback(onAction || noop);
-
   useEffect(() => {
-    callbackAction();
-  }, [callbackAction]);
+    if (onAction) {
+      onAction();
+    }
+  }, []);
 
   return <React.Fragment>{children}</React.Fragment>;
 };
