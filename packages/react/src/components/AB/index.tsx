@@ -1,6 +1,5 @@
 import React, { PropsWithChildren, useEffect } from 'react';
-import { abRandom, noop } from '@devgrace/utils';
-import { usePreservedCallback } from '../../hooks/usePreservedCallback';
+import { abRandom } from '@devgrace/utils';
 
 interface ABProps {
   onAction?: () => void;
