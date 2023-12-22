@@ -7,7 +7,7 @@ import { Typography } from '@devgrace/ui';
 <br />
 
 ## Interface
-### BaseTypographyProps
+### Typography
 ```tsx
 interface BaseTypographyProps {
   textAlign?: CSSProperties['textAlign'];
@@ -16,43 +16,34 @@ interface BaseTypographyProps {
   whiteSpace?: CSSProperties['whiteSpace'];
   bodyStyle?: CSSProperties;
 }
-```
 
-### Typography.Title
-```tsx
 interface TitleProps
   extends React.HTMLAttributes<HTMLHeadElement>,
     BaseTypographyProps {
   level?: 1 | 2 | 3 | 4 | 5;
 }
 
-const Title: ({
-  children,
-  level,
-  ...restProps
-}: PropsWithChildren<TitleProps>) => JSX.Element;
-```
-
-### Typography.Paragraph
-```tsx
 type ParagraphProps = React.HTMLAttributes<HTMLParagraphElement> &
   BaseTypographyProps;
 
-const Paragraph: ({
-  children,
-  ...restProps
-}: PropsWithChildren<ParagraphProps>) => JSX.Element;
-```
-
-### Typography.Text
-```tsx
 type TextProps = React.HTMLAttributes<HTMLSpanElement> &
   BaseTypographyProps;
 
-const Text: ({
-  children,
-  ...restProps
-}: PropsWithChildren<TextProps>) => JSX.Element;
+const Typography: {
+  Title: ({
+    children,
+    level,
+    ...restProps
+  }: PropsWithChildren<TitleProps>) => JSX.Element;
+  Paragraph: ({
+    children,
+    ...restProps
+  }: PropsWithChildren<ParagraphProps>) => JSX.Element;
+  Text: ({
+    children,
+    ...restProps
+  }: PropsWithChildren<TextProps>) => JSX.Element;
+};
 ```
 
 <br />

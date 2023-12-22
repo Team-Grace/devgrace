@@ -1,4 +1,3 @@
-import { render } from '@testing-library/react';
 import { AB } from '.';
 import { renderSetup } from '../../utils/test/renderSetup';
 

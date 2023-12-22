@@ -6,7 +6,7 @@ import { AB } from '@devgrace/react';
 
 아래와 같이 올바르게 사용하지 않으면 `null`을 반환합니다.
 
-- 올바르지 않은 컴포넌트 타입을 사용 (AB.CaseA. AB.CaseB)
+- 올바르지 않은 컴포넌트 타입을 사용 (사용 가능한 컴포넌트: AB.CaseA. AB.CaseB)
 - 중복된 컴포넌트 타입을 사용
 - 자식 컴포넌트 길이가 `2`가 아닌 경우
 
@@ -14,11 +14,15 @@ import { AB } from '@devgrace/react';
 
 ## Interface
 ```tsx
-const AB: {
-  ({ children }: { children: React.ReactNode }): JSX.Element | null;
-  CaseA({ children }: { children: React.ReactNode }): JSX.Element;
-  CaseB({ children }: { children: React.ReactNode }): JSX.Element;
+interface ABProps {
+  onAction?: () => void;
 }
+
+const AB: {
+  ({ children }: PropsWithChildren): JSX.Element | null;
+  CaseA({ children, onAction }: PropsWithChildren<ABProps>): JSX.Element;
+  CaseB({ children, onAction }: PropsWithChildren<ABProps>): JSX.Element;
+};
 ```
 
 ## Usage
@@ -31,10 +35,10 @@ const { CaseA, CaseB } = AB;
 const Example = () => {
   return (
     <AB>
-      <CaseA>
+      <CaseA onAction={() => console.log("Case A Renader")}>
         <div>A</div>
       </CaseA>
-      <CaseB>
+      <CaseB onAction={() => console.log("Case B Renader")}>
         <div>B</div>
       </CaseB>
     </AB>
@@ -45,12 +49,12 @@ const Example = () => {
 ## Example
 
 <div>
-  <p>페이지를 새로고침 하면 값이 변경됩니다.</p>
+  <p>페이지를 새로고침 하면 컴포넌트가 변경됩니다.</p>
   <AB>
-    <AB.CaseA>
+    <AB.CaseA onAction={() => console.log("Case A Renader")}>
       <div style={{ width: "50px", backgroundColor: "green", color: "white", fontSize: '2rem', textAlign: 'center'}}>A</div>
     </AB.CaseA>
-    <AB.CaseB>
+    <AB.CaseB onAction={() => console.log("Case B Renader")}>
       <div style={{width: "50px", backgroundColor: "green", color: "white", fontSize: '2rem', textAlign: 'center'}}>B</div>
     </AB.CaseB>
   </AB>

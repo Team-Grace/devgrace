@@ -1,13 +1,14 @@
-import React from 'react';
-import { abRandom } from '@devgrace/utils';
+import React, { PropsWithChildren, useEffect } from 'react';
+import { abRandom, noop } from '@devgrace/utils';
+import { usePreservedCallback } from '../../hooks/usePreservedCallback';
 
 interface ABProps {
-  children: React.ReactNode;
+  onAction?: () => void;
 }
 
 const OVER_COUNT = 2;
 
-export const AB = ({ children }: ABProps) => {
+export const AB = ({ children }: PropsWithChildren) => {
   const ab = abRandom();
   const childrenList = React.Children.toArray(children) as JSX.Element[];
   let aCount = 0;
@@ -37,10 +38,22 @@ export const AB = ({ children }: ABProps) => {
   return ab ? childrenList[0] : childrenList[1];
 };
 
-AB.CaseA = ({ children }: ABProps) => {
+AB.CaseA = ({ children, onAction }: PropsWithChildren<ABProps>) => {
+  const callbackAction = usePreservedCallback(onAction || noop);
+
+  useEffect(() => {
+    callbackAction();
+  }, [callbackAction]);
+
   return <React.Fragment>{children}</React.Fragment>;
 };
 
-AB.CaseB = ({ children }: ABProps) => {
+AB.CaseB = ({ children, onAction }: PropsWithChildren<ABProps>) => {
+  const callbackAction = usePreservedCallback(onAction || noop);
+
+  useEffect(() => {
+    callbackAction();
+  }, [callbackAction]);
+
   return <React.Fragment>{children}</React.Fragment>;
 };
