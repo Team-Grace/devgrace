@@ -1,4 +1,5 @@
 import { AB } from '@devgrace/react';
+import { useState } from 'react';
 
 # AB
 Component that can be used when `AB testing`.
@@ -14,14 +15,14 @@ Returns `null` if not used correctly, as shown below.
 ## Interface
 ```tsx
 interface ABProps {
-  renderAction?: () => void; // A function called once on render.
+  renderAction?: () => void; // A function that is executed when rendered.
 }
 
 const AB: {
   ({ children }: PropsWithChildren): JSX.Element | null;
   CaseA({ children, renderAction }: PropsWithChildren<ABProps>): JSX.Element;
   CaseB({ children, renderAction }: PropsWithChildren<ABProps>): JSX.Element;
-};
+}
 ```
 
 ## Usage
@@ -47,14 +48,18 @@ const Example = () => {
 
 ## Example
 
-<div>
-  <p>Refreshing the page will change the value.</p>
-  <AB>
-    <AB.CaseA renderAction={() => console.log("CaseA Render")}>
-      <div style={{ width: "50px", backgroundColor: "green", color: "white", fontSize: '2rem', textAlign: 'center'}}>A</div>
-    </AB.CaseA>
-    <AB.CaseB renderAction={() => console.log("CaseB Render")}>
-      <div style={{width: "50px", backgroundColor: "green", color: "white", fontSize: '2rem', textAlign: 'center'}}>B</div>
-    </AB.CaseB>
-  </AB>
-</div>
+export const Example = () => {
+  const { CaseA, CaseB } = AB;
+  return (
+    <AB>
+      <CaseA renderAction={() => console.log("CaseA Render")}>
+        <div style={{ width: "50px", backgroundColor: "green", color: "white", fontSize: '2rem', textAlign: 'center'}}>A</div>
+      </CaseA>
+      <CaseB renderAction={() => console.log("CaseB Render")}>
+        <div style={{width: "50px", backgroundColor: "blue", color: "white", fontSize: '2rem', textAlign: 'center'}}>B</div>
+      </CaseB>
+    </AB>
+  );
+};
+
+<Example />

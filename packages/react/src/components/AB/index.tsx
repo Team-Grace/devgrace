@@ -1,5 +1,6 @@
 import React, { PropsWithChildren, useEffect } from 'react';
-import { abRandom } from '@devgrace/utils';
+import { abRandom, noop } from '@devgrace/utils';
+import { usePreservedCallback } from '../../hooks/usePreservedCallback';
 
 interface ABProps {
   renderAction?: () => void;
@@ -38,21 +39,21 @@ export const AB = ({ children }: PropsWithChildren) => {
 };
 
 AB.CaseA = ({ children, renderAction }: PropsWithChildren<ABProps>) => {
+  const callbackRenderAction = usePreservedCallback(renderAction || noop);
+
   useEffect(() => {
-    if (renderAction) {
-      renderAction();
-    }
-  }, []);
+    callbackRenderAction();
+  }, [callbackRenderAction]);
 
   return <React.Fragment>{children}</React.Fragment>;
 };
 
 AB.CaseB = ({ children, renderAction }: PropsWithChildren<ABProps>) => {
+  const callbackRenderAction = usePreservedCallback(renderAction || noop);
+
   useEffect(() => {
-    if (renderAction) {
-      renderAction();
-    }
-  }, []);
+    callbackRenderAction();
+  }, [callbackRenderAction]);
 
   return <React.Fragment>{children}</React.Fragment>;
 };
