@@ -2,7 +2,7 @@ import React, { PropsWithChildren, useEffect } from 'react';
 import { abRandom } from '@devgrace/utils';
 
 interface ABProps {
-  onAction?: () => void;
+  renderAction?: () => void;
 }
 
 const OVER_COUNT = 2;
@@ -37,20 +37,20 @@ export const AB = ({ children }: PropsWithChildren) => {
   return ab ? childrenList[0] : childrenList[1];
 };
 
-AB.CaseA = ({ children, onAction }: PropsWithChildren<ABProps>) => {
+AB.CaseA = ({ children, renderAction }: PropsWithChildren<ABProps>) => {
   useEffect(() => {
-    if (onAction) {
-      onAction();
+    if (renderAction) {
+      renderAction();
     }
   }, []);
 
   return <React.Fragment>{children}</React.Fragment>;
 };
 
-AB.CaseB = ({ children, onAction }: PropsWithChildren<ABProps>) => {
+AB.CaseB = ({ children, renderAction }: PropsWithChildren<ABProps>) => {
   useEffect(() => {
-    if (onAction) {
-      onAction();
+    if (renderAction) {
+      renderAction();
     }
   }, []);
 

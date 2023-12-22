@@ -14,13 +14,13 @@ Returns `null` if not used correctly, as shown below.
 ## Interface
 ```tsx
 interface ABProps {
-  onAction?: () => void;
+  renderAction?: () => void; // A function called once on render.
 }
 
 const AB: {
   ({ children }: PropsWithChildren): JSX.Element | null;
-  CaseA({ children, onAction }: PropsWithChildren<ABProps>): JSX.Element;
-  CaseB({ children, onAction }: PropsWithChildren<ABProps>): JSX.Element;
+  CaseA({ children, renderAction }: PropsWithChildren<ABProps>): JSX.Element;
+  CaseB({ children, renderAction }: PropsWithChildren<ABProps>): JSX.Element;
 };
 ```
 
@@ -34,10 +34,10 @@ const { CaseA, CaseB } = AB;
 const Example = () => {
   return (
     <AB>
-      <CaseA onAction={() => console.log("CaseA Renader")}>
+      <CaseA renderAction={() => console.log("CaseA Render")}>
         <div>A</div>
       </CaseA>
-      <CaseB onAction={() => console.log("CaseB Renader")}>
+      <CaseB renderAction={() => console.log("CaseB Render")}>
         <div>B</div>
       </CaseB>
     </AB>
@@ -50,10 +50,10 @@ const Example = () => {
 <div>
   <p>Refreshing the page will change the value.</p>
   <AB>
-    <AB.CaseA onAction={() => console.log("CaseA Renader")}>
+    <AB.CaseA renderAction={() => console.log("CaseA Render")}>
       <div style={{ width: "50px", backgroundColor: "green", color: "white", fontSize: '2rem', textAlign: 'center'}}>A</div>
     </AB.CaseA>
-    <AB.CaseB onAction={() => console.log("CaseB Renader")}>
+    <AB.CaseB renderAction={() => console.log("CaseB Render")}>
       <div style={{width: "50px", backgroundColor: "green", color: "white", fontSize: '2rem', textAlign: 'center'}}>B</div>
     </AB.CaseB>
   </AB>

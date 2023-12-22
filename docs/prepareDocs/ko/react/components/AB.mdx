@@ -15,13 +15,13 @@ import { AB } from '@devgrace/react';
 ## Interface
 ```tsx
 interface ABProps {
-  onAction?: () => void;
+  renderAction?: () => void; // render시 1회 호출 함수입니다.
 }
 
 const AB: {
   ({ children }: PropsWithChildren): JSX.Element | null;
-  CaseA({ children, onAction }: PropsWithChildren<ABProps>): JSX.Element;
-  CaseB({ children, onAction }: PropsWithChildren<ABProps>): JSX.Element;
+  CaseA({ children, renderAction }: PropsWithChildren<ABProps>): JSX.Element;
+  CaseB({ children, renderAction }: PropsWithChildren<ABProps>): JSX.Element;
 };
 ```
 
@@ -35,10 +35,10 @@ const { CaseA, CaseB } = AB;
 const Example = () => {
   return (
     <AB>
-      <CaseA onAction={() => console.log("Case A Renader")}>
+      <CaseA renderAction={() => console.log("Case A Render")}>
         <div>A</div>
       </CaseA>
-      <CaseB onAction={() => console.log("Case B Renader")}>
+      <CaseB renderAction={() => console.log("Case B Render")}>
         <div>B</div>
       </CaseB>
     </AB>
@@ -51,10 +51,10 @@ const Example = () => {
 <div>
   <p>페이지를 새로고침 하면 컴포넌트가 변경됩니다.</p>
   <AB>
-    <AB.CaseA onAction={() => console.log("Case A Renader")}>
+    <AB.CaseA renderAction={() => console.log("Case A Render")}>
       <div style={{ width: "50px", backgroundColor: "green", color: "white", fontSize: '2rem', textAlign: 'center'}}>A</div>
     </AB.CaseA>
-    <AB.CaseB onAction={() => console.log("Case B Renader")}>
+    <AB.CaseB renderAction={() => console.log("Case B Render")}>
       <div style={{width: "50px", backgroundColor: "green", color: "white", fontSize: '2rem', textAlign: 'center'}}>B</div>
     </AB.CaseB>
   </AB>
