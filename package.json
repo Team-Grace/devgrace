@@ -15,8 +15,8 @@
     "start:docs:ko": "lerna run start:ko",
     "start:docs": "lerna run start",
     "prepare:docs": "lerna run prepare:docs",
-    "build:docs": "lerna run build:docs",
-    "publish:docs": "lerna run publish:docs"
+    "docs:build": "lerna run build:docs",
+    "docs:publish": "lerna run publish:docs"
   },
   "homepage": "https://github.com/Team-Grace/devgrace",
   "devDependencies": {
