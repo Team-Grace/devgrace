@@ -7,6 +7,7 @@ export * from './useIntersectionObserver';
 export * from './useInterval';
 export * from './useIsMounted';
 export * from './useIsomorphicLayoutEffect';
+export * from './useMediaQuery';
 export * from './useMergeRefs';
 export * from './useOnClickOutside';
 export * from './usePreservedCallback';
