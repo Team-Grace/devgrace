@@ -26,8 +26,8 @@
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.22.10",
-    "@devgrace/react": "workspace:*",
-    "@devgrace/utils": "workspace:*",
+    "@devgrace/react": "0.11.0",
+    "@devgrace/utils": "0.7.0",
     "@emotion/babel-preset-css-prop": "^11.11.0",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
@@ -71,5 +71,5 @@
     "hooks",
     "custom hooks"
   ],
-  "gitHead": "7722785374b897572934e335817ec297ad45a943"
+  "gitHead": "fa7c33a7eaf7050ef74cd4c2acdfa2fa5922cfd7"
 }

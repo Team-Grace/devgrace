@@ -26,7 +26,7 @@
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.22.10",
-    "@devgrace/utils": "workspace:*",
+    "@devgrace/utils": "0.7.0",
     "@rollup/plugin-babel": "^6.0.3",
     "@rollup/plugin-commonjs": "^25.0.4",
     "@rollup/plugin-node-resolve": "^15.1.0",
@@ -69,5 +69,6 @@
     "ui",
     "hooks",
     "custom hooks"
-  ]
+  ],
+  "gitHead": "fa7c33a7eaf7050ef74cd4c2acdfa2fa5922cfd7"
 }
