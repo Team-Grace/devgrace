@@ -2,8 +2,6 @@ import { isNumber } from '.';
 
 describe('isNumber', () => {
   it('should return true if the argument is a number and false otherwise', () => {
-    function example() {}
-
     expect(isNumber(123)).toBeTruthy();
 
     expect(isNumber(() => {})).toBeFalsy();
