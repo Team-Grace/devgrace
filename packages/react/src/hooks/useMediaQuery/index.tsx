@@ -25,17 +25,3 @@ export const useMediaQuery = (query: string) => {
 
   return { isMatch };
 };
-
-export const Example = () => {
-  const { isMatch } = useMediaQuery('(min-width: 768px)');
-  return (
-    <div>
-      <p>브라우저 너비를 조정해보세요!</p>
-      <p>
-        {isMatch
-          ? 'viewport 너비가 768px 이상입니다.'
-          : 'viewport 너비가 768px 미만입니다.'}
-      </p>
-    </div>
-  );
-};
