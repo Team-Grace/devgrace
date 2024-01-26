@@ -27,7 +27,7 @@
   "devDependencies": {
     "@babel/core": "^7.22.10",
     "@devgrace/react": "^0.11.3",
-    "@devgrace/utils": "0.7.0",
+    "@devgrace/utils": "^0.8.0",
     "@emotion/babel-preset-css-prop": "^11.11.0",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
