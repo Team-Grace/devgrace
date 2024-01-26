@@ -7,5 +7,6 @@ export * from './getUniqTime';
 export * from './getViewportSize';
 export * from './hexToRgb';
 export * from './isFunction';
+export * from './isNumber';
 export * from './noop';
 export * from './wrapInArray';

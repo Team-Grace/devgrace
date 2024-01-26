@@ -1,7 +1,7 @@
 import { isFunction } from '.';
 
 describe('isFunction', () => {
-  it('should return true for functions and false for other values', () => {
+  it('should return true if the argument is a function and false otherwise', () => {
     function example() {}
 
     expect(isFunction(() => {})).toBeTruthy();
