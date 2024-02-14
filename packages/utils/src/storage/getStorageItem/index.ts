@@ -1,6 +1,6 @@
 import { Nullable, StorageType } from '../types';
 import { isClient } from '../../device';
-import { isFunction } from '../../common';
+import { isFunction } from '../../validator/isFunction';
 
 export const getStorageItem = <T>(
   type: StorageType,
