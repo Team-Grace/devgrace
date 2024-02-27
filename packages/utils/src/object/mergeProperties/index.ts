@@ -3,7 +3,8 @@ export const mergeProperties = <
   K extends Record<PropertyKey, any>
 >(
   target: T,
-  source: K
+  source: K,
+  exclude?: string[]
 ): T & K => {
   if (typeof target !== 'object' || typeof source !== 'object') {
     return target;
@@ -12,6 +13,10 @@ export const mergeProperties = <
   const merged = { ...target };
 
   for (const key in source) {
+    if (exclude && exclude.includes(key)) {
+      continue;
+    }
+
     if (source.hasOwnProperty(key)) {
       if (typeof source[key] === 'object') {
         if (Array.isArray(source[key])) {
