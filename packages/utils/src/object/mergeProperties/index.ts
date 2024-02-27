@@ -13,9 +13,7 @@ export const mergeProperties = <
   const merged = { ...target };
 
   for (const key in source) {
-    if (exclude && exclude.includes(key)) {
-      continue;
-    }
+    if (exclude && exclude.includes(key)) continue;
 
     if (source.hasOwnProperty(key)) {
       if (typeof source[key] === 'object') {
