@@ -5,6 +5,6 @@ export * from './deepEqual';
 export * from './getUniqId';
 export * from './getUniqTime';
 export * from './getViewportSize';
-export * from './hexToRgb';
+export * from './hexToRgba';
 export * from './noop';
 export * from './wrapInArray';
