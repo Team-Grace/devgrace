@@ -1,23 +1,21 @@
-import { useRef, useEffect } from 'react';
+import { usePreservedCallback } from '../usePreservedCallback';
+import { useEffect } from 'react';
 
-export const useInterval = (callback: () => void, delay: number | null) => {
-  const savedCallback = useRef(callback);
+type SetIntervalParameters = Parameters<typeof setInterval>;
+
+export const useInterval = (
+  callback: SetIntervalParameters[0],
+  delay?: SetIntervalParameters[1]
+) => {
+  const callbackAction = usePreservedCallback(callback);
 
   useEffect(() => {
-    savedCallback.current = callback;
-  }, [callback]);
-
-  useEffect(() => {
-    if (!delay && delay !== 0) {
+    if (delay == null) {
       return;
     }
 
-    const handleInterval = () => {
-      savedCallback.current();
-    };
-
-    const intervalId = window.setInterval(handleInterval, delay);
+    const intervalId = window.setInterval(callbackAction, delay);
 
     return () => clearInterval(intervalId);
-  }, [delay]);
+  }, [callbackAction, delay]);
 };

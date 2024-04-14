@@ -8,7 +8,9 @@
 
 ## Interface
 ```tsx
-const useTimeout: (callback: () => void, delay: number | null) => void
+type SetTimeoutParameters = Parameters<typeof setTimeout>;
+
+const useTimeout: (callback: SetTimeoutParameters[0], delay?: SetTimeoutParameters[1]) => void
 ```
 
 ## Usage

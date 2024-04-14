@@ -35,10 +35,10 @@ describe('useTimeout', () => {
     expect(mockFn).toBeCalled();
   });
 
-  it('delay is null, timeout is disabled', () => {
+  it('delay is undefined, timeout is disabled', () => {
     const mockFn = jest.fn();
 
-    renderHook(() => useTimeout(mockFn, null));
+    renderHook(() => useTimeout(mockFn, undefined));
 
     expect(mockFn).not.toBeCalled();
 

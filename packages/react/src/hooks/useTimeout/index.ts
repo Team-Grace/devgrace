@@ -1,23 +1,21 @@
-import { useEffect, useRef } from 'react';
+import { usePreservedCallback } from '../usePreservedCallback';
+import { useEffect } from 'react';
 
-export const useTimeout = (callback: () => void, delay: number | null) => {
-  const savedCallback = useRef(callback);
+type SetTimeoutParameters = Parameters<typeof setTimeout>;
+
+export const useTimeout = (
+  callback: SetTimeoutParameters[0],
+  delay?: SetTimeoutParameters[1]
+) => {
+  const callbackAction = usePreservedCallback(callback);
 
   useEffect(() => {
-    savedCallback.current = callback;
-  }, [callback]);
-
-  useEffect(() => {
-    if (!delay && delay !== 0) {
+    if (delay == null) {
       return;
     }
 
-    const handleTimeout = () => {
-      savedCallback.current();
-    };
-
-    const timeoutId = window.setTimeout(handleTimeout, delay);
+    const timeoutId = window.setTimeout(callbackAction, delay);
 
     return () => clearTimeout(timeoutId);
-  }, [delay]);
+  }, [callbackAction, delay]);
 };

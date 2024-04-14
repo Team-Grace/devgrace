@@ -22,7 +22,7 @@ const TestComponent = () => {
     () => {
       act(() => setNumber(number + 1));
     },
-    isPlaying ? delayTime : null
+    isPlaying ? delayTime : undefined
   );
 
   return (
@@ -51,7 +51,7 @@ describe('useInterval', () => {
     expect(mockFn).toBeCalledTimes(2);
   });
 
-  it('delay is null, interval is disabled', () => {
+  it('delay is undefined, interval is disabled', () => {
     render(<TestComponent />);
     const button = screen.getByRole('button');
 

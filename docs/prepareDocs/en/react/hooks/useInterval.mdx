@@ -10,7 +10,9 @@ You can stop the timer by putting `null` as the value of `delay`.
 
 ## Interface
 ```tsx
-const useInterval: (callback: () => void, delay: number | null) => void
+type SetIntervalParameters = Parameters<typeof setInterval>;
+
+const useInterval: (callback: SetIntervalParameters[0], delay?: SetIntervalParameters[1]) => void
 ```
 
 ## Usage
@@ -22,7 +24,7 @@ const Example = () => {
   const [number, setNumber] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
 
-  useInterval(() => setNumber(number + 1), isPlaying ? 1000 : null);
+  useInterval(() => setNumber(number + 1), 1000);
 
   return (
     <div>
