@@ -1,5 +1,11 @@
 # @devgrace/react
 
+## 0.12.4
+
+### Patch Changes
+
+- d86a667: fix: when component
+
 ## 0.12.3
 
 ### Patch Changes
