@@ -8,6 +8,8 @@
     "**/*.spec.*",
     "**/*.stories.*",
     "**/__storybook__/*",
-    "**/*.md"
+    "**/*.md",
+    "./packages/ui",
+    "./docs"
   ]
 }
