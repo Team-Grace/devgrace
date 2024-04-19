@@ -2,13 +2,13 @@ import { useCallback, useState, useRef } from 'react';
 
 type RequestFunction<Data> = (requestData?: any) => Promise<Data>;
 
-interface useAsyncProcessQueueOptions {
+interface UseAsyncProcessQueueOptions {
   keepPreviousData?: boolean;
 }
 
 export const useAsyncProcessQueue = <Data = unknown, Error = unknown>({
   keepPreviousData = false,
-}: useAsyncProcessQueueOptions = {}) => {
+}: UseAsyncProcessQueueOptions = {}) => {
   const requestQueue = useRef<RequestFunction<Data>[]>([]);
 
   const [data, setData] = useState<Data>();
