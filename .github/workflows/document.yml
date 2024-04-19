@@ -9,14 +9,21 @@ jobs:
     steps:
       - name: Checkout 🔔
         uses: actions/checkout@v4
+      - name: Node Setup 🔔
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          registry-url: 'https://registry.npmjs.org'
       - name: Link 🔨
         run: yarn
+      - name: packages build 🔨
+        run: yarn build
       - name: prepare 🔨
         run: yarn prepare:docs
-      - name: build 🔨
+      - name: document build 🔨
         run: yarn build:docs
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           token: ${{ secrets.PUBLISH_TOKEN }}
-          folder: docs/build
+          folder: ./docs/build
