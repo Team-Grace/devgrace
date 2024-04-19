@@ -1,5 +1,11 @@
 # @devgrace/react
 
+## 0.12.2
+
+### Patch Changes
+
+- 5042645: fix: useVisibilityChange
+
 ## 0.12.1
 
 ### Patch Changes
