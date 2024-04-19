@@ -1,0 +1,22 @@
+name: Document Publish
+on:
+  push:
+    branches:
+      - main
+jobs:
+  document-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🔔
+        uses: actions/checkout@v4
+      - name: Link 🔨
+        run: yarn
+      - name: prepare 🔨
+        run: yarn prepare:docs
+      - name: build 🔨
+        run: yarn build:docs
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          token: ${{ secrets.PUBLISH_TOKEN }}
+          folder: docs/build
