@@ -2,7 +2,7 @@ import { useCallback, useMemo, useState } from 'react';
 import { useIsomorphicLayoutEffect } from '../useIsomorphicLayoutEffect';
 import { useDebounce } from '../useDebounce';
 
-interface Size {
+interface WindowSize {
   width: number | null;
   height: number | null;
 }
@@ -14,7 +14,7 @@ interface useWindowSizeProps {
 
 export const useWindowSize = (options: useWindowSizeProps = {}) => {
   const { isDebounce = false, wait = 300 } = options;
-  const [windowSize, setWindowSize] = useState<Size>({
+  const [windowSize, setWindowSize] = useState<WindowSize>({
     width: null,
     height: null,
   });
