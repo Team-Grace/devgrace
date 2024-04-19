@@ -1,5 +1,11 @@
 # @devgrace/react
 
+## 0.12.1
+
+### Patch Changes
+
+- ad33dc0: fix: useUnmount
+
 ## 0.12.0
 
 ### Minor Changes
