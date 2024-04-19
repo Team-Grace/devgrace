@@ -12,13 +12,13 @@ A `function that returns a boolean` as a condition prop is also allowed.
 
 ## Interface
 ```tsx
-type Condition = boolean | ((...args: any) => boolean);
+type Condition = boolean | ((...args: any[]) => boolean);
 
-interface WhenProps extends PropsWithChildren {
+interface WhenProps {
   condition: Condition;
 }
 
-const When: ({ children, condition }: WhenProps) => JSX.Element | null
+const When: ({ children, condition }: PropsWithChildren<WhenProps>) => JSX.Element | null
 ```
 
 ## Usage
