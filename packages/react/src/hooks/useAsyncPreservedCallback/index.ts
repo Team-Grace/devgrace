@@ -12,6 +12,6 @@ export const useAsyncPreservedCallback = <
   }, [callback]);
 
   return useCallback(async (...args: any[]) => {
-    return await callbackRef.current(args.length === 1 ? args[0] : args);
+    return await callbackRef.current(...args);
   }, []);
 };
