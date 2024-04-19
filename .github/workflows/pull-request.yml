@@ -11,9 +11,9 @@ jobs:
   Build-Test:
     runs-on: ubuntu-latest
     steps:
-      - run: corepack enable
       - name: Checkout 🔔
         uses: actions/checkout@v4
+      - run: corepack enable
       - name: Node Setup 🔔
         uses: actions/setup-node@v4
         with:
