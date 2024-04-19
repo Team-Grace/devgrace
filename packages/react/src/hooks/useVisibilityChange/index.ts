@@ -7,7 +7,7 @@ type VisibilityChangeCallbackAction = (
   visibilityState: DocumentVisibilityState
 ) => void;
 
-interface useVisibilityChangeProps {
+interface UseVisibilityChangeProps {
   onShow?: VisibilityChangeCallbackAction;
   onHide?: VisibilityChangeCallbackAction;
 }
@@ -15,7 +15,7 @@ interface useVisibilityChangeProps {
 export const useVisibilityChange = ({
   onShow = noop,
   onHide = noop,
-}: useVisibilityChangeProps) => {
+}: UseVisibilityChangeProps) => {
   const handleVisibilityChange = usePreservedCallback((event: Event) => {
     const isVisible = document.visibilityState === 'visible';
     const callbackAction = isVisible ? onShow : onHide;
