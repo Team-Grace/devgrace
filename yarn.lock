@@ -3233,12 +3233,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@devgrace/react@npm:^0.11.6, @devgrace/react@workspace:*, @devgrace/react@workspace:packages/react":
+"@devgrace/react@workspace:*, @devgrace/react@workspace:packages/react":
   version: 0.0.0-use.local
   resolution: "@devgrace/react@workspace:packages/react"
   dependencies:
     "@babel/core": "npm:^7.22.10"
-    "@devgrace/utils": "npm:^0.9.3"
+    "@devgrace/utils": "workspace:*"
     "@rollup/plugin-babel": "npm:^6.0.3"
     "@rollup/plugin-commonjs": "npm:^25.0.4"
     "@rollup/plugin-node-resolve": "npm:^15.1.0"
@@ -3276,8 +3276,8 @@ __metadata:
   resolution: "@devgrace/ui@workspace:packages/ui"
   dependencies:
     "@babel/core": "npm:^7.22.10"
-    "@devgrace/react": "npm:^0.11.6"
-    "@devgrace/utils": "npm:^0.9.3"
+    "@devgrace/react": "workspace:*"
+    "@devgrace/utils": "workspace:*"
     "@emotion/babel-preset-css-prop": "npm:^11.11.0"
     "@emotion/react": "npm:^11.11.1"
     "@emotion/styled": "npm:^11.11.0"
@@ -3310,7 +3310,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@devgrace/utils@npm:^0.9.3, @devgrace/utils@workspace:packages/utils":
+"@devgrace/utils@workspace:*, @devgrace/utils@workspace:packages/utils":
   version: 0.0.0-use.local
   resolution: "@devgrace/utils@workspace:packages/utils"
   dependencies:

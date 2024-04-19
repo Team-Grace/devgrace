@@ -26,8 +26,8 @@
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.22.10",
-    "@devgrace/react": "^0.11.6",
-    "@devgrace/utils": "^0.9.3",
+    "@devgrace/react": "workspace:*",
+    "@devgrace/utils": "workspace:*",
     "@emotion/babel-preset-css-prop": "^11.11.0",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
