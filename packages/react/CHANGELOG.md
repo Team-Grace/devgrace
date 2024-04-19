@@ -1,5 +1,11 @@
 # @devgrace/react
 
+## 0.12.3
+
+### Patch Changes
+
+- 2b03d46: fix: useWindowSize
+
 ## 0.12.2
 
 ### Patch Changes
