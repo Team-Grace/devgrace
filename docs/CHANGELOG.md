@@ -1,5 +1,14 @@
 # docs
 
+## 0.0.46
+
+### Patch Changes
+
+- d86a667: fix: when component
+- Updated dependencies [d86a667]
+  - @devgrace/react@0.12.4
+  - @devgrace/ui@0.7.0
+
 ## 0.0.45
 
 ### Patch Changes

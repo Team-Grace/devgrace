@@ -1,7 +1,7 @@
 {
   "name": "@devgrace/react",
   "sideEffects": false,
-  "version": "0.12.3",
+  "version": "0.12.4",
   "description": "devgrace/react",
   "exports": {
     ".": {
