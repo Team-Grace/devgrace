@@ -1,4 +1,4 @@
-import { usePreservedCallback } from 'hooks/usePreservedCallback';
+import { usePreservedCallback } from '../usePreservedCallback';
 import { useEffect } from 'react';
 
 export const useUnmount = (callback: () => any) => {
