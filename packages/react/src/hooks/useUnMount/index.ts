@@ -1,12 +1,9 @@
-import { useEffect, useRef } from 'react';
+import { usePreservedCallback } from 'hooks/usePreservedCallback';
+import { useEffect } from 'react';
 
 export const useUnmount = (callback: () => any) => {
-  const callbackRef = useRef(callback);
+  const callbackAction = usePreservedCallback(callback);
 
   // update the ref each render so if it change the newest callback will be invoked
-  useEffect(() => {
-    callbackRef.current = callback;
-  }, [callback]);
-
-  useEffect(() => () => callbackRef.current(), []);
+  useEffect(() => () => callbackAction(), [callbackAction]);
 };
