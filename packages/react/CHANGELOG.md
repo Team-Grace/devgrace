@@ -1,5 +1,11 @@
 # @devgrace/react
 
+## 0.12.6
+
+### Patch Changes
+
+- 5753da5: fix: workflow test
+
 ## 0.12.5
 
 ### Patch Changes
