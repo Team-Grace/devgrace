@@ -1,5 +1,11 @@
 # @devgrace/react
 
+## 0.12.5
+
+### Patch Changes
+
+- 83415a8: fix: jest to vitest
+
 ## 0.12.4
 
 ### Patch Changes
