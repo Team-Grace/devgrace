@@ -64,7 +64,7 @@ yarn add @devgrace/ui
 ```shell
 yarn test
 ```
-- `jest`와 `react-testing-library`로 테스트를 실행할 수 있습니다.
+- `vitest`와 `react-testing-library`로 테스트를 실행할 수 있습니다.
 ```shell
 yarn typecheck
 ```
@@ -90,7 +90,7 @@ yarn storybook
 
 ## Environment
 - React, TypeScript, @emotion
-- Jest, React-Testing-Library, Storybook
+- Vitest, React-Testing-Library, Storybook
 - Rollup, Babel
 - Yarn Berry & Workspaces
 - Lerna 4 (for Versioning & Publishing)

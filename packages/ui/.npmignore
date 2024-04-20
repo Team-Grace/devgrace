@@ -34,4 +34,5 @@ storybook-static
 
 # test
 coverage
-jest.config.ts
+vite.config.ts
+vite.setup.ts
