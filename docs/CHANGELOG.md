@@ -1,5 +1,13 @@
 # docs
 
+## 0.0.47
+
+### Patch Changes
+
+- Updated dependencies [83415a8]
+  - @devgrace/react@0.12.5
+  - @devgrace/ui@0.7.1
+
 ## 0.0.46
 
 ### Patch Changes
