@@ -13,7 +13,7 @@ interface useWindowSizeProps {
 }
 
 export const useWindowSize = (options: useWindowSizeProps = {}) => {
-  const { isDebounce = false, wait = 300 } = options;
+  const { isDebounce = false, wait = 200 } = options;
   const [windowSize, setWindowSize] = useState<WindowSize>({
     width: null,
     height: null,
