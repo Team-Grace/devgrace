@@ -1,5 +1,11 @@
 # @devgrace/utils
 
+## 0.11.1
+
+### Patch Changes
+
+- a2a6b74: Eslint
+
 ## 0.11.0
 
 ### Minor Changes
