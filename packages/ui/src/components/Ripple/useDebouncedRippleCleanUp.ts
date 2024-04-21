@@ -1,5 +1,4 @@
-import { useIsomorphicLayoutEffect } from "@devgrace/react";
-import { useEffect } from "react";
+import { useIsomorphicLayoutEffect } from '@devgrace/react';
 
 /**
  * @description ripple 효과가 끝나는 시간(duration)에 맞춰 ripples 배열 초기화 함수

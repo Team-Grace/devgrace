@@ -1,4 +1,4 @@
-import { forwardRef, useEffect, useRef } from 'react';
+import { forwardRef, useRef } from 'react';
 import * as S from './Dimmed.styled';
 import { DimmedProps } from './Dimmed.types';
 import { CSSTransition } from 'react-transition-group';
@@ -8,7 +8,6 @@ export const Dimmed = forwardRef<HTMLDivElement, DimmedProps>(
   (
     {
       children,
-      className,
       isShow = false,
       isTransition = true,
       timeout = 200, // ms unit

@@ -8,7 +8,7 @@ describe('removeSpecialCharacters', () => {
   });
 
   it('should return a string without special characters if there are special characters', () => {
-    const str = 'H@#!ello, @Wo!@#!!(%)(!&@rld!';
+    const str = 'H@#!ello, @Wo!@#!!(%)(!&@rld![]';
     expect(removeSpecialCharacters(str)).toBe('Hello World');
   });
 });

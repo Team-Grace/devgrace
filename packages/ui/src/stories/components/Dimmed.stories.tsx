@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { StoryFn } from '@storybook/react';
 import { Dimmed } from '../../components/Dimmed';
 import { Button } from '../../components/Button';
