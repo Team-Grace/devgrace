@@ -1,4 +1,7 @@
-export const hasProperty = <T extends object, K extends PropertyKey>(
+export const hasProperty = <
+  T extends Record<PropertyKey, any>,
+  K extends PropertyKey
+>(
   obj: T,
   key: K
 ): key is K & keyof T => {
