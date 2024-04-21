@@ -1,5 +1,11 @@
 # @devgrace/ui
 
+## 0.8.1
+
+### Patch Changes
+
+- a2a6b74: Eslint
+
 ## 0.8.0
 
 ### Minor Changes
