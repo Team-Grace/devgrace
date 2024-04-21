@@ -92,7 +92,7 @@ All contributions are appreciated, and anyone is welcome to contribute to the li
 ## Environment
 - React, TypeScript, @emotion
 - Vitest, React-Testing-Library, Storybook
-- Rollup, Babel
+- Rollup, ESBuild
 - Yarn Berry & Workspaces
 - Lerna 4 (for Versioning & Publishing)
 - docusaurus (documentation)
