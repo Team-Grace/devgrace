@@ -1,5 +1,11 @@
 # @devgrace/ui
 
+## 0.8.0
+
+### Minor Changes
+
+- cc4e0b9: Migration ESBuild
+
 ## 0.7.1
 
 ### Patch Changes

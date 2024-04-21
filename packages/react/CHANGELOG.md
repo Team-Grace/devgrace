@@ -1,5 +1,11 @@
 # @devgrace/react
 
+## 0.13.0
+
+### Minor Changes
+
+- cc4e0b9: Migration ESBuild
+
 ## 0.12.6
 
 ### Patch Changes
