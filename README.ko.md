@@ -33,6 +33,10 @@ npm i @devgrace/react
 yarn add @devgrace/react
 ```
 
+```shell
+pnpm i @devgrace/react
+```
+
 <br />
 
 ### @devgrace/utils <a href="https://www.npmjs.com/package/@devgrace/utils" target="_blank"><img align="center" src="https://img.shields.io/npm/v/@devgrace/utils.svg" /></a> <a href="https://bundlephobia.com/package/@devgrace/utils" target="_blank"><img align="center" src="https://img.shields.io/bundlephobia/minzip/@devgrace/utils/latest"></a>
@@ -45,6 +49,10 @@ npm i @devgrace/utils
 
 ```shell
 yarn add @devgrace/utils
+```
+
+```shell
+pnpm i @devgrace/utils
 ```
 
 <br />
@@ -61,11 +69,15 @@ npm i @devgrace/ui
 yarn add @devgrace/ui
 ```
 
+```shell
+pnpm i @devgrace/ui
+```
+
 <br />
 
 ### @devgrace/types <a href="https://www.npmjs.com/package/@devgrace/types" target="_blank"><img align="center" src="https://img.shields.io/npm/v/@devgrace/types.svg" /></a> <a href="https://bundlephobia.com/package/@devgrace/types" target="_blank"><img align="center" src="https://img.shields.io/bundlephobia/minzip/@devgrace/types/latest"></a>
   
-- 유용한 유틸 타입을 제공합니다.
+- 유용한 유틸 타입들을 제공하는 라이브러리 입니다.
 
 ```shell
 npm i @devgrace/types
@@ -76,7 +88,7 @@ yarn add @devgrace/types
 ```
 
 ```shell
-yarn add @devgrace/ui
+pnpm i @devgrace/types
 ```
 
 <br />
