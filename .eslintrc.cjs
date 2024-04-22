@@ -18,6 +18,5 @@ module.exports = {
     '@typescript-eslint/no-unnecessary-type-constraint': 'off',
     'import/no-anonymous-default-export': 'off',
     'no-useless-escape': 'off',
-    'no-undef': 'warning',
   },
 };

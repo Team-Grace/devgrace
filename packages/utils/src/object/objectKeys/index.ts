@@ -1,4 +1,4 @@
-import { ObjectKeys } from '../types';
+import { ObjectKeys } from '@devgrace/types';
 
 export const objectKeys = <T extends Record<ObjectKeys<T>, T[keyof T]>>(
   obj: T

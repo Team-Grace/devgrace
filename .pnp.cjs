@@ -5997,6 +5997,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./packages/utils/",\
         "packageDependencies": [\
           ["@devgrace/utils", "workspace:packages/utils"],\
+          ["@devgrace/types", "workspace:packages/types"],\
           ["@rollup/plugin-commonjs", "virtual:f260b09ce4727a71270bfff991b4553faf588868362a2864e2ecddcb7d09b075aa16375f0f9d75c9081022775e9eba52d6fdb6b88abf2f6f48ba8f02fa3a2a62#npm:25.0.4"],\
           ["@rollup/plugin-node-resolve", "virtual:f260b09ce4727a71270bfff991b4553faf588868362a2864e2ecddcb7d09b075aa16375f0f9d75c9081022775e9eba52d6fdb6b88abf2f6f48ba8f02fa3a2a62#npm:15.1.0"],\
           ["@rollup/plugin-terser", "virtual:f260b09ce4727a71270bfff991b4553faf588868362a2864e2ecddcb7d09b075aa16375f0f9d75c9081022775e9eba52d6fdb6b88abf2f6f48ba8f02fa3a2a62#npm:0.4.3"],\

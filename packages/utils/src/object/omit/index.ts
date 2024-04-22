@@ -1,4 +1,4 @@
-import { ObjectKeys } from '../types';
+import { ObjectKeys } from '@devgrace/types';
 import { deepCopy } from '../../common/deepCopy';
 import { wrapInArray } from '../../common/wrapInArray';
 
