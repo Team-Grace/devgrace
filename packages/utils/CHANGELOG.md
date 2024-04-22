@@ -1,5 +1,11 @@
 # @devgrace/utils
 
+## 1.0.0
+
+### Major Changes
+
+- da8acbc: release 1.0.0
+
 ## 0.11.1
 
 ### Patch Changes
