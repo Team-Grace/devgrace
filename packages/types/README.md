@@ -1,6 +1,6 @@
 # @devgrace/types <a href="https://www.npmjs.com/package/@devgrace/types" target="_blank"><img align="center" src="https://img.shields.io/npm/v/@devgrace/types.svg" /></a> <a href="https://bundlephobia.com/package/@devgrace/types" target="_blank"><img align="center" src="https://img.shields.io/bundlephobia/minzip/@devgrace/types/latest"></a>
 
-Provides useful utility types. 
+A library that provides useful utility types.
 
 <br />
 

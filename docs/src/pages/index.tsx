@@ -71,7 +71,7 @@ export default function Home(): JSX.Element {
               href="https://www.npmjs.com/package/@devgrace/react"
               target="_blank">
               <img src="https://img.shields.io/npm/v/@devgrace/react.svg" />
-            </a>{' '}
+            </a>
             <a
               href="https://bundlephobia.com/package/@devgrace/react"
               target="_blank">
@@ -88,7 +88,7 @@ export default function Home(): JSX.Element {
               href="https://www.npmjs.com/package/@devgrace/utils"
               target="_blank">
               <img src="https://img.shields.io/npm/v/@devgrace/utils.svg" />
-            </a>{' '}
+            </a>
             <a
               href="https://bundlephobia.com/package/@devgrace/utils"
               target="_blank">
@@ -106,7 +106,7 @@ export default function Home(): JSX.Element {
               href="https://www.npmjs.com/package/@devgrace/ui"
               target="_blank">
               <img src="https://img.shields.io/npm/v/@devgrace/ui.svg" />
-            </a>{' '}
+            </a>
             <a
               href="https://bundlephobia.com/package/@devgrace/ui"
               target="_blank">
@@ -117,6 +117,23 @@ export default function Home(): JSX.Element {
           <p className={styles.mainContentParagraph}>
             A library that provides React UI Components. (Example: Button,
             Select, Checkbox)
+          </p>
+
+          <h2 className={styles.mainContentHead}>
+            @devgrace/types
+            <a
+              href="https://www.npmjs.com/package/@devgrace/types"
+              target="_blank">
+              <img src="https://img.shields.io/npm/v/@devgrace/types.svg" />
+            </a>
+            <a
+              href="https://bundlephobia.com/package/@devgrace/types"
+              target="_blank">
+              <img src="https://img.shields.io/bundlephobia/minzip/@devgrace/types/latest" />
+            </a>
+          </h2>
+          <p className={styles.mainContentParagraph}>
+            A library that provides useful utility types.
           </p>
         </div>
       </main>

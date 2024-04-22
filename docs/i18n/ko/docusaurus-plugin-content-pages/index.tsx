@@ -70,7 +70,7 @@ export default function Home(): JSX.Element {
               href="https://www.npmjs.com/package/@devgrace/react"
               target="_blank">
               <img src="https://img.shields.io/npm/v/@devgrace/react.svg" />
-            </a>{' '}
+            </a>
             <a
               href="https://bundlephobia.com/package/@devgrace/react"
               target="_blank">
@@ -87,7 +87,7 @@ export default function Home(): JSX.Element {
               href="https://www.npmjs.com/package/@devgrace/utils"
               target="_blank">
               <img src="https://img.shields.io/npm/v/@devgrace/utils.svg" />
-            </a>{' '}
+            </a>
             <a
               href="https://bundlephobia.com/package/@devgrace/utils"
               target="_blank">
@@ -105,17 +105,33 @@ export default function Home(): JSX.Element {
               href="https://www.npmjs.com/package/@devgrace/ui"
               target="_blank">
               <img src="https://img.shields.io/npm/v/@devgrace/ui.svg" />
-            </a>{' '}
+            </a>
             <a
               href="https://bundlephobia.com/package/@devgrace/ui"
               target="_blank">
               <img src="https://img.shields.io/bundlephobia/minzip/@devgrace/ui/latest" />
             </a>
           </h2>
-
           <p className={styles.mainContentParagraph}>
             React UI 컴포넌트를 제공하는 라이브러리입니다. (예: Button, Select,
             Checkbox)
+          </p>
+
+          <h2 className={styles.mainContentHead}>
+            @devgrace/types
+            <a
+              href="https://www.npmjs.com/package/@devgrace/types"
+              target="_blank">
+              <img src="https://img.shields.io/npm/v/@devgrace/types.svg" />
+            </a>
+            <a
+              href="https://bundlephobia.com/package/@devgrace/types"
+              target="_blank">
+              <img src="https://img.shields.io/bundlephobia/minzip/@devgrace/types/latest" />
+            </a>
+          </h2>
+          <p className={styles.mainContentParagraph}>
+            유용한 유틸 타입들을 제공하는 라이브러리 입니다.
           </p>
         </div>
       </main>
