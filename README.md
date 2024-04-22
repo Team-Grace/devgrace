@@ -35,6 +35,12 @@ npm i @devgrace/react
 yarn add @devgrace/react
 ```
 
+```shell
+pnpm i @devgrace/react
+```
+
+<br />
+
 ### @devgrace/utils <a href="https://www.npmjs.com/package/@devgrace/utils" target="_blank"><img align="center" src="https://img.shields.io/npm/v/@devgrace/utils.svg" /></a> <a href="https://bundlephobia.com/package/@devgrace/utils" target="_blank"><img align="center" src="https://img.shields.io/bundlephobia/minzip/@devgrace/utils/latest"></a>
 
 - A library that provides useful `Utility functions` related to client development. 
@@ -46,12 +52,41 @@ npm i @devgrace/utils
 ```shell
 yarn add @devgrace/utils
 ```
+
+```shell
+pnpm i @devgrace/utils
+```
+
+<br />
+
 ### @devgrace/ui <a href="https://www.npmjs.com/package/@devgrace/ui" target="_blank"><img align="center" src="https://img.shields.io/npm/v/@devgrace/ui.svg" /></a> <a href="https://bundlephobia.com/package/@devgrace/ui" target="_blank"><img align="center" src="https://img.shields.io/bundlephobia/minzip/@devgrace/ui/latest"></a>
   
 - A library that provides `React UI Components`. (Example: `Button`, `Select`, `Checkbox`) 
 
 ```shell
 npm i @devgrace/ui
+```
+
+```shell
+yarn add @devgrace/ui
+```
+
+```shell
+pnpm i @devgrace/ui
+```
+
+<br />
+
+### @devgrace/types <a href="https://www.npmjs.com/package/@devgrace/types" target="_blank"><img align="center" src="https://img.shields.io/npm/v/@devgrace/types.svg" /></a> <a href="https://bundlephobia.com/package/@devgrace/types" target="_blank"><img align="center" src="https://img.shields.io/bundlephobia/minzip/@devgrace/types/latest"></a>
+  
+- Provides useful utility types. 
+
+```shell
+npm i @devgrace/types
+```
+
+```shell
+yarn add @devgrace/types
 ```
 
 ```shell
@@ -65,14 +100,19 @@ yarn add @devgrace/ui
 ```shell
 yarn test
 ```
+
 - You can run tests with `vitest` and `react-testing-library`.
+
 ```shell
 yarn typecheck
 ```
+
 - You can run `type check`.
+
 ```shell
 yarn storybook
 ```
+
 - You can run UI tests with `storybook`.
 
 <br />

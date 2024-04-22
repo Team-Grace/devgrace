@@ -131,6 +131,10 @@ const config = {
                 label: '@devgrace/ui',
                 href: 'https://www.npmjs.com/package/@devgrace/ui',
               },
+              {
+                label: '@devgrace/utils',
+                href: 'https://www.npmjs.com/package/@devgrace/utils',
+              },
             ],
           },
         ],

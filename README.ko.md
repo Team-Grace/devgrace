@@ -33,6 +33,8 @@ npm i @devgrace/react
 yarn add @devgrace/react
 ```
 
+<br />
+
 ### @devgrace/utils <a href="https://www.npmjs.com/package/@devgrace/utils" target="_blank"><img align="center" src="https://img.shields.io/npm/v/@devgrace/utils.svg" /></a> <a href="https://bundlephobia.com/package/@devgrace/utils" target="_blank"><img align="center" src="https://img.shields.io/bundlephobia/minzip/@devgrace/utils/latest"></a>
 
 - 클라이언트 개발과 관련된 유용한 `유틸리티 함수`를 제공하는 라이브러리입니다.
@@ -44,6 +46,8 @@ npm i @devgrace/utils
 ```shell
 yarn add @devgrace/utils
 ```
+
+<br />
 
 ### @devgrace/ui <a href="https://www.npmjs.com/package/@devgrace/ui" target="_blank"><img align="center" src="https://img.shields.io/npm/v/@devgrace/ui.svg" /></a> <a href="https://bundlephobia.com/package/@devgrace/ui" target="_blank"><img align="center" src="https://img.shields.io/bundlephobia/minzip/@devgrace/ui/latest"></a>
   
@@ -59,19 +63,42 @@ yarn add @devgrace/ui
 
 <br />
 
+### @devgrace/types <a href="https://www.npmjs.com/package/@devgrace/types" target="_blank"><img align="center" src="https://img.shields.io/npm/v/@devgrace/types.svg" /></a> <a href="https://bundlephobia.com/package/@devgrace/types" target="_blank"><img align="center" src="https://img.shields.io/bundlephobia/minzip/@devgrace/types/latest"></a>
+  
+- 유용한 유틸 타입을 제공합니다.
+
+```shell
+npm i @devgrace/types
+```
+
+```shell
+yarn add @devgrace/types
+```
+
+```shell
+yarn add @devgrace/ui
+```
+
+<br />
+
 ## Tests
 
 ```shell
 yarn test
 ```
+
 - `vitest`와 `react-testing-library`로 테스트를 실행할 수 있습니다.
+
 ```shell
 yarn typecheck
 ```
+
 - 타입 체크를 할 수 있습니다.
+
 ```shell
 yarn storybook
 ```
+
 - `storybook`으로 UI 테스트를 실행할 수 있습니다.
 
 <br />
