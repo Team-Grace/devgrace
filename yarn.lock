@@ -3319,7 +3319,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@devgrace/types@workspace:packages/types":
+"@devgrace/types@workspace:*, @devgrace/types@workspace:packages/types":
   version: 0.0.0-use.local
   resolution: "@devgrace/types@workspace:packages/types"
   dependencies:
@@ -3369,6 +3369,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@devgrace/utils@workspace:packages/utils"
   dependencies:
+    "@devgrace/types": "workspace:*"
     "@rollup/plugin-commonjs": "npm:^25.0.4"
     "@rollup/plugin-node-resolve": "npm:^15.1.0"
     "@rollup/plugin-terser": "npm:^0.4.3"
