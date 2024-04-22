@@ -5853,7 +5853,7 @@ const RAW_RUNTIME_STATE =
           ["@testing-library/react", "virtual:80bc615fb71da5b81724bdd224826f577244d6332bfc0b51882a31da308543ab17a33948411fb94d004c451f00cdd1bdf8ada576b9513f1ef2b09011505bf183#npm:14.0.0"],\
           ["@types/react", "npm:18.2.20"],\
           ["@types/react-dom", "npm:18.2.7"],\
-          ["@types/react-transition-group", "npm:4.4.9"],\
+          ["@types/react-transition-group", "npm:4.4.10"],\
           ["core-js", "npm:3.32.0"],\
           ["esbuild", "npm:0.20.2"],\
           ["jsdom", "virtual:f260b09ce4727a71270bfff991b4553faf588868362a2864e2ecddcb7d09b075aa16375f0f9d75c9081022775e9eba52d6fdb6b88abf2f6f48ba8f02fa3a2a62#npm:24.0.0"],\
@@ -5892,7 +5892,7 @@ const RAW_RUNTIME_STATE =
           ["@testing-library/react", "virtual:80bc615fb71da5b81724bdd224826f577244d6332bfc0b51882a31da308543ab17a33948411fb94d004c451f00cdd1bdf8ada576b9513f1ef2b09011505bf183#npm:14.0.0"],\
           ["@types/react", "npm:18.2.20"],\
           ["@types/react-dom", "npm:18.2.7"],\
-          ["@types/react-transition-group", "npm:4.4.9"],\
+          ["@types/react-transition-group", "npm:4.4.10"],\
           ["core-js", "npm:3.32.0"],\
           ["esbuild", "npm:0.20.2"],\
           ["jsdom", "virtual:f260b09ce4727a71270bfff991b4553faf588868362a2864e2ecddcb7d09b075aa16375f0f9d75c9081022775e9eba52d6fdb6b88abf2f6f48ba8f02fa3a2a62#npm:24.0.0"],\
@@ -12567,10 +12567,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/react-transition-group", [\
-      ["npm:4.4.9", {\
-        "packageLocation": "./.yarn/cache/@types-react-transition-group-npm-4.4.9-949aeca8e7-279cd31920.zip/node_modules/@types/react-transition-group/",\
+      ["npm:4.4.10", {\
+        "packageLocation": "./.yarn/cache/@types-react-transition-group-npm-4.4.10-5e11bed850-3eb9bca143.zip/node_modules/@types/react-transition-group/",\
         "packageDependencies": [\
-          ["@types/react-transition-group", "npm:4.4.9"],\
+          ["@types/react-transition-group", "npm:4.4.10"],\
           ["@types/react", "npm:18.2.20"]\
         ],\
         "linkType": "HARD"\
