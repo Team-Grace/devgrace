@@ -1,0 +1,51 @@
+# usePreservedCallback
+
+A custom hook that changes the state when the value changes when compared with `comparator`. 
+
+If no comparator is passed, the `deepEqual` function in `@devgrace/utils` is utilized.
+  - [deepEqual](https://team-grace.github.io/devgrace/ko/docs/utils/common/deepEqual/)
+
+If the return value of the comparator is `true` so that the state does not change, the reference is also kept.
+
+<br />
+
+## Interface
+```tsx
+const usePreservedState: <T>(
+  value: T,
+  comparator?: ((source: T, target: T) => boolean) | undefined
+) => T;
+```
+
+## Usage
+### Default Comparator
+```tsx
+import React, { useEffect, useState } from "react";
+import { usePreservedState } from "@devgrace/react";
+
+const Example = () => {
+  const preservedState = usePreservedState({ exampleId: 1 }); // The preservedState reference is retained when the component is re-rendered.
+
+  return  <>{/* ... */}</>;
+}
+```
+
+<br />
+
+### Custom Comparator
+```tsx
+import React, { useEffect, useState } from 'react';
+import { usePreservedState } from '@devgrace/react';
+
+const Example = () => {
+  const comparator = (
+    source: { exampleId: number },
+    target: { exampleId: number }
+  ) => source.exampleId === target.exampleId;
+
+  const preservedState = usePreservedState({ exampleId: 1 }, comparator);
+  
+  return <>{/* ... */}</>;
+};
+
+```
