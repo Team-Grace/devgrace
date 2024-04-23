@@ -1,5 +1,11 @@
 # @devgrace/react
 
+## 1.0.0
+
+### Major Changes
+
+- [#66](https://github.com/Team-Grace/devgrace/pull/66) [`ae35b28`](https://github.com/Team-Grace/devgrace/commit/ae35b28a3c09edc4a517569bfafc8731a8fc5e52) Thanks [@ssi02014](https://github.com/ssi02014)! - feat: Add usePreservedState
+
 ## 0.13.1
 
 ### Patch Changes
