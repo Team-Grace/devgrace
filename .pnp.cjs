@@ -16208,6 +16208,13 @@ const RAW_RUNTIME_STATE =
           ["clsx", "npm:2.0.0"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:2.1.1", {\
+        "packageLocation": "./.yarn/cache/clsx-npm-2.1.1-96125b98be-c4c8eb865f.zip/node_modules/clsx/",\
+        "packageDependencies": [\
+          ["clsx", "npm:2.1.1"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["cmd-shim", [\
@@ -17836,7 +17843,7 @@ const RAW_RUNTIME_STATE =
           ["@types/node", "npm:20.12.7"],\
           ["@types/react", "npm:18.2.20"],\
           ["@types/react-dom", "npm:18.2.7"],\
-          ["clsx", "npm:1.2.1"],\
+          ["clsx", "npm:2.1.1"],\
           ["gh-pages", "npm:6.1.0"],\
           ["prism-react-renderer", "virtual:b5b5dfb1662b30d0d5b62f084f8b8fddd0eee56dd8737572197395ab6309e644fa76525392b1d0250ce3c07c5eeeb90901439953af682fc76f8ab38f71b8b09d#npm:1.3.5"],\
           ["react", "npm:18.2.0"],\
