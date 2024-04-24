@@ -21,7 +21,7 @@ jobs:
       - name: Link 🔨
         run: yarn
       - name: packages build 🔨
-        run: yarn build
+        run: lerna run build
       - name: prepare 🔨
         run: yarn prepare:docs
       - name: document build 🔨
