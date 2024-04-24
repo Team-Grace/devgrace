@@ -1,5 +1,11 @@
 # @devgrace/utils
 
+## 1.0.1
+
+### Patch Changes
+
+- [#70](https://github.com/Team-Grace/devgrace/pull/70) [`7aed972`](https://github.com/Team-Grace/devgrace/commit/7aed9724ff70f99ec55c2456f472a8ab5a922a5d) Thanks [@ssi02014](https://github.com/ssi02014)! - fix: deepEqual logci
+
 ## 1.0.0
 
 ### Major Changes
