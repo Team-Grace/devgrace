@@ -6637,16 +6637,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addon-onboarding@npm:^1.0.8":
-  version: 1.0.8
-  resolution: "@storybook/addon-onboarding@npm:1.0.8"
-  dependencies:
-    "@storybook/telemetry": "npm:^7.1.0-alpha.32"
-    react-confetti: "npm:^6.1.0"
-  peerDependencies:
-    react: ^16.8.0 || ^17.0.0 || ^18.0.0
-    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-  checksum: 12444cd8831e289df6e46d76fb61932678e4424e591a3ea0be1517547e2111bd35e54161674b851d00d507b05b7e28c6ca83e2b1b09bca483004c51b8f4b5acd
+"@storybook/addon-onboarding@npm:^8.0.9":
+  version: 8.0.9
+  resolution: "@storybook/addon-onboarding@npm:8.0.9"
+  checksum: a1fdd88d3dcb09ac75b426bb40d334131ac6e5a0ade9884872cfd61a3869cfed5ea0683ac6756d3952857c7fa3d9146265ab192d6f919b13176764d39e04ca29
   languageName: node
   linkType: hard
 
@@ -7532,7 +7526,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/telemetry@npm:7.3.1, @storybook/telemetry@npm:^7.1.0-alpha.32":
+"@storybook/telemetry@npm:7.3.1":
   version: 7.3.1
   resolution: "@storybook/telemetry@npm:7.3.1"
   dependencies:
@@ -12343,7 +12337,7 @@ __metadata:
     "@storybook/addon-essentials": "npm:^7.3.1"
     "@storybook/addon-interactions": "npm:^7.3.1"
     "@storybook/addon-links": "npm:^7.3.1"
-    "@storybook/addon-onboarding": "npm:^1.0.8"
+    "@storybook/addon-onboarding": "npm:^8.0.9"
     "@storybook/blocks": "npm:^8.0.8"
     "@storybook/react": "npm:^7.3.1"
     "@storybook/react-vite": "npm:^7.3.1"
@@ -21282,17 +21276,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-confetti@npm:^6.1.0":
-  version: 6.1.0
-  resolution: "react-confetti@npm:6.1.0"
-  dependencies:
-    tween-functions: "npm:^1.2.0"
-  peerDependencies:
-    react: ^16.3.0 || ^17.0.1 || ^18.0.0
-  checksum: 5b4eb23eef564695f6db1d25b294ed31d5fa21ff4092c6a38e641f85cd10e3e0b50014366e3ac0f7cf772e73faaecd14614e5b11a5531336fa769dda8068ab59
-  languageName: node
-  linkType: hard
-
 "react-dev-utils@npm:^12.0.1":
   version: 12.0.1
   resolution: "react-dev-utils@npm:12.0.1"
@@ -24230,13 +24213,6 @@ __metadata:
     debug: "npm:^4.3.4"
     make-fetch-happen: "npm:^13.0.0"
   checksum: 9a11793feed2aa798c1a50107a0f031034b4a670016684e0d0b7d97be3fff7f98f53783c30120bce795c16d58f1b951410bb673aae92cc2437d641cc7457e215
-  languageName: node
-  linkType: hard
-
-"tween-functions@npm:^1.2.0":
-  version: 1.2.0
-  resolution: "tween-functions@npm:1.2.0"
-  checksum: 7e59295b8b0ee4132ed2fe335f56a9db5c87056dad6b6fd3011be72239fd20398003ddb4403bc98ad9f5c94468890830f64016edbbde35581faf95b32cda8305
   languageName: node
   linkType: hard
 

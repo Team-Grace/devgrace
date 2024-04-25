@@ -56,7 +56,7 @@ const RAW_RUNTIME_STATE =
           ["@storybook/addon-essentials", "virtual:792eac2794d4baf13284e2048e1d1fb9724457aab62d48bc2e1bd4b2bf21e7be3dfea8f0ad969ee22ca8945dfa00d46e2a50c5bbcd78a91dcb874c3362e1871d#npm:7.3.1"],\
           ["@storybook/addon-interactions", "virtual:792eac2794d4baf13284e2048e1d1fb9724457aab62d48bc2e1bd4b2bf21e7be3dfea8f0ad969ee22ca8945dfa00d46e2a50c5bbcd78a91dcb874c3362e1871d#npm:7.3.1"],\
           ["@storybook/addon-links", "virtual:792eac2794d4baf13284e2048e1d1fb9724457aab62d48bc2e1bd4b2bf21e7be3dfea8f0ad969ee22ca8945dfa00d46e2a50c5bbcd78a91dcb874c3362e1871d#npm:7.3.1"],\
-          ["@storybook/addon-onboarding", "virtual:792eac2794d4baf13284e2048e1d1fb9724457aab62d48bc2e1bd4b2bf21e7be3dfea8f0ad969ee22ca8945dfa00d46e2a50c5bbcd78a91dcb874c3362e1871d#npm:1.0.8"],\
+          ["@storybook/addon-onboarding", "npm:8.0.9"],\
           ["@storybook/blocks", "virtual:792eac2794d4baf13284e2048e1d1fb9724457aab62d48bc2e1bd4b2bf21e7be3dfea8f0ad969ee22ca8945dfa00d46e2a50c5bbcd78a91dcb874c3362e1871d#npm:8.0.8"],\
           ["@storybook/react", "virtual:792eac2794d4baf13284e2048e1d1fb9724457aab62d48bc2e1bd4b2bf21e7be3dfea8f0ad969ee22ca8945dfa00d46e2a50c5bbcd78a91dcb874c3362e1871d#npm:7.3.1"],\
           ["@storybook/react-vite", "virtual:792eac2794d4baf13284e2048e1d1fb9724457aab62d48bc2e1bd4b2bf21e7be3dfea8f0ad969ee22ca8945dfa00d46e2a50c5bbcd78a91dcb874c3362e1871d#npm:7.3.1"],\
@@ -11749,29 +11749,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@storybook/addon-onboarding", [\
-      ["npm:1.0.8", {\
-        "packageLocation": "./.yarn/cache/@storybook-addon-onboarding-npm-1.0.8-79fd8683f8-12444cd883.zip/node_modules/@storybook/addon-onboarding/",\
+      ["npm:8.0.9", {\
+        "packageLocation": "./.yarn/cache/@storybook-addon-onboarding-npm-8.0.9-920bf7f3c9-a1fdd88d3d.zip/node_modules/@storybook/addon-onboarding/",\
         "packageDependencies": [\
-          ["@storybook/addon-onboarding", "npm:1.0.8"]\
-        ],\
-        "linkType": "SOFT"\
-      }],\
-      ["virtual:792eac2794d4baf13284e2048e1d1fb9724457aab62d48bc2e1bd4b2bf21e7be3dfea8f0ad969ee22ca8945dfa00d46e2a50c5bbcd78a91dcb874c3362e1871d#npm:1.0.8", {\
-        "packageLocation": "./.yarn/__virtual__/@storybook-addon-onboarding-virtual-50ed6e10c2/0/cache/@storybook-addon-onboarding-npm-1.0.8-79fd8683f8-12444cd883.zip/node_modules/@storybook/addon-onboarding/",\
-        "packageDependencies": [\
-          ["@storybook/addon-onboarding", "virtual:792eac2794d4baf13284e2048e1d1fb9724457aab62d48bc2e1bd4b2bf21e7be3dfea8f0ad969ee22ca8945dfa00d46e2a50c5bbcd78a91dcb874c3362e1871d#npm:1.0.8"],\
-          ["@storybook/telemetry", "npm:7.3.1"],\
-          ["@types/react", "npm:18.2.79"],\
-          ["@types/react-dom", "npm:18.2.7"],\
-          ["react", "npm:18.2.0"],\
-          ["react-confetti", "virtual:50ed6e10c2e9b942bbb984289aa900fd18751574262cbda5d52189c692c294609b4496df30ddd2dbf3d99db9a32e3c0f61b01b6002976ce4532b64e756d91de2#npm:6.1.0"],\
-          ["react-dom", "virtual:792eac2794d4baf13284e2048e1d1fb9724457aab62d48bc2e1bd4b2bf21e7be3dfea8f0ad969ee22ca8945dfa00d46e2a50c5bbcd78a91dcb874c3362e1871d#npm:18.2.0"]\
-        ],\
-        "packagePeers": [\
-          "@types/react-dom",\
-          "@types/react",\
-          "react-dom",\
-          "react"\
+          ["@storybook/addon-onboarding", "npm:8.0.9"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -19033,7 +19014,7 @@ const RAW_RUNTIME_STATE =
           ["@storybook/addon-essentials", "virtual:792eac2794d4baf13284e2048e1d1fb9724457aab62d48bc2e1bd4b2bf21e7be3dfea8f0ad969ee22ca8945dfa00d46e2a50c5bbcd78a91dcb874c3362e1871d#npm:7.3.1"],\
           ["@storybook/addon-interactions", "virtual:792eac2794d4baf13284e2048e1d1fb9724457aab62d48bc2e1bd4b2bf21e7be3dfea8f0ad969ee22ca8945dfa00d46e2a50c5bbcd78a91dcb874c3362e1871d#npm:7.3.1"],\
           ["@storybook/addon-links", "virtual:792eac2794d4baf13284e2048e1d1fb9724457aab62d48bc2e1bd4b2bf21e7be3dfea8f0ad969ee22ca8945dfa00d46e2a50c5bbcd78a91dcb874c3362e1871d#npm:7.3.1"],\
-          ["@storybook/addon-onboarding", "virtual:792eac2794d4baf13284e2048e1d1fb9724457aab62d48bc2e1bd4b2bf21e7be3dfea8f0ad969ee22ca8945dfa00d46e2a50c5bbcd78a91dcb874c3362e1871d#npm:1.0.8"],\
+          ["@storybook/addon-onboarding", "npm:8.0.9"],\
           ["@storybook/blocks", "virtual:792eac2794d4baf13284e2048e1d1fb9724457aab62d48bc2e1bd4b2bf21e7be3dfea8f0ad969ee22ca8945dfa00d46e2a50c5bbcd78a91dcb874c3362e1871d#npm:8.0.8"],\
           ["@storybook/react", "virtual:792eac2794d4baf13284e2048e1d1fb9724457aab62d48bc2e1bd4b2bf21e7be3dfea8f0ad969ee22ca8945dfa00d46e2a50c5bbcd78a91dcb874c3362e1871d#npm:7.3.1"],\
           ["@storybook/react-vite", "virtual:792eac2794d4baf13284e2048e1d1fb9724457aab62d48bc2e1bd4b2bf21e7be3dfea8f0ad969ee22ca8945dfa00d46e2a50c5bbcd78a91dcb874c3362e1871d#npm:7.3.1"],\
@@ -29249,29 +29230,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["react-confetti", [\
-      ["npm:6.1.0", {\
-        "packageLocation": "./.yarn/cache/react-confetti-npm-6.1.0-9b9e19a3c8-5b4eb23eef.zip/node_modules/react-confetti/",\
-        "packageDependencies": [\
-          ["react-confetti", "npm:6.1.0"]\
-        ],\
-        "linkType": "SOFT"\
-      }],\
-      ["virtual:50ed6e10c2e9b942bbb984289aa900fd18751574262cbda5d52189c692c294609b4496df30ddd2dbf3d99db9a32e3c0f61b01b6002976ce4532b64e756d91de2#npm:6.1.0", {\
-        "packageLocation": "./.yarn/__virtual__/react-confetti-virtual-b65a458f1b/0/cache/react-confetti-npm-6.1.0-9b9e19a3c8-5b4eb23eef.zip/node_modules/react-confetti/",\
-        "packageDependencies": [\
-          ["react-confetti", "virtual:50ed6e10c2e9b942bbb984289aa900fd18751574262cbda5d52189c692c294609b4496df30ddd2dbf3d99db9a32e3c0f61b01b6002976ce4532b64e756d91de2#npm:6.1.0"],\
-          ["@types/react", "npm:18.2.79"],\
-          ["react", "npm:18.2.0"],\
-          ["tween-functions", "npm:1.2.0"]\
-        ],\
-        "packagePeers": [\
-          "@types/react",\
-          "react"\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["react-dev-utils", [\
       ["npm:12.0.1", {\
         "packageLocation": "./.yarn/cache/react-dev-utils-npm-12.0.1-83ba06e3ee-94bc4ee501.zip/node_modules/react-dev-utils/",\
@@ -32676,15 +32634,6 @@ const RAW_RUNTIME_STATE =
           ["@tufjs/models", "npm:2.0.0"],\
           ["debug", "virtual:1ff4b5f90832ba0a9c93ba1223af226e44ba70c1126a3740d93562b97bc36544e896a5e95908196f7458713e6a6089a34bfc67362fc6df7fa093bd06c878be47#npm:4.3.4"],\
           ["make-fetch-happen", "npm:13.0.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["tween-functions", [\
-      ["npm:1.2.0", {\
-        "packageLocation": "./.yarn/cache/tween-functions-npm-1.2.0-4c24ac77a5-7e59295b8b.zip/node_modules/tween-functions/",\
-        "packageDependencies": [\
-          ["tween-functions", "npm:1.2.0"]\
         ],\
         "linkType": "HARD"\
       }]\
