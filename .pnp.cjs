@@ -7297,7 +7297,7 @@ const RAW_RUNTIME_STATE =
           ["@rollup/plugin-node-resolve", "virtual:f260b09ce4727a71270bfff991b4553faf588868362a2864e2ecddcb7d09b075aa16375f0f9d75c9081022775e9eba52d6fdb6b88abf2f6f48ba8f02fa3a2a62#npm:15.1.0"],\
           ["@rollup/plugin-terser", "virtual:f260b09ce4727a71270bfff991b4553faf588868362a2864e2ecddcb7d09b075aa16375f0f9d75c9081022775e9eba52d6fdb6b88abf2f6f48ba8f02fa3a2a62#npm:0.4.3"],\
           ["@rollup/plugin-typescript", "virtual:f260b09ce4727a71270bfff991b4553faf588868362a2864e2ecddcb7d09b075aa16375f0f9d75c9081022775e9eba52d6fdb6b88abf2f6f48ba8f02fa3a2a62#npm:11.1.6"],\
-          ["@testing-library/dom", "npm:9.3.3"],\
+          ["@testing-library/dom", "npm:10.0.0"],\
           ["@testing-library/jest-dom", "virtual:80bc615fb71da5b81724bdd224826f577244d6332bfc0b51882a31da308543ab17a33948411fb94d004c451f00cdd1bdf8ada576b9513f1ef2b09011505bf183#npm:6.0.0"],\
           ["@testing-library/react", "virtual:80bc615fb71da5b81724bdd224826f577244d6332bfc0b51882a31da308543ab17a33948411fb94d004c451f00cdd1bdf8ada576b9513f1ef2b09011505bf183#npm:14.0.0"],\
           ["@testing-library/user-event", "virtual:80bc615fb71da5b81724bdd224826f577244d6332bfc0b51882a31da308543ab17a33948411fb94d004c451f00cdd1bdf8ada576b9513f1ef2b09011505bf183#npm:14.5.1"],\
@@ -7336,7 +7336,7 @@ const RAW_RUNTIME_STATE =
           ["@rollup/plugin-node-resolve", "virtual:f260b09ce4727a71270bfff991b4553faf588868362a2864e2ecddcb7d09b075aa16375f0f9d75c9081022775e9eba52d6fdb6b88abf2f6f48ba8f02fa3a2a62#npm:15.1.0"],\
           ["@rollup/plugin-terser", "virtual:f260b09ce4727a71270bfff991b4553faf588868362a2864e2ecddcb7d09b075aa16375f0f9d75c9081022775e9eba52d6fdb6b88abf2f6f48ba8f02fa3a2a62#npm:0.4.3"],\
           ["@rollup/plugin-typescript", "virtual:f260b09ce4727a71270bfff991b4553faf588868362a2864e2ecddcb7d09b075aa16375f0f9d75c9081022775e9eba52d6fdb6b88abf2f6f48ba8f02fa3a2a62#npm:11.1.6"],\
-          ["@testing-library/dom", "npm:9.3.3"],\
+          ["@testing-library/dom", "npm:10.0.0"],\
           ["@testing-library/jest-dom", "virtual:80bc615fb71da5b81724bdd224826f577244d6332bfc0b51882a31da308543ab17a33948411fb94d004c451f00cdd1bdf8ada576b9513f1ef2b09011505bf183#npm:6.0.0"],\
           ["@testing-library/react", "virtual:80bc615fb71da5b81724bdd224826f577244d6332bfc0b51882a31da308543ab17a33948411fb94d004c451f00cdd1bdf8ada576b9513f1ef2b09011505bf183#npm:14.0.0"],\
           ["@testing-library/user-event", "virtual:80bc615fb71da5b81724bdd224826f577244d6332bfc0b51882a31da308543ab17a33948411fb94d004c451f00cdd1bdf8ada576b9513f1ef2b09011505bf183#npm:14.5.1"],\
@@ -13378,14 +13378,14 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@testing-library/dom", [\
-      ["npm:9.3.1", {\
-        "packageLocation": "./.yarn/cache/@testing-library-dom-npm-9.3.1-ec81dc9367-25d1deddba.zip/node_modules/@testing-library/dom/",\
+      ["npm:10.0.0", {\
+        "packageLocation": "./.yarn/cache/@testing-library-dom-npm-10.0.0-708b4ef7e6-2d12d2a601.zip/node_modules/@testing-library/dom/",\
         "packageDependencies": [\
-          ["@testing-library/dom", "npm:9.3.1"],\
+          ["@testing-library/dom", "npm:10.0.0"],\
           ["@babel/code-frame", "npm:7.22.10"],\
           ["@babel/runtime", "npm:7.22.10"],\
           ["@types/aria-query", "npm:5.0.1"],\
-          ["aria-query", "npm:5.1.3"],\
+          ["aria-query", "npm:5.3.0"],\
           ["chalk", "npm:4.1.2"],\
           ["dom-accessibility-api", "npm:0.5.16"],\
           ["lz-string", "npm:1.5.0"],\
@@ -13393,10 +13393,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:9.3.3", {\
-        "packageLocation": "./.yarn/cache/@testing-library-dom-npm-9.3.3-c5d4692db9-c3bbd67503.zip/node_modules/@testing-library/dom/",\
+      ["npm:9.3.1", {\
+        "packageLocation": "./.yarn/cache/@testing-library-dom-npm-9.3.1-ec81dc9367-25d1deddba.zip/node_modules/@testing-library/dom/",\
         "packageDependencies": [\
-          ["@testing-library/dom", "npm:9.3.3"],\
+          ["@testing-library/dom", "npm:9.3.1"],\
           ["@babel/code-frame", "npm:7.22.10"],\
           ["@babel/runtime", "npm:7.22.10"],\
           ["@types/aria-query", "npm:5.0.1"],\
@@ -13543,7 +13543,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@testing-library-user-event-virtual-43e0e532d1/0/cache/@testing-library-user-event-npm-14.5.1-daca21fbcb-1e00d6ead2.zip/node_modules/@testing-library/user-event/",\
         "packageDependencies": [\
           ["@testing-library/user-event", "virtual:80bc615fb71da5b81724bdd224826f577244d6332bfc0b51882a31da308543ab17a33948411fb94d004c451f00cdd1bdf8ada576b9513f1ef2b09011505bf183#npm:14.5.1"],\
-          ["@testing-library/dom", "npm:9.3.3"],\
+          ["@testing-library/dom", "npm:10.0.0"],\
           ["@types/testing-library__dom", null]\
         ],\
         "packagePeers": [\
