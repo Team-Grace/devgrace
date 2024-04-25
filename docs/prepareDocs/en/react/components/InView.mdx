@@ -8,14 +8,6 @@ A component that calls an `action` callback function that is passed as a prop wh
 
 ## Interface
 ```tsx
-interface UseIntersectionObserverProps {
-  action: (entry: IntersectionObserverEntry) => void;
-  calledOnce?: boolean;
-  threshold?: number | number[];
-  root?: Document | Element | null;
-  rootMargin?: string;
-}
-
 type InViewProps = React.ComponentProps<'div'> & UseIntersectionObserverProps;
 
 const InView: React.ForwardRefExoticComponent<
