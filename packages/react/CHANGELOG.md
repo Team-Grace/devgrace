@@ -1,5 +1,11 @@
 # @devgrace/react
 
+## 1.0.1
+
+### Patch Changes
+
+- [#78](https://github.com/Team-Grace/devgrace/pull/78) [`6728cfb`](https://github.com/Team-Grace/devgrace/commit/6728cfbbdb1657150d913646b249d630e250a305) Thanks [@ssi02014](https://github.com/ssi02014)! - fix: fixed useIntersectionObserver
+
 ## 1.0.0
 
 ### Major Changes

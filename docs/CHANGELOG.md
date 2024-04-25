@@ -1,5 +1,13 @@
 # docs
 
+## 0.0.52
+
+### Patch Changes
+
+- Updated dependencies [[`6728cfb`](https://github.com/Team-Grace/devgrace/commit/6728cfbbdb1657150d913646b249d630e250a305)]:
+  - @devgrace/react@1.0.1
+  - @devgrace/ui@0.8.1
+
 ## 0.0.51
 
 ### Patch Changes
