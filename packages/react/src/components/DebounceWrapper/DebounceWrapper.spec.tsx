@@ -1,12 +1,14 @@
-import { beforeAll, vi, describe, it, expect } from 'vitest';
-
 import { act, screen } from '@testing-library/react';
 import { renderSetup } from '../../utils/test/renderSetup';
 import { DebounceWrapper } from '.';
 import { ChangeEvent, useState } from 'react';
 
-beforeAll(() => {
+beforeEach(() => {
   vi.useFakeTimers();
+});
+
+afterEach(() => {
+  vi.useRealTimers();
 });
 
 interface TestComponentProps {
