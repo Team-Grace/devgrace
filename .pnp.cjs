@@ -7274,6 +7274,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@devgrace-react-virtual-80bc615fb7/1/packages/react/",\
         "packageDependencies": [\
           ["@devgrace/react", "virtual:b5b5dfb1662b30d0d5b62f084f8b8fddd0eee56dd8737572197395ab6309e644fa76525392b1d0250ce3c07c5eeeb90901439953af682fc76f8ab38f71b8b09d#workspace:packages/react"],\
+          ["@devgrace/types", "workspace:packages/types"],\
           ["@devgrace/utils", "workspace:packages/utils"],\
           ["@rollup/plugin-commonjs", "virtual:f260b09ce4727a71270bfff991b4553faf588868362a2864e2ecddcb7d09b075aa16375f0f9d75c9081022775e9eba52d6fdb6b88abf2f6f48ba8f02fa3a2a62#npm:25.0.4"],\
           ["@rollup/plugin-node-resolve", "virtual:f260b09ce4727a71270bfff991b4553faf588868362a2864e2ecddcb7d09b075aa16375f0f9d75c9081022775e9eba52d6fdb6b88abf2f6f48ba8f02fa3a2a62#npm:15.1.0"],\
@@ -7310,6 +7311,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./packages/react/",\
         "packageDependencies": [\
           ["@devgrace/react", "workspace:packages/react"],\
+          ["@devgrace/types", "workspace:packages/types"],\
           ["@devgrace/utils", "workspace:packages/utils"],\
           ["@rollup/plugin-commonjs", "virtual:f260b09ce4727a71270bfff991b4553faf588868362a2864e2ecddcb7d09b075aa16375f0f9d75c9081022775e9eba52d6fdb6b88abf2f6f48ba8f02fa3a2a62#npm:25.0.4"],\
           ["@rollup/plugin-node-resolve", "virtual:f260b09ce4727a71270bfff991b4553faf588868362a2864e2ecddcb7d09b075aa16375f0f9d75c9081022775e9eba52d6fdb6b88abf2f6f48ba8f02fa3a2a62#npm:15.1.0"],\
