@@ -31,3 +31,6 @@ rollup.config.mjs
 coverage
 vite.config.ts
 vite.setup.ts
+
+# Test files
+*.spec.d.ts

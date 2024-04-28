@@ -10,7 +10,13 @@ export default defineConfig({
     globals: true,
     setupFiles: './vitest.setup.ts',
     coverage: {
-      provider: 'istanbul',
+      provider: 'v8',
+      exclude: [
+        'src/index.ts',
+        'src/global.d.ts',
+        'src/components/index.ts',
+        'src/hooks/index.ts',
+      ],
     },
   },
 });

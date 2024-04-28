@@ -32,7 +32,7 @@ export default {
     esbuild(),
     typescript({
       tsconfig: './tsconfig.json',
-      exclude: ['**/*.spec.tsx', '**/*.stories.tsx', '**/jest.setup.ts'],
+      exclude: ['**/*.spec.ts?(x)', '**/*.stories.tsx', '**/jest.setup.ts'],
     }),
     terser(),
   ],

@@ -1,0 +1,24 @@
+coverage:
+  status:
+    patch: off
+    project:
+      default:
+        target: 100%
+        threshold: 30%
+
+comment:
+  layout: 'header, reach, diff, flags, components'
+
+ignore:
+  - '**/*.test-d.*'
+
+component_management:
+  individual_components:
+    - component_id: react
+      name: '@devgrace/react'
+      paths:
+        - packages/react/**
+    - component_id: utils
+      name: '@devgrace/utils'
+      paths:
+        - packages/utils/**

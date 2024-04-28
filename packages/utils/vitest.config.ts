@@ -9,7 +9,15 @@ export default defineConfig({
     environment: 'jsdom',
     globals: true,
     coverage: {
-      provider: 'istanbul',
+      provider: 'v8',
+      exclude: [
+        'src/index.ts',
+        'src/common/index.ts',
+        'src/device/index.ts',
+        'src/string/index.ts',
+        'src/object/index.ts',
+        'src/storage',
+      ],
     },
   },
 });
