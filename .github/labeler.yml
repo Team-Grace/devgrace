@@ -1,0 +1,12 @@
+"@devgrace/react":
+  - "packages/react/**/*"
+"@devgrace/utils":
+  - "packages/utils/**/*"
+"@devgrace/types":
+  - "packages/types/**/*"
+"@devgrace/ui":
+  - "packages/ui/**/*"
+"dependencies":
+  - "yarn.lock"
+"workflows":
+  - ".github/workflows/**/*"
