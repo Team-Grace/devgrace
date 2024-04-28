@@ -3433,7 +3433,6 @@ __metadata:
     "@types/react": "npm:^18.2.20"
     "@types/react-dom": "npm:^18.2.7"
     "@types/react-transition-group": "npm:^4"
-    "@vitest/coverage-v8": "npm:^1.5.2"
     esbuild: "npm:^0.20.2"
     jsdom: "npm:^24.0.0"
     react: "npm:^18.2.0"

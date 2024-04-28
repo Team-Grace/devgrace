@@ -15,10 +15,10 @@ ignore:
 component_management:
   individual_components:
     - component_id: react
-      name: '@modern-kit/react'
+      name: '@devgrace/react'
       paths:
         - packages/react/**
     - component_id: utils
-      name: '@modern-kit/utils'
+      name: '@devgrace/utils'
       paths:
         - packages/utils/**

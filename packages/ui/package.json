@@ -19,7 +19,7 @@
   ],
   "scripts": {
     "test": "vitest --typecheck",
-    "test:run": "vitest run --coverage --typecheck",
+    "test:run": "vitest run --typecheck",
     "build": "rm -rf dist && rollup -c",
     "typecheck": "tsc --noEmit"
   },
@@ -40,7 +40,6 @@
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
     "@types/react-transition-group": "^4",
-    "@vitest/coverage-v8": "^1.5.2",
     "esbuild": "^0.20.2",
     "jsdom": "^24.0.0",
     "react": "^18.2.0",

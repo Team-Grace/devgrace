@@ -7381,7 +7381,6 @@ const RAW_RUNTIME_STATE =
           ["@types/react", "npm:18.3.0"],\
           ["@types/react-dom", "npm:18.2.7"],\
           ["@types/react-transition-group", "npm:4.4.10"],\
-          ["@vitest/coverage-v8", "virtual:f260b09ce4727a71270bfff991b4553faf588868362a2864e2ecddcb7d09b075aa16375f0f9d75c9081022775e9eba52d6fdb6b88abf2f6f48ba8f02fa3a2a62#npm:1.5.2"],\
           ["esbuild", "npm:0.20.2"],\
           ["jsdom", "virtual:f260b09ce4727a71270bfff991b4553faf588868362a2864e2ecddcb7d09b075aa16375f0f9d75c9081022775e9eba52d6fdb6b88abf2f6f48ba8f02fa3a2a62#npm:24.0.0"],\
           ["react", "npm:18.3.0"],\
@@ -7420,7 +7419,6 @@ const RAW_RUNTIME_STATE =
           ["@types/react", "npm:18.3.0"],\
           ["@types/react-dom", "npm:18.2.7"],\
           ["@types/react-transition-group", "npm:4.4.10"],\
-          ["@vitest/coverage-v8", "virtual:f260b09ce4727a71270bfff991b4553faf588868362a2864e2ecddcb7d09b075aa16375f0f9d75c9081022775e9eba52d6fdb6b88abf2f6f48ba8f02fa3a2a62#npm:1.5.2"],\
           ["esbuild", "npm:0.20.2"],\
           ["jsdom", "virtual:f260b09ce4727a71270bfff991b4553faf588868362a2864e2ecddcb7d09b075aa16375f0f9d75c9081022775e9eba52d6fdb6b88abf2f6f48ba8f02fa3a2a62#npm:24.0.0"],\
           ["react", "npm:18.3.0"],\
