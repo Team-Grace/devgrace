@@ -1,5 +1,13 @@
 # docs
 
+## 0.0.53
+
+### Patch Changes
+
+- Updated dependencies [[`4f630a3`](https://github.com/Team-Grace/devgrace/commit/4f630a343a15984732589a35d2a1d0d78e7bd19b), [`7a916f7`](https://github.com/Team-Grace/devgrace/commit/7a916f7a9ff9482462e0db2872013eedc06d35c6), [`90071a4`](https://github.com/Team-Grace/devgrace/commit/90071a479e55f86aa2d19ab41a6e7e521b832499), [`7a916f7`](https://github.com/Team-Grace/devgrace/commit/7a916f7a9ff9482462e0db2872013eedc06d35c6)]:
+  - @devgrace/react@1.0.2
+  - @devgrace/ui@0.8.2
+
 ## 0.0.52
 
 ### Patch Changes
