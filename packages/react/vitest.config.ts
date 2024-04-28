@@ -10,7 +10,7 @@ export default defineConfig({
     globals: true,
     setupFiles: './vitest.setup.ts',
     coverage: {
-      provider: 'istanbul',
+      provider: 'v8',
     },
   },
 });

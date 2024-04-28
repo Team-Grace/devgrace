@@ -8,7 +8,7 @@ export default defineConfig({
     dir: './src',
     globals: true,
     coverage: {
-      provider: 'istanbul',
+      provider: 'v8',
     },
   },
 });
