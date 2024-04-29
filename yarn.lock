@@ -3382,7 +3382,7 @@ __metadata:
     "@rollup/plugin-typescript": "npm:^11.1.2"
     "@testing-library/dom": "npm:^10.0.0"
     "@testing-library/jest-dom": "npm:^6.0.0"
-    "@testing-library/react": "npm:^14.0.0"
+    "@testing-library/react": "npm:^15.0.5"
     "@testing-library/user-event": "npm:^14.5.1"
     "@types/lodash-es": "npm:^4.17.12"
     "@types/react": "npm:^18.2.20"
@@ -3429,7 +3429,7 @@ __metadata:
     "@rollup/plugin-typescript": "npm:^11.1.2"
     "@storybook/react": "npm:^7.3.1"
     "@testing-library/jest-dom": "npm:^6.0.1"
-    "@testing-library/react": "npm:^14.0.0"
+    "@testing-library/react": "npm:^15.0.5"
     "@types/react": "npm:^18.2.20"
     "@types/react-dom": "npm:^18.2.7"
     "@types/react-transition-group": "npm:^4"
@@ -7978,17 +7978,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/react@npm:^14.0.0":
-  version: 14.0.0
-  resolution: "@testing-library/react@npm:14.0.0"
+"@testing-library/react@npm:^15.0.5":
+  version: 15.0.5
+  resolution: "@testing-library/react@npm:15.0.5"
   dependencies:
     "@babel/runtime": "npm:^7.12.5"
-    "@testing-library/dom": "npm:^9.0.0"
+    "@testing-library/dom": "npm:^10.0.0"
     "@types/react-dom": "npm:^18.0.0"
   peerDependencies:
     react: ^18.0.0
     react-dom: ^18.0.0
-  checksum: 81035913024faf18ba7e163418af517b2c3b85aef496fbd6334bda38f6f6dd4072678c6b76c41148b46b7fc846764f875e1156cbfc7643ffa1b62ee069d78951
+  checksum: 8759cc8e7e6b4d8964f151d8872ea3c91b6ef6d8fb3b9116fae53350b9a6b29e5ad45b18408c22525924d050263f7ea77cd17ca803918759f22a760f68a42227
   languageName: node
   linkType: hard
 
