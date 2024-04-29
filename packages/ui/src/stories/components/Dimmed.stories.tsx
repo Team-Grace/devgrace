@@ -18,7 +18,11 @@ export default {
   },
 };
 
-const Template: StoryFn<DimmedProps> = ({ alpha, isTransition, timeout }) => {
+const Template: StoryFn<DimmedProps> = ({
+  alpha,
+  isTransition,
+  timeout,
+}: DimmedProps) => {
   const [isShow, setIsShow] = useState(false);
   const { ref } = useOnClickOutside<HTMLDivElement>(() => setIsShow(false));
 
