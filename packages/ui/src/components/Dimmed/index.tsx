@@ -38,3 +38,5 @@ export const Dimmed = forwardRef<HTMLDivElement, DimmedProps>(
     );
   }
 );
+
+Dimmed.displayName = 'Dimmed';
