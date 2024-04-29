@@ -33,7 +33,7 @@
     "@storybook/react-vite": "^7.3.1",
     "@storybook/testing-library": "^0.2.0",
     "@types/node": "^20.5.0",
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/eslint-plugin": "^7.7.1",
     "@typescript-eslint/parser": "^7.7.1",
     "eslint": "^8.47.0",
     "eslint-plugin-react": "^7.34.1",
