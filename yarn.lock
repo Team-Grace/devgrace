@@ -3648,7 +3648,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@docusaurus/module-type-aliases@npm:3.2.1, @docusaurus/module-type-aliases@npm:^3.2.1":
+"@docusaurus/module-type-aliases@npm:3.2.1":
   version: 3.2.1
   resolution: "@docusaurus/module-type-aliases@npm:3.2.1"
   dependencies:
@@ -3664,6 +3664,24 @@ __metadata:
     react: "*"
     react-dom: "*"
   checksum: fbf7a9ac5832f45e6afa8356cbe33bc979dce1ae9bc3791056261a5d7b1ad1220ecd7b07d1d7cc6b5b2d8d2b437fb31b4ea7df2ec40aad48f245832ca1b067dd
+  languageName: node
+  linkType: hard
+
+"@docusaurus/module-type-aliases@npm:^3.2.1":
+  version: 3.3.0
+  resolution: "@docusaurus/module-type-aliases@npm:3.3.0"
+  dependencies:
+    "@docusaurus/types": "npm:3.3.0"
+    "@types/history": "npm:^4.7.11"
+    "@types/react": "npm:*"
+    "@types/react-router-config": "npm:*"
+    "@types/react-router-dom": "npm:*"
+    react-helmet-async: "npm:*"
+    react-loadable: "npm:@docusaurus/react-loadable@6.0.0"
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
+  checksum: ba879f8bcdd3376e27c5c4ab0c005e11795373b5d3137fa449a00e890b28104731dac6335c3ad201e084cec2ed866a85cb0522d27bb8f016dcb6ba4c01cacdb1
   languageName: node
   linkType: hard
 
@@ -3976,6 +3994,26 @@ __metadata:
     react: ^18.0.0
     react-dom: ^18.0.0
   checksum: ea48d186a2f5a130dcc254147568343c884212e2951c8f34fa0aad123fc70d2da010c0ef8a7e223162d5d0e9a91f14fc7902ce25f9e5c2eed954b47d621ebf4f
+  languageName: node
+  linkType: hard
+
+"@docusaurus/types@npm:3.3.0":
+  version: 3.3.0
+  resolution: "@docusaurus/types@npm:3.3.0"
+  dependencies:
+    "@mdx-js/mdx": "npm:^3.0.0"
+    "@types/history": "npm:^4.7.11"
+    "@types/react": "npm:*"
+    commander: "npm:^5.1.0"
+    joi: "npm:^17.9.2"
+    react-helmet-async: "npm:^1.3.0"
+    utility-types: "npm:^3.10.0"
+    webpack: "npm:^5.88.1"
+    webpack-merge: "npm:^5.9.0"
+  peerDependencies:
+    react: ^18.0.0
+    react-dom: ^18.0.0
+  checksum: b8534bc02718bc079b6085c57c58f1c2491bad180082758a384f485152e72b108a454c852fc587f4a7edac51d6e8ca9f26cdd3488c5fe69a23ffc307555f76a9
   languageName: node
   linkType: hard
 
@@ -21425,6 +21463,17 @@ __metadata:
     react-loadable: "*"
     webpack: ">=4.41.1 || 5.x"
   checksum: 7b0645f66adec56646f985ba8094c66a1c0a4627d96ad80eea32431d773ef1f79aa47d3247a8f21db3b064a0c6091653c5b5d3483b7046722eb64e55bffe635c
+  languageName: node
+  linkType: hard
+
+"react-loadable@npm:@docusaurus/react-loadable@6.0.0":
+  version: 6.0.0
+  resolution: "@docusaurus/react-loadable@npm:6.0.0"
+  dependencies:
+    "@types/react": "npm:*"
+  peerDependencies:
+    react: "*"
+  checksum: 6b145d1a8d2e7342ceef58dd154aa990322f72a6cb98955ab8ce8e3f0dc7f0c5d00f9c2e4efa8d356c5effed72a130b5588857332b11faba0398f5429b484b04
   languageName: node
   linkType: hard
 
