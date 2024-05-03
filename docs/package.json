@@ -26,8 +26,8 @@
   "dependencies": {
     "@devgrace/react": "workspace:*",
     "@devgrace/ui": "workspace:*",
-    "@docusaurus/core": "^3.2.1",
-    "@docusaurus/preset-classic": "^3.2.1",
+    "@docusaurus/core": "^3.3.2",
+    "@docusaurus/preset-classic": "^3.3.2",
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.1.1",
     "prism-react-renderer": "^2.3.1",
@@ -35,9 +35,9 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "^3.2.1",
-    "@docusaurus/theme-classic": "^3.2.1",
-    "@docusaurus/types": "^3.2.1",
+    "@docusaurus/module-type-aliases": "^3.3.2",
+    "@docusaurus/theme-classic": "^3.3.2",
+    "@docusaurus/types": "^3.3.2",
     "@tsconfig/docusaurus": "^2.0.0",
     "@types/node": "^20.5.1",
     "@types/react": "^18.2.20",
