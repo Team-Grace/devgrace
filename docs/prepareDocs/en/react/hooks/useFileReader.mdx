@@ -1,0 +1,63 @@
+# useFileReader
+
+A custom hook that reads a `File` object with the desired read method (`readAsText`, `readAsDataURL`, `readAsArrayBuffer`) and returns the read file content.
+
+<br />
+
+## Interface
+```tsx
+type ReadType = 'readAsText' | 'readAsDataURL' | 'readAsArrayBuffer';
+
+interface FileContent {
+  status: 'fulfilled' | 'rejected';
+  readValue: string | ArrayBuffer;
+  originFile: Nullable<File>;
+}
+
+interface ReadFileOptions {
+  file: FileList | File;
+  readType: ReadType;
+  accepts?: string[];
+}
+
+const useFileReader: () => {
+  readFile: ({
+    file,
+    readType,
+    accepts,
+  }: ReadFileOptions) => Promise<FileContent[]>;
+  fileContents: FileContent[];
+  isLoading: boolean;
+};
+```
+
+## Usage
+
+```tsx
+import React, { useState } from 'react';
+import { useFileReader } from '@devgrace/react';
+
+const Example = () => {
+  const { readFile, fileContents, loading } = useFileReader()
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if(!e.target.files) return;
+
+    readFile({ file: e.target.files, readType: 'readAsText' }); 
+    /*
+     * 1. readFile returns a Promise<FileContent[]>. Its value is the same as fileContents.
+     * ex) const data = await readFile(e.target.files, 'readAsDataURL'); 
+     * 
+     * 2. accepts option allows you to read only the file types you want.
+     * accepts option is not passed, all file types are accepted.
+     * ex) readFile({ file: e.target.files, readType: 'readAsText', accepts: ['text/plain'] }); 
+     */
+  }
+
+  return (
+    <div>
+      <input multiple type="file" onChange={handleChange} />
+    </div>
+  );
+};
+```
