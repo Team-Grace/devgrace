@@ -1,3 +1,6 @@
+import { useState } from 'react';
+import { useDebounce } from '@devgrace/react';
+
 # useDebounce
 
 A custom hook that makes it easy to use `debounce`.
@@ -26,12 +29,61 @@ const useDebounce: (
 ## Usage
 
 ```tsx
-import { useDebounce } from '@devgrace/react';
+import { useState } from 'react';
+import { useDebounce } from '@modern-kit/react';
 
 const Example = () => {
-  const handle = useDebounce(() => {
-    console.log('debounce');
-  }, 500);
+  const [count, setCount] = useState(1);
+  const [debouncedCount, setDebouncedCount] = useState(1);
 
-  return <button onClick={handle}>button1</button>;
+  const countUp = () => {
+    setCount(count + 1);
+  };
+
+  const countUpWithDebounce = useDebounce(() => {
+    setDebouncedCount(debouncedCount + 1);
+  }, 1000);
+
+  return (
+    <div>
+      <div style={{ display: "flex" }}>
+        <button onClick={countUp}>Default Button Click</button>
+        <div style={{ width: "50px" }} />
+        <button onClick={countUpWithDebounce}>Debounce Button Click</button>
+      </div>
+      <div>
+        <p>count: {count}</p>
+        <p>debouncedCount: {debouncedCount}</p>
+      </div>
+    </div>
+  );
 };
+```
+
+## Example
+
+export const Example = () => {
+  const [count, setCount] = useState(1);
+  const [debouncedCount, setDebouncedCount] = useState(1);
+  const countUp = () => {
+    setCount(count + 1);
+  };
+  const countUpWithDebounce = useDebounce(() => {
+    setDebouncedCount(debouncedCount + 1);
+  }, 1000);
+  return (
+    <div>
+      <div style={{ display: "flex" }}>
+        <button onClick={countUp}>Default Button Click</button>
+        <div style={{ width: "50px" }} />
+        <button onClick={countUpWithDebounce}>Debounce Button Click</button>
+      </div>
+      <div>
+        <p>count: {count}</p>
+        <p>debouncedCount: {debouncedCount}</p>
+      </div>
+    </div>
+  );
+};
+
+<Example />
