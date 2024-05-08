@@ -1,8 +1,8 @@
 # delay
 
-This function allows you to perform an action after a specified amount of time. 
+A function that allows you to wait a given amount of time before performing the next action.
 
-When you use `setTimeout` to define an action to occur after a certain time, if there is `Promise` following the function that should act after the delay, `setTimeout` will fall into the `macroTaskQueue` and `Promise` will be in the `microTaskQueue`. This configuration may prevent the actions from executing in the intended order. 
+If you use `setTimeout` to define an action after a certain amount of time, and a Promise exists after the function that needs to happen after that time, then the setTimeout will belong to the `macroTaskQueue` and the Promise will belong to the `microTaskQueue`, which may not guarantee that the actions will happen in order as intended. 
 
 Using the `delay` function can solve this problem.
 
