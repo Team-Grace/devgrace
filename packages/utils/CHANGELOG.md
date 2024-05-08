@@ -1,5 +1,17 @@
 # @devgrace/utils
 
+## 1.1.0
+
+### Minor Changes
+
+- [#122](https://github.com/Team-Grace/devgrace/pull/122) [`d749621`](https://github.com/Team-Grace/devgrace/commit/d7496216ccfc834ff6ff921005f63ac6be25520e) Thanks [@ssi02014](https://github.com/ssi02014)! - feat: Add SwitchCase, useBlockPromiseMultipleClick, delay
+
+### Patch Changes
+
+- [#109](https://github.com/Team-Grace/devgrace/pull/109) [`dfc99cd`](https://github.com/Team-Grace/devgrace/commit/dfc99cd9f0562de1c3fc33057dd9ff57fbc4241c) Thanks [@ssi02014](https://github.com/ssi02014)! - feat(utils): add delay utils function
+
+- [#106](https://github.com/Team-Grace/devgrace/pull/106) [`d5c9a45`](https://github.com/Team-Grace/devgrace/commit/d5c9a45aaf7d806bc222de81952682799feee895) Thanks [@ssi02014](https://github.com/ssi02014)! - feat: Add isPromise
+
 ## 1.0.2
 
 ### Patch Changes
