@@ -1,5 +1,11 @@
 # @devgrace/types
 
+## 1.1.0
+
+### Minor Changes
+
+- [#110](https://github.com/Team-Grace/devgrace/pull/110) [`0954239`](https://github.com/Team-Grace/devgrace/commit/0954239c7dbe9b95dc5ae08de05a2546c8be3fe3) Thanks [@ssi02014](https://github.com/ssi02014)! - feat(types): Add ExtractSetType, ExtractMapType, Promiseable
+
 ## 1.0.1
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @devgrace/ui
 
+## 0.8.3
+
+### Patch Changes
+
+- [#99](https://github.com/Team-Grace/devgrace/pull/99) [`02c36be`](https://github.com/Team-Grace/devgrace/commit/02c36bec7062ee500436207a2d2b09d8f403b111) Thanks [@ssi02014](https://github.com/ssi02014)! - refac: eslint rule'
+
 ## 0.8.2
 
 ### Patch Changes
