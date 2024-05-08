@@ -1,0 +1,83 @@
+import { useState } from 'react';
+import { SwitchCase } from '@devgrace/react';
+
+# SwitchCase
+
+A component that allows `Switch` statements to be used as components.
+
+Passes `cases` an object with properties of the form `key(condition):value(component)`, and renders the `value(component)` that matches the `condition` props.
+
+You can pass a `defaultCaseComponent` as `props` that can be temporarily shown when there is no matching `condition` in `cases`.
+
+<br />
+
+## Interface
+```tsx
+type Component = Nullable<React.ReactNode>;
+
+interface SwitchCaseProps<Condition extends string | number> {
+  condition: Condition | null | undefined;
+  cases: Partial<Record<Condition, Component>>;
+  defaultCaseComponent?: Component;
+}
+
+const SwitchCase: <Condition extends string | number>({
+  condition,
+  cases,
+  defaultCaseComponent,
+}: SwitchCaseProps<Condition>) => JSX.Element;
+```
+
+## Usage
+
+```tsx
+import { SwitchCase } from '@devgrace/react';
+
+
+const Example = () => {
+  const [condition, setCondition] = useState(1);
+
+  return (
+    <div>
+      <div>
+        <button onClick={() => setCondition(1)}>Change to case 1</button>
+        <button onClick={() => setCondition(2)}>Change to case 2</button>
+        <button onClick={() => setCondition(3)}>Change to case 3</button>
+      </div>
+
+      <SwitchCase
+        condition={condition}
+        cases={{
+          1: <h3>Case No.1</h3>,
+          2: <h3>Case No.2</h3>,
+          3: <h3>Case No.3</h3>,
+        }}
+      />
+    </div>
+  );
+};
+```
+
+export const Example = () => {
+  const [condition, setCondition] = useState(1);
+  return (
+    <div>
+      <div>
+        <button onClick={() => setCondition(1)}>Change to case 1</button>
+        <button onClick={() => setCondition(2)}>Change to case 2</button>
+        <button onClick={() => setCondition(3)}>Change to case 3</button>
+      </div>
+
+      <SwitchCase
+        condition={condition}
+        cases={{
+          1: <h3>Case No.1</h3>,
+          2: <h3>Case No.2</h3>,
+          3: <h3>Case No.3</h3>,
+        }}
+      />
+    </div>
+  );
+};
+
+<Example />

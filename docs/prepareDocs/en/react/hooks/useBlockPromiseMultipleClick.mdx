@@ -1,0 +1,99 @@
+import { useState } from 'react';
+import { useBlockPromiseMultipleClick } from '@devgrace/react';
+
+# useBlockPromiseMultipleClick
+
+A custom hook thatprevents duplicate calls while performing the `Promise` behavior of the Callback function passed in as an argument.
+
+You can use [useDebounce](https://team-grace.github.io/devgrace/docs/react/hooks/useDebounce/) to prevent duplicate calls, but it relies on a time value, which is insufficient if you need to completely block calls until the `Promise` is fulfilled.
+
+This hook prevents duplicate calls while performing the Promise action, so you can use it when you want to prevent duplicate calls while still guaranteeing the fulfillment of the `Promise`.
+
+<br />
+
+## Interface
+```tsx
+const useBlockPromiseMultipleClick: () => {
+  isLoading: boolean;
+  blockMultipleClick: (callback: () => Promise<unknown>) => Promise<void>;
+};
+```
+
+## Usage
+
+```tsx
+import React, { useState } from 'react';
+import { useBlockPromiseMultipleClick } from '@devgrace/react';
+
+interface Value {
+  userId: number;
+  id: number;
+  title: string;
+  completed: boolean;
+}
+
+const Example = () => {
+  const [blockingCount, setBlockingCount] = useState(1);
+  const [nonBlockingCount, setNonBlockingCount] = useState(1);
+  const [value, setValue] = useState<Value | null>(null);
+
+  const { isLoading, blockMultipleClick } = useBlockPromiseMultipleClick();
+
+  const fetchApi = async () => {
+    const res = await fetch(
+      `https://jsonplaceholder.typicode.com/todos/${blockingCount}`
+    ).then((response) => response.json());
+
+    setValue(res);
+    setBlockingCount(blockingCount + 1);
+  };
+
+  const handleClick = () => {
+    setNonBlockingCount(nonBlockingCount + 1);
+    blockMultipleClick(fetchApi); // (*) Promise 반환하는 함수를 인자로 넣어주세요.
+  };
+
+  return (
+    <div>
+      <button onClick={handleClick}>버튼 클릭</button>
+      <div>
+        <p>BlockingCount: {blockingCount}</p>
+        <p>NonBlockingCount: {nonBlockingCount}</p>
+      </div>
+      {isLoading ? <p>로딩중</p> : <p>{value?.title}</p>}
+    </div>
+  );
+};
+```
+
+## Example
+
+export const Example = () => {
+  const [blockingCount, setBlockingCount] = useState(1);
+  const [nonBlockingCount, setNonBlockingCount] = useState(1);
+  const [value, setValue] = useState(null);
+  const { isLoading, blockMultipleClick } = useBlockPromiseMultipleClick();
+  const fetchApi = async () => {
+    const res = await fetch(
+      `https://jsonplaceholder.typicode.com/todos/${blockingCount}`
+    ).then((response) => response.json());
+    setValue(res);
+    setBlockingCount(blockingCount + 1);
+  };
+  const handleClick = () => {
+    setNonBlockingCount(nonBlockingCount + 1);
+    blockMultipleClick(fetchApi);
+  };
+  return (
+    <div>
+      <button onClick={handleClick}>버튼 클릭</button>
+      <div>
+        <p>BlockingCount: {blockingCount}</p>
+        <p>NonBlockingCount: {nonBlockingCount}</p>
+      </div>
+      {isLoading ? <p>로딩중</p> : <p>{value?.title}</p>}
+    </div>
+  );
+};
+
+<Example />
